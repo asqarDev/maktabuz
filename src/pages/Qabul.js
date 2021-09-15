@@ -2,16 +2,13 @@ import React from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import styles from "../css/qabul.module.css";
-import students from "../img/Students.png";
-import shakl from "../img/shakl.png";
 import jarayon from "../img/jarayon.png";
 import tav_img from "../img/tav_img.jpg";
 import talab from "../img/talab.jpg";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import axios from "axios";
 import { url, user } from "../host/Host";
 import FadeLoader from "react-spinners/FadeLoader";
-import Global from "../host/Global";
 
 class Qabul extends React.Component {
   state = {
@@ -22,7 +19,6 @@ class Qabul extends React.Component {
   };
 
   getSchool = () => {
-    //   var a=window.location.href.split('/')
     var v = user;
     axios.get(`${url}/school-by-admin/${v}`).then((res) => {
       this.setState({
@@ -41,71 +37,35 @@ class Qabul extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className={styles.body_makatab}>
         {this.state.loader ? (
           <div className="loaderT">
             <FadeLoader color="blue" loading={this.state.loader} size={120} />
           </div>
         ) : (
-          <div style={{ width: "100vw", overflowX: "hidden" }}>
-            <div
-              className={styles.qabulHeader}
-              style={{ backgroundColor: "#318CE7", width: "100%" }}
-            >
+          <div className={styles.dark_maktab}>
+            <div className={styles.qabulHeader}>
               <Container fluid style={{ padding: "0" }}>
-                <div
-                  style={{
-                    width: "100%",
-                    height: "100vh",
-                    position: "relative",
-                  }}
-                >
-                  <Row>
-                    <Col style={{ padding: "0" }} lg={6} md={12} sm={12}>
+                <div className={styles.qabul_header}>
+                  <Row className={styles.header_qabul}>
+                    <Col></Col>
+                    <Col lg={6} md={12} sm={12}>
                       {" "}
                       <div data-aos="fade-right" className={styles.text_q}>
-                        <h1>Qabul uchun ariza topshiring</h1>
-                        <img
+                        <h1>Qabul uchun ariza topshirishga hushkelibsiz!!!</h1>
+                        <Image
                           src="https://as2.ftcdn.net/jpg/01/17/65/19/500_F_117651987_mJuEArLJWmdeGSmSqbntiI5i04RBvhXX.jpg"
                           style={{
                             boxShadow:
                               "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
-                            width: "200px",
-                            height: "200px",
+                            width: "350px",
+                            height: "350px",
                             borderRadius: "50%",
                             marginLeft: "30%",
                             marginTop: "10%",
                           }}
                         />
                       </div>
-                    </Col>
-                    <Col
-                      style={{ padding: "0" }}
-                      lg={6}
-                      md={12}
-                      sm={12}
-                      className={styles.img}
-                      data-aos="zoom-in-up"
-                    >
-                      <img
-                        src={shakl}
-                        className={styles.back}
-                        style={{
-                          width: "450px",
-                          height: "450px",
-                          bottom: "0px",
-                          position: "absolute",
-                        }}
-                      />
-                      <img
-                        src={students}
-                        className={styles.main}
-                        style={{
-                          position: "absolute",
-                          bottom: "-50px",
-                          height: "625px",
-                        }}
-                      />
                     </Col>
                   </Row>
                 </div>
@@ -122,16 +82,17 @@ class Qabul extends React.Component {
                     sm={12}
                     className={styles.tavsilot}
                   >
-                    <img
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.q !== null
-                            ? this.state.school.q
+                    <div className={styles.qabul_image} data-aos="zoom-in-down">
+                      <Image
+                        src={
+                          this.state.school !== null
+                            ? this.state.school.q !== null
+                              ? this.state.school.q
+                              : tav_img
                             : tav_img
-                          : tav_img
-                      }
-                      data-aos="zoom-in-up"
-                    />
+                        }
+                      />
+                    </div>
                   </Col>
                   <Col
                     style={{ padding: "0" }}
@@ -150,13 +111,6 @@ class Qabul extends React.Component {
                           : "Qabul jarayonlari bo'yicha tavsilotlar"
                         : "Qabul jarayonlari bo'yicha tavsilotlar"}
                     </p>
-
-                    {/* <p>
-                            Agar siz ertangi kun uchun dunyoni tarannum etishga qaratilgan shahar markazidagi universitetda o'qishni istasangiz, siz to'g'ri joyni tanlaysiz. Talabalarni tanlash uchun biz maxsus formulalardan foydalanmaymiz. Biz har bir talabnoma beruvchining ilmiy va shaxsiy arizalarini ko'rib chiqamiz, har xil ma'lumotlarga ega bo'lgan jamoamizga mos talabalarni tanlash uchun.
-                            </p>
-                            <p>
-                            Agar siz shaharning qoq markazida joylashgan universitetda o'qishni xohlasangiz, agar siz ertangi kun uchun dunyoni tarannum etishga e'tibor qaratadigan shahar markazidagi universitetda o'qishni xohlasangiz, siz to'g'ri joyni tanlaysiz. Talabalarni tanlash uchun biz maxsus formulalardan foydalanmaymiz. Biz har bir abituriyentning ilmiy va shaxsiy arizasini ko'rib chiqamiz, bu bizning jamoamizga to'liq mos keladigan talabalarni tanlash uchun
-                            </p> */}
                   </Col>
                 </Row>
               </Container>
@@ -166,29 +120,12 @@ class Qabul extends React.Component {
               <Container fluid style={{ padding: "0" }}>
                 <Row>
                   <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div
-                      className={styles.info}
-                      style={{ backgroundColor: "white" }}
-                      data-aos="zoom-in-up"
-                    >
-                      <div
-                        style={{
-                          width: "70px",
-                          height: "70px",
-                          borderRadius: "50%",
-                          backgroundColor: "white",
-                          margin: "auto",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          display: "flex",
-                          marginTop: "-60px",
-                          border: "3px solid #318CE7",
-                        }}
-                      >
-                        <img src="https://image.flaticon.com/icons/png/512/906/906175.png" />
+                    <div className={styles.info} data-aos="zoom-in-up">
+                      <div className={styles.qabul_talim}>
+                        <Image src="https://image.flaticon.com/icons/png/512/906/906175.png" />
                       </div>
                       <h3>Ta'lim shakli</h3>
-                      <p style={{ fontSize: "18px" }}>
+                      <p>
                         {this.state.school !== null
                           ? this.state.school.q_talim !== null
                             ? this.state.school.q_talim
@@ -198,31 +135,13 @@ class Qabul extends React.Component {
                       </p>
                     </div>
                   </Col>
-
                   <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div
-                      className={styles.info_b}
-                      style={{ backgroundColor: "#318CE7" }}
-                      data-aos="zoom-in-up"
-                    >
-                      <div
-                        style={{
-                          width: "70px",
-                          height: "70px",
-                          borderRadius: "50%",
-                          backgroundColor: "white",
-                          margin: "auto",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          display: "flex",
-                          marginTop: "-60px",
-                          border: "3px solid #318CE7",
-                        }}
-                      >
-                        <img src="https://image.flaticon.com/icons/png/512/3829/3829933.png" />
+                    <div className={styles.info} s data-aos="zoom-in-up">
+                      <div className={styles.qabul_talim}>
+                        <Image src="https://image.flaticon.com/icons/png/512/3829/3829933.png" />
                       </div>
                       <h3>Bitiruvchilar</h3>
-                      <p style={{ fontSize: "18px" }}>
+                      <p>
                         {this.state.school !== null
                           ? this.state.school.q_bitiruv !== null
                             ? this.state.school.q_bitiruv
@@ -234,29 +153,12 @@ class Qabul extends React.Component {
                     </div>
                   </Col>
                   <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div
-                      className={styles.info}
-                      style={{ backgroundColor: "white" }}
-                      data-aos="zoom-in-up"
-                    >
-                      <div
-                        style={{
-                          width: "70px",
-                          height: "70px",
-                          borderRadius: "50%",
-                          backgroundColor: "white",
-                          margin: "auto",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          display: "flex",
-                          marginTop: "-60px",
-                          border: "3px solid #318CE7",
-                        }}
-                      >
-                        <img src="https://image.flaticon.com/icons/png/512/950/950145.png" />
+                    <div className={styles.info} data-aos="zoom-in-up">
+                      <div className={styles.qabul_talim}>
+                        <Image src="https://image.flaticon.com/icons/png/512/950/950145.png" />
                       </div>
                       <h3>O'quvchilar</h3>
-                      <p style={{ fontSize: "18px" }}>
+                      <p>
                         {this.state.school !== null
                           ? this.state.school.q_oquvchi !== null
                             ? this.state.school.q_oquvchi
@@ -331,7 +233,7 @@ class Qabul extends React.Component {
                   </Col>
                   <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
                     <div className={styles.jarayon_img}>
-                      <img src={jarayon} />
+                      <Image src={jarayon} />
                     </div>
                   </Col>
                   <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
@@ -390,7 +292,7 @@ class Qabul extends React.Component {
                     sm={12}
                     className={styles.tavsilot}
                   >
-                    <img
+                    <Image
                       src={
                         this.state.school !== null
                           ? this.state.school.q_imtihon_r !== null
@@ -402,13 +304,12 @@ class Qabul extends React.Component {
                     />
                   </Col>
                   <Col
-                    style={{ padding: "0" }}
+                    style={{ padding: "0", height: "570px" }}
                     lg={8}
                     md={12}
                     sm={12}
                     className={styles.tavsilottext}
                     data-aos="zoom-in-up"
-                    style={{ height: "570px" }}
                   >
                     <h3 style={{ fontSize: "30px" }}>
                       Imtihonda ishtirok etish talablari
