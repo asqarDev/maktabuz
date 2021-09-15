@@ -50,7 +50,7 @@ import { Clock } from "./Clock";
 
 export default class BoshSahifa extends Component {
   state = {
-    loader: true,
+    loader: false,
     news: [],
     id: 0,
     school: null,
@@ -130,7 +130,7 @@ export default class BoshSahifa extends Component {
                 <div className="gerbHead" style={{ width: "100%" }}>
                   <img src={gerb} alt="" />
                   <p>
-                    Samarqand viloyati Samarqand tumani 33 - iqtisoslashtirilgan
+                    Surxondaryo viloyati Samarqand tumani 25 - iqtisoslashtirilgan
                     davlat umumta'lim maktabi
                   </p>
 
@@ -141,7 +141,7 @@ export default class BoshSahifa extends Component {
               </div>
             </ContainerDashboard>
 
-            <div className="iconsHead">
+            {/* <div className="iconsHead">
               <div>
                 <Tooltip placement="left" title="ittower01@gmail.com">
                   {" "}
@@ -228,7 +228,7 @@ export default class BoshSahifa extends Component {
                   </a>{" "}
                 </Tooltip>
               </div>
-            </div>
+            </div> */}
             <div style={{ width: "100vw" }}>
               <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
                 <Container fluid>
@@ -281,35 +281,12 @@ export default class BoshSahifa extends Component {
             <div className="gth">
               <div className="carg" style={{ zIndex: "-345" }}>
                 <div className="carg_item">
-                  <Carousel
-                    autoplay
-                    effect="fade"
-                    style={{ zIndex: "-234" }}
-                    {...props}
-                  >
-                    <div className="carg_img">
-                      <img src={bg1t} />
-                    </div>
-                    <div className="carg_img">
-                      <img
-                        src={
-                          maktab
-                          //  this.state.school !== null
-                          //    ? this.state.school.b_r1 !== null
-                          //      ? this.state.school.b_r1
-                          //      : headerT
-                          //    : headerT
-                        }
-                      />
-                    </div>
-                    <div className="carg_img">
-                      <img src={bg2t} />
-                    </div>
-                  </Carousel>
+                 <img src={bg3t}/>
                 </div>{" "}
               </div>
               <div className="yozuvT">
-                <h4>XUSH KELIBSIZ</h4>
+               <div className="col-6"> 
+               <h4>XUSH KELIBSIZ</h4>
                 {/* <br /> */}
                 <h1>MAKTABIMIZGA</h1>
                 <br />
@@ -318,6 +295,7 @@ export default class BoshSahifa extends Component {
                     <Button>Maktab hayoti</Button>
                   </Link>
                 </div>
+               </div>
               </div>
             </div>
 
@@ -408,8 +386,8 @@ export default class BoshSahifa extends Component {
             </div>
 
             <div className={style.containerRow}>
-              <Row>
-                <Col xs={12} sm={12} md={4} lg={4} className={style.col}>
+              <Row className={style.videos}>
+                <Col xs={12} sm={12} md={10} lg={10} className={style.col}>
                   <h3>Maktabga video sayohat</h3>
                   {/* <img src={rasm1} className={style.img}/> */}
                   <YouTube
@@ -424,7 +402,7 @@ export default class BoshSahifa extends Component {
                     }
                     opts={{
                       width: "100%",
-                      height: "300px",
+                      height: "500px",
                       playerVars: {
                         // https://developers.google.com/youtube/player_parameters
                         autoplay: 0,
@@ -438,7 +416,7 @@ export default class BoshSahifa extends Component {
                   </p>
                 </Col>
 
-                <Col xs={12} sm={12} md={8} lg={8} className={style.col}>
+                <Col xs={12} sm={12} md={8} lg={12} className={style.col}>
                   <h3>Maktabdagi yangiliklari va o'zgarishlar</h3>
 
                   <Row>
@@ -488,13 +466,14 @@ export default class BoshSahifa extends Component {
                         })}
                       </Row>
                     </Col>
-                  </Row>
-
-                  <Link to={`/yangiliklar/`}>
+                 <div className={style.tugmacha}>
+                 <Link to={`/yangiliklar/`}>
                     <button className={style.buttoncha}>
                       <span>Barchasini o'qish</span>
                     </button>
                   </Link>
+                 </div>
+                  </Row>
                 </Col>
               </Row>
             </div>

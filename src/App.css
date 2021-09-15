@@ -204,8 +204,8 @@ html {
 
 .yuqori {
   z-index: 3434 !important;
-  background-image: url(./img/naqsh.jpg);
-  background-size: 100px 70px;
+  background-color: #1fa848 !important;
+  /* background-size: 100px 70px; */
   /* background-attachment: fixed; */
   position: fixed !important;
   top: 0px !important;
@@ -290,6 +290,10 @@ html {
   width: 100vw;
   height: 590px;
   position: fixed;
+  background-image: url('./img/school9.jpg');
+  background-size: cover;
+  background-position: center;
+  
   top: 50px;
 }
 .yozuvT {
@@ -322,7 +326,7 @@ html {
 .yozuvT button {
   border: none;
   z-index: 22;
-  background-color: rgb(7, 20, 116);
+  background-color: rgb(18, 136, 67);
   color: white;
   padding: 10px 20px;
   border-radius: 20px;
