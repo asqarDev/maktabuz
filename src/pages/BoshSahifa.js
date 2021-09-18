@@ -284,7 +284,7 @@ export default class BoshSahifa extends Component {
                  <img src={bg3t}/>
                 </div>{" "}
               </div>
-              <div className="yozuvT">
+              <div className="yozuvT row">
                <div className="col-6"> 
                <h4>XUSH KELIBSIZ</h4>
                 {/* <br /> */}
@@ -295,6 +295,9 @@ export default class BoshSahifa extends Component {
                     <Button>Maktab hayoti</Button>
                   </Link>
                 </div>
+               </div>
+               <div className='col-6'>
+                    <p>jkhagdfkjhsfk</p>
                </div>
               </div>
             </div>
