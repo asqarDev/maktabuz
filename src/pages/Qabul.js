@@ -55,15 +55,7 @@ class Qabul extends React.Component {
                         <h1>Qabul uchun ariza topshirishga hushkelibsiz!!!</h1>
                         <Image
                           src="https://as2.ftcdn.net/jpg/01/17/65/19/500_F_117651987_mJuEArLJWmdeGSmSqbntiI5i04RBvhXX.jpg"
-                          style={{
-                            boxShadow:
-                              "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
-                            width: "350px",
-                            height: "350px",
-                            borderRadius: "50%",
-                            marginLeft: "30%",
-                            marginTop: "10%",
-                          }}
+                          className={styles.header_image}
                         />
                       </div>
                     </Col>
@@ -260,7 +252,7 @@ class Qabul extends React.Component {
               </Container>
             </div>
 
-            <div className={styles.tavsilotlar} style={{ height: "580px" }}>
+            <div className={styles.tavsilotlar}>
               <Container fluid style={{ padding: "0" }}>
                 <Row>
                   <Col
@@ -282,16 +274,14 @@ class Qabul extends React.Component {
                     />
                   </Col>
                   <Col
-                    style={{ padding: "0", height: "570px" }}
+                    style={{ padding: "0" }}
                     lg={8}
                     md={12}
                     sm={12}
                     className={styles.tavsilottext}
                     data-aos="zoom-in-up"
                   >
-                    <h3 style={{ fontSize: "30px" }}>
-                      Imtihonda ishtirok etish talablari
-                    </h3>
+                    <h3>Imtihonda ishtirok etish talablari</h3>
                     <p>
                       {this.state.school !== null
                         ? this.state.school.q_imtihon_t !== null
@@ -320,53 +310,51 @@ class Qabul extends React.Component {
                   <h1>Ma'lumotlar</h1>
                   <div className={styles.line}></div>
                 </div>
-                <Row>
-                  <div className={styles.muddat_item}>
-                    <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                      <div className={styles.muddat_text1}>
-                        <div>
-                          <h3>O'quv yili</h3>
-                          <p>
-                            {this.state.school !== null
-                              ? this.state.school.q_oquv_yili !== null
-                                ? this.state.school.q_oquv_yili
-                                : "O'quv yili"
-                              : "O'quv yili"}
-                          </p>
-                        </div>
+                <Row className={styles.muddat_item}>
+                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
+                    <div className={styles.muddat_text1}>
+                      <div>
+                        <h3>O'quv yili</h3>
+                        <p>
+                          {this.state.school !== null
+                            ? this.state.school.q_oquv_yili !== null
+                              ? this.state.school.q_oquv_yili
+                              : "O'quv yili"
+                            : "O'quv yili"}
+                        </p>
                       </div>
-                    </Col>
-                    <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                      <div className={styles.muddat_text2}>
-                        <div>
-                          <h3>Hujjat topshirish muddati</h3>
-                          <p>
-                            {this.state.school !== null
-                              ? this.state.school.q_muddat !== null
-                                ? this.state.school.q_muddat
-                                : "Muddati haqida ma'lumot"
-                              : "Muddati haqida ma'lumot"}
-                            {/* 10-20-sentabr kunlari */}
-                          </p>
-                        </div>
+                    </div>
+                  </Col>
+                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
+                    <div className={styles.muddat_text2}>
+                      <div>
+                        <h3>Hujjat topshirish muddati</h3>
+                        <p>
+                          {this.state.school !== null
+                            ? this.state.school.q_muddat !== null
+                              ? this.state.school.q_muddat
+                              : "Muddati haqida ma'lumot"
+                            : "Muddati haqida ma'lumot"}
+                          {/* 10-20-sentabr kunlari */}
+                        </p>
                       </div>
-                    </Col>
-                    <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                      <div className={styles.muddat_text3}>
-                        <div>
-                          <h3>Imtihon kuni</h3>
-                          <p>
-                            {this.state.school !== null
-                              ? this.state.school.q_imtihon !== null
-                                ? this.state.school.q_imtihon
-                                : "Imtixon kuni"
-                              : "Imtixon kuni"}
-                            {/* 25-sentabrdan 9-oktabrgacha */}
-                          </p>
-                        </div>
+                    </div>
+                  </Col>
+                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
+                    <div className={styles.muddat_text3}>
+                      <div>
+                        <h3>Imtihon kuni</h3>
+                        <p>
+                          {this.state.school !== null
+                            ? this.state.school.q_imtihon !== null
+                              ? this.state.school.q_imtihon
+                              : "Imtixon kuni"
+                            : "Imtixon kuni"}
+                          {/* 25-sentabrdan 9-oktabrgacha */}
+                        </p>
                       </div>
-                    </Col>
-                  </div>
+                    </div>
+                  </Col>
                 </Row>
               </Container>
             </div>
