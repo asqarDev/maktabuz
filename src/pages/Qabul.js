@@ -2,10 +2,10 @@ import React from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import styles from "../css/qabul.module.css";
-import jarayon from "../img/jarayon.png";
 import tav_img from "../img/tav_img.jpg";
 import talab from "../img/talab.jpg";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import { Carousel } from "antd";
 import axios from "axios";
 import { url, user } from "../host/Host";
 import FadeLoader from "react-spinners/FadeLoader";
@@ -174,111 +174,89 @@ class Qabul extends React.Component {
 
             <div className={styles.jarayon}>
               <Container fluid style={{ padding: "0" }}>
-                <h1
-                  style={{
-                    textAlign: "center",
-                    fontFamily: "Lobster",
-                    fontSize: "50px",
-                  }}
-                >
-                  Qabul jarayoni
-                </h1>
+                <h1>Qabul jarayoni</h1>
                 <div
                   className={styles.line}
                   style={{ marginLeft: "auto", marginRight: "auto" }}
                 ></div>
-                <Row>
-                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div className={styles.jarayon_text}>
-                      <h3>1. Onlayn royxatdan o'ting</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_online !== null
-                            ? this.state.school.q_j_online
-                            : "O'nline ro'yxatdan o'tish haqida"
-                          : "O'nline ro'yxatdan o'tish haqida"}
+                <Carousel autoplay>
+                  <div className={styles.jarayon_text}>
+                    <h3>1. Onlayn royxatdan o'ting</h3>
+                    <p>
+                      {this.state.school !== null
+                        ? this.state.school.q_j_online !== null
+                          ? this.state.school.q_j_online
+                          : "O'nline ro'yxatdan o'tish haqida"
+                        : "O'nline ro'yxatdan o'tish haqida"}
 
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
+                      {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
+                    </p>
+                  </div>
 
-                    <div className={styles.jarayon_text}>
-                      <h3>2. Ariza yozing</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_forma !== null
-                            ? this.state.school.q_j_forma
-                            : "Ro'yxatdan o'tishdagi ariza haqida ma'lumot"
-                          : "Ro'yxatdan o'tishdagi ariza haqida ma'lumot"}
+                  <div className={styles.jarayon_text}>
+                    <h3>2. Ariza yozing</h3>
+                    <p>
+                      {this.state.school !== null
+                        ? this.state.school.q_j_forma !== null
+                          ? this.state.school.q_j_forma
+                          : "Ro'yxatdan o'tishdagi ariza haqida ma'lumot"
+                        : "Ro'yxatdan o'tishdagi ariza haqida ma'lumot"}
 
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
+                      {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
+                    </p>
+                  </div>
 
-                    <div className={styles.jarayon_text}>
-                      <h3>3. Arizani ko'zdan kechiring</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_koz !== null
-                            ? this.state.school.q_j_koz
-                            : "Arizani ko'zdan kechirish haqida ma'lumot"
-                          : "Arizani ko'zdan kechirish haqida ma'lumot"}
+                  <div className={styles.jarayon_text}>
+                    <h3>3. Arizani ko'zdan kechiring</h3>
+                    <p>
+                      {this.state.school !== null
+                        ? this.state.school.q_j_koz !== null
+                          ? this.state.school.q_j_koz
+                          : "Arizani ko'zdan kechirish haqida ma'lumot"
+                        : "Arizani ko'zdan kechirish haqida ma'lumot"}
 
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
-                  </Col>
-                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div className={styles.jarayon_img}>
-                      <Image src={jarayon} />
-                    </div>
-                  </Col>
-                  <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
-                    <div className={styles.jarayon_text}>
-                      <h3>4. Kerakli hujjatlarni to'plang</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_hujjat !== null
-                            ? this.state.school.q_j_hujjat
-                            : "Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot"
-                          : "Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot"}
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
+                      {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
+                    </p>
+                  </div>
 
-                    <div className={styles.jarayon_text}>
-                      <h3>5. Suhbat jarayoni</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_intervyu !== null
-                            ? this.state.school.q_j_intervyu
-                            : "Suhbat jarayoni haqida ma'lumot"
-                          : "Suhbat jarayoni haqida ma'lumot"}
+                  <div className={styles.jarayon_text}>
+                    <h3>4. Kerakli hujjatlarni to'plang</h3>
+                    <p>
+                      {this.state.school !== null
+                        ? this.state.school.q_j_hujjat !== null
+                          ? this.state.school.q_j_hujjat
+                          : "Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot"
+                        : "Ro'yxatdan o'tish uchun kerak bo'ladigan hujjatlar to'g'risida ma'lumot"}
+                      {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
+                    </p>
+                  </div>
 
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
+                  <div className={styles.jarayon_text}>
+                    <h3>5. Suhbat jarayoni</h3>
+                    <p>
+                      {this.state.school !== null
+                        ? this.state.school.q_j_intervyu !== null
+                          ? this.state.school.q_j_intervyu
+                          : "Suhbat jarayoni haqida ma'lumot"
+                        : "Suhbat jarayoni haqida ma'lumot"}
 
-                    <div className={styles.jarayon_text}>
-                      <h3>6. So'nggi qaror</h3>
-                      <div className={styles.line}></div>
-                      <p>
-                        {this.state.school !== null
-                          ? this.state.school.q_j_qaror !== null
-                            ? this.state.school.q_j_qaror
-                            : "So'ngi qaror haqida ma'lumot"
-                          : "So'ngi qaror haqida ma'lumot"}
+                      {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
+                    </p>
+                  </div>
 
-                        {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
-                      </p>
-                    </div>
-                  </Col>
-                </Row>
+                  <div className={styles.jarayon_text}>
+                    <h3>6. So'nggi qaror</h3>
+                    <p>
+                      {this.state.school !== null
+                        ? this.state.school.q_j_qaror !== null
+                          ? this.state.school.q_j_qaror
+                          : "So'ngi qaror haqida ma'lumot"
+                        : "So'ngi qaror haqida ma'lumot"}
+
+                      {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
+                    </p>
+                  </div>
+                </Carousel>
               </Container>
             </div>
 
