@@ -16,6 +16,7 @@ body {
 }
 .body_makatab * {
   color: #fff;
+  font-family: "Lobster", cursive;
 }
 .dark_maktab {
   background-color: rgba(0, 0, 0, 0.5);
@@ -80,6 +81,7 @@ body {
   z-index: 2 !important;
   text-align: justify;
   box-shadow: 0 0 100px #fff;
+  border-radius: 10px;
 }
 
 .tavsilottext h3 {
@@ -98,10 +100,6 @@ body {
 
 .talim {
   width: 100%;
-  background-image: url(../img/talim.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin-bottom: 5%;
   padding: 5%;
   text-align: justify;
@@ -133,8 +131,10 @@ body {
   height: 80%;
 }
 .info h3 {
-  font-family: "Lobster", cursive;
-  font-size: 80px;
+  padding: 2px;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0 0 5px #fff;
 }
 .info p {
   font-family: "Lobster", cursive;
@@ -155,17 +155,17 @@ body {
   padding-right: 10% !important;
   text-align: center;
 }
-.jarayon_text h3 {
-  font-size: 60px;
-  font-family: "Lobster", cursive;
+.jarayon_text h3,
+.jarayon h1 {
+  font-size: 50px;
+  text-shadow: 0 0 5px #fff;
 }
 .jarayon_text p {
   font-size: 50px;
-  font-family: "Lobster", cursive;
 }
 .line {
   width: 10%;
-  border-bottom: 3px solid #318ce7;
+  border-bottom: 3px solid #fff;
   margin: 0 auto;
 }
 
@@ -200,8 +200,8 @@ body {
 }
 
 .talabtext h3 {
-  font-family: "Lobster", cursive;
-  font-size: 35px;
+  font-size: 50px;
+  text-shadow: 0 0 5px #fff;
   color: black;
   margin-bottom: 3%;
 }
@@ -212,17 +212,16 @@ body {
 }
 
 .muddat {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  height: 500px;
-  padding: 3%;
-  padding-top: 100px;
-  margin-bottom: 5%;
-  background-image: url(../img/muddat1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  padding: 5%;
 }
-
+.muddat_header {
+  padding: 5px;
+  padding-bottom: 30px;
+}
+.muddat_header h1 {
+  font-size: 50px;
+  text-shadow: 0 0 5px #fff;
+}
 .muddat_item {
   display: flex;
   justify-content: center;
@@ -231,68 +230,59 @@ body {
 .muddat_text1,
 .muddat_text2,
 .muddat_text3 {
-  width: 400px;
-  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 100px;
+  padding: 20px;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: 0 0 20px #fff;
   background-color: #318ce7;
+  border-radius: 10px;
+  height: 300px;
 }
 
 .muddat_text1 h3,
 .muddat_text2 h3,
 .muddat_text3 h3 {
   font-family: "Lobster", cursive;
-  font-size: 25px;
+  font-size: 40px;
 }
 .muddat_text1 p,
 .muddat_text2 p,
 .muddat_text3 p {
-  font-size: 20px;
-}
-.muddat_text1:hover {
-  background-color: #fff;
-}
-.muddat_text2:hover {
-  background-color: #fff;
-}
-.muddat_text3:hover {
-  background-color: #fff;
+  font-size: 30px;
 }
 
 .hujjat {
-  width: 900px;
-  height: 600px;
+  height: 1000px;
   background-image: url(../img/hujjat.jfif);
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
-  margin-bottom: 5% !important;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .hujjat_text {
   position: absolute;
   left: 0;
+  top: 5%;
+  right: 50%;
+  bottom: 5%;
   margin: 20px;
-  width: 350px;
-  padding: 16px;
-  background-color: white;
+  padding: 100px;
+  background-color: #318ce7;
   text-align: justify;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .hujjat_text h3 {
   font-family: "Lobster", cursive;
-  font-size: 30px;
+  font-size: 60px;
 }
 .hujjat_text p {
-  font-size: 18px;
+  font-size: 30px;
 }
 
 /* media =============*/

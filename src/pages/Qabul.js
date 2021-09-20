@@ -316,19 +316,10 @@ class Qabul extends React.Component {
 
             <div className={styles.muddat} data-aos="fade-up">
               <Container fluid style={{ padding: "0" }}>
-                <h1
-                  style={{
-                    textAlign: "center",
-                    fontFamily: "Lobster",
-                    fontSize: "40px",
-                  }}
-                >
-                  Ma'lumotlar
-                </h1>
-                <div
-                  className={styles.line}
-                  style={{ marginLeft: "auto", marginRight: "auto" }}
-                ></div>
+                <div className={styles.muddat_header}>
+                  <h1>Ma'lumotlar</h1>
+                  <div className={styles.line}></div>
+                </div>
                 <Row>
                   <div className={styles.muddat_item}>
                     <Col style={{ padding: "0" }} lg={4} md={12} sm={12}>
@@ -341,7 +332,6 @@ class Qabul extends React.Component {
                                 ? this.state.school.q_oquv_yili
                                 : "O'quv yili"
                               : "O'quv yili"}
-                            {/* 2020/2021 */}
                           </p>
                         </div>
                       </div>
@@ -385,8 +375,7 @@ class Qabul extends React.Component {
               <div className={styles.hujjat}>
                 <div className={styles.hujjat_text} data-aos="fade-right">
                   <h3>Kerakli hujjatlar</h3>
-                  <div className={styles.line}></div>
-                  <p style={{ padding: "10px" }}>
+                  <p>
                     <b>1.</b>
                     {this.state.school !== null
                       ? this.state.school.q_hujjat_t1 !== null
@@ -395,7 +384,7 @@ class Qabul extends React.Component {
                       : "Kerakli hujjatlar to'g'risida ma'lumot"}
                     {/* O‘quvchining tug‘ilganligi haqida guvohnoma (pdf-10Mb oshmagan holatda). */}
                   </p>
-                  <p style={{ padding: "10px" }}>
+                  <p>
                     <b>2.</b>
                     {this.state.school !== null
                       ? this.state.school.q_hujjat_t2 !== null
@@ -404,7 +393,7 @@ class Qabul extends React.Component {
                       : "Kerakli hujjatlar to'g'risida ma'lumot"}
                     {/* 2019-2020 o‘quv yilini “4”va “5” baholarga bitirganligini tasdiqlovchi o‘quvchining tabeli. Maktab direktori tomonidan tasdiqlangan bo‘lishi kerak (pdf-10Mb oshmagan holatda). */}
                   </p>
-                  <p style={{ padding: "10px" }}>
+                  <p>
                     <b>3.</b>
                     {this.state.school !== null
                       ? this.state.school.q_hujjat_t3 !== null
@@ -413,7 +402,7 @@ class Qabul extends React.Component {
                       : "Kerakli hujjatlar to'g'risida ma'lumot"}
                     {/* 3/4 Rasm (jpg/png/jpeg-formatida). */}
                   </p>
-                  <p style={{ color: "darkgray", marginTop: "30px" }}>
+                  <p>
                     {this.state.school !== null
                       ? this.state.school.address !== null
                         ? this.state.school.address
