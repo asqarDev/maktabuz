@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styles from "../css/maktabmamuriyati.module.css";
-import { Carousel as Car } from "antd";
+//import { Carousel as Car } from "antd";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { FaQuoteRight } from "react-icons/fa";
+//import { FaQuoteRight } from "react-icons/fa";
 import axios from "axios";
 import { url } from "../host/Host";
 import Global from "../host/Global";
