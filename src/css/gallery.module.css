@@ -8,6 +8,7 @@
 .mat{
     width: 100%;
 }
+
 @media(min-width:648px){
 .header{
   position: relative;

@@ -102,7 +102,7 @@ export default class BoshSahifa extends Component {
                 <div className="gerbHead" style={{ width: "100%" }}>
                   <Image src={gerb} alt="" />
                   <p>
-                    Surxondaryo viloyati Samarqand tumani 25 -
+                    Surxondaryo viloyati Bandixon tumani 25 -
                     iqtisoslashtirilgan davlat umumta'lim maktabi
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default class BoshSahifa extends Component {
             <div className="gth">
               <div className="carg" style={{ zIndex: "-345" }}>
                 <div className="carg_item">
-                  <Image src={bg3t} />
+                  {/* <Image src={bg3t} /> */}
                 </div>{" "}
               </div>
               <div className="yozuvT row">
@@ -170,7 +170,9 @@ export default class BoshSahifa extends Component {
                     </Link>
                   </div>
                 </div>
-                <div className="col-6"></div>
+                <div className="col-6">
+                  Assalomu aleykum
+                </div>
               </div>
             </div>
             <div className={style.container}>
