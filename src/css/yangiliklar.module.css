@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+.cardsimg{
+    width: 100%;
+    height: 500px;
+}
+.images{
+    width: 100%;
+    height: 500px;
+}
 .carusel1{
     background-image: url(../img/yangilik2.jpg);
     background-size: cover;
@@ -72,7 +80,21 @@ object-fit: cover;
     position: relative;
     background-color: #FFF;
 }
+.news2{
+    width: 100%;
+    height: auto;
+}
+.news2:hover img{
+    transform: scale(1.02);
+}
+.news2 img{
+    transition: linear 0.4s;
+    width: 100%;
+    height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .news img{
+    transition: linear 0.4s;
     width: 100%;
     height: 500px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -108,6 +130,7 @@ color: gray !important;}
 .title{
     width: 100%;
     height: 50px;
+    text-align: center;
     margin-bottom: 20px;
     border-bottom: red solid 1px;
 }

@@ -10,7 +10,7 @@ import new4 from '../img/new4.jpg'
 import styles from '../css/yangiliklar.module.css'
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Aos from 'aos';
@@ -19,6 +19,8 @@ import { Link } from 'react-router-dom'
 import { getNews } from '../host/Config'
 import FadeLoader from "react-spinners/FadeLoader";
 import { Carousel } from 'antd'
+import styled from 'styled-components'
+import sports from '../img/sport1.jpg'
 
 // import {DownCircleOutlined} from '@ant-design/icons'
 
@@ -138,18 +140,31 @@ export default class Yangiliklar extends Component {
                                  this.state.news.length!==0?
                                  <div className={styles.news} data-aos="zoom-in-right">
                                  
-                                 <img src= {this.state.news[this.state.id].image} alt='Foto lavha' />
+                                <div className={styles.news2}>
+                                <img src= {this.state.news[this.state.id].image} alt='Foto lavha' />
                                  <h3>{this.state.news[this.state.id].title}</h3>
                                  
                                  <p className={styles.date}><i style={{marginRight:'10px'}} class="far fa-calendar-alt"></i>{this.state.news[this.state.id].published_time.substring(0, 10)}</p> 
                                  <p>
                                  {this.state.news[this.state.id].text}
-                                 </p></div>:''
+                                 </p>
+                                </div>
+                                </div>:''
                                }
                                
                             
                         </Col>
-                        <Col lg={5}>
+                        <Col lg={5} data-aos="zoom-in-left">
+                                <Card className={styles.cardsimg}>
+                                  <div className={styles.news2}>
+                                  <img src={sports} className={styles.images}/>
+
+                                  </div>
+                                </Card>
+                               
+                        </Col>
+
+                        <Col lg={12}>
                             <div className={styles.recent_news} data-aos="zoom-in-left">
                               <div className={styles.title}>
                               <h3>So'ngi yangiliklar</h3>
@@ -159,7 +174,7 @@ export default class Yangiliklar extends Component {
                                    {
                                      this.state.news.map((item, key)=>{
                                        return(
-                                     <Col lg={12} md={12} sm={12} style={{marginBottom:'10px'}} className={styles.body_card} >
+                                     <Col lg={6} md={12} sm={12} style={{marginBottom:'10px'}} className={styles.body_card} >
                                      <MDBCard onClick={()=>{this.setState({id:key})}} style={{ maxWidth: '540px' }}>
                                       <MDBRow className='g-0'>
                                       <MDBCol md='4'>
