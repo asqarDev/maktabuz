@@ -310,6 +310,10 @@ html {
 }
 .yozuvT h4 {
   /* font-size: 18px; */
+  
+}
+.mytyped{
+  font-size: 26px;
   letter-spacing: 4px;
   text-align: center;
   color: black;
@@ -317,6 +321,7 @@ html {
   display: block;
 }
 .yozuvT h1 {
+
   /* font-size: 65px; */
   letter-spacing: 6px;
   text-align: center;

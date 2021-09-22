@@ -26,7 +26,7 @@ import axios from "axios";
 import YouTube from "react-youtube";
 import Global from "../host/Global";
 import { Clock } from "./Clock";
-
+import Typed from 'react-typed';
 export default class BoshSahifa extends Component {
   state = {
     loader: false,
@@ -161,8 +161,18 @@ export default class BoshSahifa extends Component {
               </div>
               <div className="yozuvT row">
                 <div className="col-6">
-                  <h4>XUSH KELIBSIZ</h4>
-                  <h1>MAKTABIMIZGA</h1>
+                <div>
+                <Typed
+                className="typed-title text-center mytyped"
+                strings={['BIZNING MAKTABIMIZGA XUSH KELIBSIZ']}
+                typeSpeed={90}
+                backSpeed={50}
+                // loop
+                
+              />{" "}
+                </div>
+                  <h4></h4>
+                  <h1></h1>
                   <br />
                   <div className="yozuvBtn">
                     <Link to="/hayot/">
