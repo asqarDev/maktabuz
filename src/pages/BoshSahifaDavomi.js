@@ -2,19 +2,12 @@ import React, { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import style from "./BoshSahifaDavomi.module.css";
 import { ButtonWrapper } from "./StyleBoshSahifa";
-import school1 from "../img/school1.jpg";
 import ustoz1 from "../img/ustoz1.jpg";
 import ustoz2 from "../img/ustoz2.jpg";
 import school2 from "../img/school2.jpg";
-import school3 from "../img/school3.jpg";
-import school4 from "../img/school4.jpg";
-import school5 from "../img/school5.jpg";
 import axios from "axios";
 import Aos from "aos";
-import styles from "../css/alochilar.module.css";
-
-import { getExcellent, getPupil } from "../host/Config";
-
+import { getPupil } from "../host/Config";
 import { url, user } from "../host/Host";
 import Global from "../host/Global";
 
@@ -31,7 +24,6 @@ export default class BoshSahifaDavomi extends Component {
   };
 
   getExcellents = () => {
-    // var a = window.location.href.split("/");
     var v = user;
     axios
       .get(`${url}/excellent/`)
@@ -49,7 +41,6 @@ export default class BoshSahifaDavomi extends Component {
     axios
       .get(`${url}/class-by-school/${Global.schoolId}/`)
       .then((res) => {
-        console.log(res.data);
         this.setState({
           class: res.data,
           loader: false,
@@ -74,24 +65,19 @@ export default class BoshSahifaDavomi extends Component {
   setPupils = (id) => {
     var pupil = {};
     if (this.state.pupils !== []) {
-      this.state.pupils.map((item1) => {
-        if (item1.id === id) {
-          pupil = item1;
-        }
-      });
+      this.state.pupils.map((item1) =>
+        item1.id === id ? (pupil = item1) : ""
+      );
     }
     return pupil;
   };
 
   echoClasses = (id) => {
     var classes = {};
-    console.log(id, this.state.class);
     if (this.state.class !== []) {
-      this.state.class.map((item1) => {
-        if (item1.id === id) {
-          classes = item1;
-        }
-      });
+      this.state.class.map((item1) =>
+        item1.id === id ? (classes = item1) : ""
+      );
     }
     return classes;
   };
@@ -145,16 +131,11 @@ export default class BoshSahifaDavomi extends Component {
                 <h1 className={style.sarlavha} style={{ fontSize: "28px" }}>
                   A'lochilar doskasi
                 </h1>
-
                 <Container className={style.back}>
-                  {/* <div className={style.line}></div> */}
-                  <br />
-
                   <Row>
                     {this.state.excellent !== [] && this.state.class !== []
                       ? this.state.excellent.map((item) => {
                           var pupil = this.setPupils(item.pupil);
-                          var classes = this.echoClasses(pupil.clas);
                           return (
                             <Col lg={6} md={6} sm={12}>
                               <div
@@ -194,31 +175,6 @@ export default class BoshSahifaDavomi extends Component {
                                 </p>
                               </div>
                             </Col>
-                            // (<div style={{padding:'10px'}}>
-                            // <div className={style.card}>
-                            // <div className={style.qizil}>Bizning faxrimiz</div>
-                            //     <Row>
-                            //                       <Col lg={5}>
-                            //                         <img src={pupil.image !== null ? pupil.image : school2} alt="" />
-                            //                       </Col>
-                            //                       <Col lg={7}>
-                            //                         <p style={{fontSize:'20px', marginTop: '20px', fontWeight:'bold', color:'black'}}>
-                            //                          {pupil.full_name}
-                            //                         </p>
-
-                            //                         <p style={{fontSize:'18px', color:'black'}}>
-
-                            //                           {this.echoClasses(pupil.clas).class_number} - "{this.echoClasses(pupil.clas).class_char}" sinf
-                            //                         </p>
-
-                            //                         {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
-                            //                       </Col>
-                            //                       </Row>
-                            //                       {/* <p style={{fontSize:'18px', color:'black'}}>Ko'plab ko'rik tanlovlarda erishgan yuqori natijalari bilan maktabimiz nomini yuqori darajaga yetkazgan. Fanlar bo'yicha o'zlashtirishi, odob axloqi va maktabimizda o'tkaziladigan tadbirlarda faol ishtiroki bilan maktabimiz o'quvchilaridan ajralib turadi.
-                            //                           Maktabimizning barcha o'qituvchilari bu o'quvchimizning o'zlashtirish darajasidan mamnun. Biz bunday yoshlarimiz bilan faxrlanamiz !!!
-                            //                       </p> */}
-                            //                     </div>
-                            //                     </div>)
                           );
                         })
                       : ""}
@@ -234,7 +190,6 @@ export default class BoshSahifaDavomi extends Component {
                   O'qituvchilar doskasi
                 </h1>
                 <Container className={style.back}>
-                  {/* <div className={style.line}></div> */}
                   <br />
                   <Row>
                     <Col lg={12} md={12} sm={12}>

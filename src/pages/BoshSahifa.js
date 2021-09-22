@@ -1,49 +1,28 @@
 import {
   faDoorOpen,
-  faEnvelope,
   faNewspaper,
-  faPhone,
   faSchool,
-  faSearch,
-  faSignInAlt,
-  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import { Image } from "react-bootstrap";
 import React, { Component } from "react";
-import { ContainerDashboard, XushKelibsiz } from "./StyleBoshSahifa";
+import { ContainerDashboard } from "./StyleBoshSahifa";
 import style from "./BoshSahifa.module.css";
 import { Button, Container, Nav, Navbar, Row, Col } from "react-bootstrap";
-import { NavbarContainer } from "./StyleBoshSahifa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import rasm1 from "../img/vasily-koloda-8CqDvPuo_kI-unsplash.jpg";
 import rasm2 from "../img/mira-kireeva-xTq26wLo5do-unsplash.jpg";
 import rasm3 from "../img/javier-trueba-iQPr1XkF5F0-unsplash.jpg";
-import sty from "./sty.module.css";
 import gerb from "../img/pngegg.png";
-import rasm41 from "../img/1.jpg";
-import rasm42 from "../img/2.jpg";
-import rasm43 from "../img/3.jpg";
-import rasm44 from "../img/4.jpg";
-import rasm45 from "../img/5.jpg";
-import rasm46 from "../img/6.jpg";
-import flagUZ from "../img/flagUZ.png";
-import flagRU from "../img/flagRU.png";
-import bg1t from "../img/bg1t.jpg";
-import bg2t from "../img/bg2t.jpg";
 import bg3t from "../img/bg3t.jpg";
 import "../App.css";
-import { Tooltip, Carousel } from "antd";
 import { Link, NavLink } from "react-router-dom";
 import BoshSahifaDavomi from "./BoshSahifaDavomi";
 import MaktabTadbirlari from "./MaktabTadbirlari";
 import Footer from "./Footer";
-import NavBar from "./Navbar";
-import maktab from "../img/1 g.jpg";
 import FadeLoader from "react-spinners/FadeLoader";
 import { getNews } from "../host/Config";
 import { url, user } from "../host/Host";
 import axios from "axios";
-// import Clock from 'react-live-clock';
-import headerT from "../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg";
 import YouTube from "react-youtube";
 import Global from "../host/Global";
 import { Clock } from "./Clock";
@@ -106,13 +85,6 @@ export default class BoshSahifa extends Component {
     }, 1000);
   }
   render() {
-    const props = {
-      dots: false,
-      infinite: true,
-      speed: 4000,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    };
     return (
       <div>
         {this.state.loader ? (
@@ -128,111 +100,19 @@ export default class BoshSahifa extends Component {
                 style={{ backgroundColor: "transparent", width: "100vw" }}
               >
                 <div className="gerbHead" style={{ width: "100%" }}>
-                  <img src={gerb} alt="" />
+                  <Image src={gerb} alt="" />
                   <p>
-                    Surxondaryo viloyati Samarqand tumani 25 - iqtisoslashtirilgan
-                    davlat umumta'lim maktabi
+                    Surxondaryo viloyati Samarqand tumani 25 -
+                    iqtisoslashtirilgan davlat umumta'lim maktabi
                   </p>
-
-                  {/* <Link to='/register'><FontAwesomeIcon icon={faSignInAlt} className={style.registericon} /></Link> */}
-                  {/* <Link to='/login'  className={style.usericon}><FontAwesomeIcon icon={faUserCircle} /><span style={{fontSize:"20px"}}> Kirish</span></Link> */}
                 </div>
                 <div id="vaqt">{this.state.clock}</div>
               </div>
             </ContainerDashboard>
 
-            {/* <div className="iconsHead">
-              <div>
-                <Tooltip placement="left" title="ittower01@gmail.com">
-                  {" "}
-                  <a
-                    target="_blank"
-                    style={{ borderRadius: "10px 0px 0px 0px" }}
-                    className="ahref"
-                    href={`mailto: ${
-                      this.state.school !== null
-                        ? this.state.school.email
-                        : "ittower01@gmail.com"
-                    }`}
-                  >
-                    <FontAwesomeIcon
-                      icon={faEnvelope}
-                      style={{ fontSize: "25px" }}
-                    />
-                  </a>
-                </Tooltip>
-              </div>
-              <div>
-                <a
-                  target="_blank"
-                  style={{ borderTop: " 1px solid blue" }}
-                  className="ahref"
-                  href="https://t.me/samarqand_33_maktab"
-                >
-                  <i className="fab fa-telegram"></i>
-                </a>
-              </div>
-              <div>
-                <a
-                  target="_blank"
-                  style={{ borderTop: " 1px solid blue" }}
-                  className="ahref"
-                  href="https://www.instagram.com/33_maktab_official/"
-                >
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </div>
-              <div>
-                <a
-                  target="_blank"
-                  style={{ borderTop: " 1px solid blue" }}
-                  className="ahref"
-                  href="https://www.facebook.com/people/Samarqand-Tuman-Idum/100072115398865/"
-                >
-                  <i className="fab fa-facebook"></i>
-                </a>
-              </div>
-              <div>
-                <a
-                  target="_blank"
-                  style={{ borderTop: " 1px solid blue" }}
-                  className="ahref"
-                  href="https://www.youtube.com/channel/UC4vQC9mOo5B6_imRFUA62Xg"
-                >
-                  <i className="fab fa-youtube"></i>
-                </a>
-              </div>
-              <div>
-                <Tooltip placement="left" title="+998 93 082 03 72">
-                  {" "}
-                  <a
-                    target="_blank"
-                    className="ahref"
-                    style={{
-                      borderTop: " 1px solid blue",
-                      borderRadius: "0px 0px 0px 10px",
-                    }}
-                    href={`tel: ${
-                      this.state.school !== null
-                        ? this.state.school.phone
-                        : "+998 93 082 03 72"
-                    }`}
-                  >
-                    <FontAwesomeIcon
-                      icon={faPhone}
-                      style={{
-                        fontSize: "25px",
-                        borderRadius: "0px 0px 0px 10px",
-                      }}
-                    />
-                  </a>{" "}
-                </Tooltip>
-              </div>
-            </div> */}
             <div style={{ width: "100vw" }}>
               <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
                 <Container fluid>
-                  {/* <Navbar.Brand><span className={style.maktabLogo} style={{ cursor:'pointer',fontSize:'25px', postion:"relative", left:'-10px'}}><Link to={`/${this.state.id}`} style={{color:'gold',fontWeight:'bold', letterSpacing:'5px' }} >{this.state.school!==null?this.state.school.school_number+' - maktab':"Maktab raqami"}</Link></span></Navbar.Brand> */}
                   <Navbar.Toggle
                     style={{ backgroundColor: "darkblue", outline: "none" }}
                   >
@@ -267,11 +147,6 @@ export default class BoshSahifa extends Component {
                       <NavLink to={`/alochilar/`}>
                         <span className={style.navLink}>Maktab alochilari</span>
                       </NavLink>
-                      {/* <div className={style.bayroqlar}>
-                               <Link to=''><img style={{marginLeft:'15px'}} src={flagUZ} /></Link>
-                              <Link to='/ru'><img src={flagRU} /></Link>
-                          </div> */}
-                      {/* <Link  to='/login' className={style.kirish}><FontAwesomeIcon style={{display:'inline-block'}} icon={faUserCircle} className={style.userIcon} />  Kirish</Link> */}
                     </Nav>
                   </Navbar.Collapse>
                 </Container>
@@ -281,32 +156,27 @@ export default class BoshSahifa extends Component {
             <div className="gth">
               <div className="carg" style={{ zIndex: "-345" }}>
                 <div className="carg_item">
-                 <img src={bg3t}/>
+                  <Image src={bg3t} />
                 </div>{" "}
               </div>
               <div className="yozuvT row">
-               <div className="col-6"> 
-               <h4>XUSH KELIBSIZ</h4>
-                {/* <br /> */}
-                <h1>MAKTABIMIZGA</h1>
-                <br />
-                <div className="yozuvBtn">
-                  <Link to="/hayot/">
-                    <Button>Maktab hayoti</Button>
-                  </Link>
+                <div className="col-6">
+                  <h4>XUSH KELIBSIZ</h4>
+                  <h1>MAKTABIMIZGA</h1>
+                  <br />
+                  <div className="yozuvBtn">
+                    <Link to="/hayot/">
+                      <Button>Maktab hayoti</Button>
+                    </Link>
+                  </div>
                 </div>
-               </div>
-               <div className='col-6'>
-                    <p>jkhagdfkjhsfk</p>
-               </div>
+                <div className="col-6"></div>
               </div>
             </div>
-
-            {/* <div className="oq"></div> */}
             <div className={style.container}>
               <div className={style.bir}>
                 <div className={style.containercha}>
-                  <img
+                  <Image
                     src={
                       this.state.school !== null
                         ? this.state.school.b_c2 !== null
@@ -334,7 +204,7 @@ export default class BoshSahifa extends Component {
 
               <div className={style.ikki}>
                 <div className={style.containercha}>
-                  <img
+                  <Image
                     src={
                       this.state.school !== null
                         ? this.state.school.b_c1 !== null
@@ -345,10 +215,6 @@ export default class BoshSahifa extends Component {
                     className={style.image}
                   />
                   <div className={style.overlay}>
-                    {/* <Link
-                      style={{ color: "white" }}
-                      to={`/yutuqlar/${Global.user}`}
-                    > */}
                     <FontAwesomeIcon icon={faSchool} className={style.icon} />
                     <h3>Yutuqlarimiz</h3>
                     <p>
@@ -361,7 +227,7 @@ export default class BoshSahifa extends Component {
               </div>
               <div className={style.uch}>
                 <div className={style.containercha}>
-                  <img
+                  <Image
                     src={
                       this.state.school !== null
                         ? this.state.school.b_c3 !== null
@@ -392,7 +258,7 @@ export default class BoshSahifa extends Component {
               <Row className={style.videos}>
                 <Col xs={12} sm={12} md={10} lg={10} className={style.col}>
                   <h3>Maktabga video sayohat</h3>
-                  {/* <img src={rasm1} className={style.img}/> */}
+                  {/* <Image src={rasm1} className={style.img}/> */}
                   <YouTube
                     videoId={
                       this.state.school !== null
@@ -436,7 +302,7 @@ export default class BoshSahifa extends Component {
                                   lg={3}
                                   className={style.colNews}
                                 >
-                                  <img
+                                  <Image
                                     src={item.image}
                                     className={style.rasm}
                                   />
@@ -469,13 +335,13 @@ export default class BoshSahifa extends Component {
                         })}
                       </Row>
                     </Col>
-                 <div className={style.tugmacha}>
-                 <Link to={`/yangiliklar/`}>
-                    <button className={style.buttoncha}>
-                      <span>Barchasini o'qish</span>
-                    </button>
-                  </Link>
-                 </div>
+                    <div className={style.tugmacha}>
+                      <Link to={`/yangiliklar/`}>
+                        <button className={style.buttoncha}>
+                          <span>Barchasini o'qish</span>
+                        </button>
+                      </Link>
+                    </div>
                   </Row>
                 </Col>
               </Row>

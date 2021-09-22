@@ -21,7 +21,7 @@ body {
 .sliderHeader {
   position: relative;
   width: 100%;
-  top:-20px;
+  top: -20px;
 }
 .headerSliderText {
   position: absolute;
@@ -168,35 +168,6 @@ body {
 .PannellumReactContainer {
   position: relative;
 }
-/* .PannellumReactContainer::before {
-  content: "Kampus tajribasi";
-  position: absolute;
-  top: 36%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: max-content;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 10;
-  font-size: 40px;
-  text-align: center;
-  font-family: "Lobster", cursive;
-}
-.PannellumReactContainer::after {
-  content: "Kingster universiteti 1920 yilda Jon Smit tomonidan jamoat foydasi uchun tashkil etilgan va u dunyo miqyosida tan olingan. Bizning buyuk tariximiz davomida Kingster keng ilmiy imkoniyatlardan foydalanishni taklif qildi. Dunyo oliy ta'lim sohasida etakchi o'rinni egallab, ushbu sohada o'zgarishlarni boshlab berdi.";
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 900px;
-  height: max-content;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 10;
-  font-size: 25px;
-  text-align: center;
-} */
 .cardBolimlar {
   margin-top: 80px !important;
   padding-right: 2% !important;
@@ -275,7 +246,7 @@ body {
 }
 
 @media screen and (max-width: 566px) {
-  .headerImage{
+  .headerImage {
     width: 100%;
     height: 300px;
     position: relative !important;
@@ -293,10 +264,10 @@ body {
   .headerIcons {
     display: none;
   }
-  .secondHeading{
+  .secondHeading {
     font-size: 23px !important;
   }
-  .secondText{
+  .secondText {
     font-size: 18px !important;
   }
   .iconPath {
@@ -327,7 +298,7 @@ body {
   }
 }
 @media screen and (min-width: 567px) {
-  .headerImage{
+  .headerImage {
     width: 100%;
     height: 400px;
     position: relative !important;
@@ -342,10 +313,10 @@ body {
     margin-left: 0px !important;
     font-size: 50px !important;
   }
-  .panoraName{
+  .panoraName {
     font-size: 30px !important;
   }
-  .panoraText{
+  .panoraText {
     font-size: 23px !important;
   }
   .headerIcons {
@@ -384,7 +355,7 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
-  .headerImage{
+  .headerImage {
     width: 100%;
     height: 100vh;
   }
@@ -708,8 +679,8 @@ body {
     height: 100%;
   }
 }
-@media (max-width:700px){
-  .headerSliderText h3{
+@media (max-width: 700px) {
+  .headerSliderText h3 {
     /* position:relative !important;
     top:-20px !important; */
     font-size: 24px !important;

@@ -29,7 +29,6 @@ export default class App extends Component {
   };
   componentDidMount() {
     window.scrollTo(0, 0);
-    // var a = window.location.href.split("/");
     var v = user;
 
     axios
@@ -40,10 +39,8 @@ export default class App extends Component {
         this.setState({
           loader: false,
         });
-        // console.log(Global.user, Global.schoolId);
       })
       .catch((err) => {
-        // console.log("scmkscmskcm");
         this.setState({ error: true, loader: false });
       });
   }
@@ -60,23 +57,15 @@ export default class App extends Component {
         ) : (
           <BrowserRouter>
             <Switch>
-              {/* <Route exact path="/register/">
-              <Register />
-            </Route> */}
               <Route path="/login">
                 <Login />
               </Route>
-              {/* <Route path="/cabinet/parents/">
-              <ParentCabinet />
-            </Route> */}
               <Route path="/cabinet/teacher/bolim/">
                 <TeacherCabinet />
               </Route>
-
               <Route path="/cabinet/teacher/rahbar/">
                 <Main />
               </Route>
-
               <Route exact path="/qabul/">
                 <NavBar />
                 <Qabul />
