@@ -92,6 +92,7 @@ export default class BoshSahifaDavomi extends Component {
     console.log(123);
   }
 
+
   render() {
     return (
       <div>
@@ -122,9 +123,9 @@ export default class BoshSahifaDavomi extends Component {
             </Row>
           </Container>
         </div>
-        <Container fluid style={{ backgroundColor: "white" }}>
+        <Container fluid style={{ backgroundColor: "white"} }>
           <Row>
-            <Col lg={6} md={12} sm={12}>
+            <Col lg={12} md={12} sm={12}>
               <div className={style.tana}>
                 <br />
                 <br />
@@ -182,7 +183,7 @@ export default class BoshSahifaDavomi extends Component {
                 </Container>
               </div>
             </Col>
-            <Col lg={6} md={12} sm={12}>
+            <Col lg={12} md={12} sm={12}>
               <div className={style.tana}>
                 <br />
                 <br />

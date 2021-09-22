@@ -288,9 +288,9 @@ export default class BoshSahifa extends Component {
                 <Col xs={12} sm={12} md={8} lg={12} className={style.col}>
                   <h3>Maktabdagi yangiliklari va o'zgarishlar</h3>
 
-                  <Row>
+                  <Row className='mb-4'>
                     <Col xs={12} sm={12} md={12} lg={12}>
-                      <Row>
+                      <Row >
                         {this.state.news.map((item, key) => {
                           return key < 6 ? (
                             <Col lg={6}>

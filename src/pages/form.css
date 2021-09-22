@@ -107,7 +107,7 @@ background-size: 100%;
   display: flex;
   align-items: center;
   text-align: center;
-  background-image:url('../img/formnaqsh.jpg');
+  /* background-image:url('../img/formnaqsh.jpg'); */
   background-attachment: fixed;
   
   justify-content: center;
