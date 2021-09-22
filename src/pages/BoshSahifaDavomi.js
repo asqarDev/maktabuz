@@ -138,7 +138,7 @@ export default class BoshSahifaDavomi extends Component {
                       ? this.state.excellent.map((item) => {
                           var pupil = this.setPupils(item.pupil);
                           return (
-                            <Col lg={6} md={6} sm={12}>
+                            <Col lg={6} md={6} sm={12} data-aos="zoom-in-up">
                               <div
                                 className={style.card}
                                 style={{ marginTop: "10px" }}
@@ -193,7 +193,7 @@ export default class BoshSahifaDavomi extends Component {
                 <Container className={style.back}>
                   <br />
                   <Row>
-                    <Col lg={12} md={12} sm={12}>
+                    <Col lg={12} md={12} sm={12} data-aos="zoom-out">
                       <div style={{ padding: "10px" }}>
                         <div className={style.card}>
                           <div className={style.bayroq}></div>
@@ -234,7 +234,7 @@ export default class BoshSahifaDavomi extends Component {
                         </div>
                       </div>
                     </Col>
-                    <Col lg={12} md={12} sm={12}>
+                    <Col lg={12} md={12} sm={12} data-aos="zoom-out">
                       <div style={{ padding: "10px" }}>
                         <div className={style.card}>
                           <div className={style.bayroq}></div>
