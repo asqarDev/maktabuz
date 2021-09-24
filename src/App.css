@@ -294,9 +294,10 @@ html {
   /* background-image: url('./img/school9.jpg'); */
   background-size: cover;
   background-position: center;
-  top: 50px;
+  top: 50px
 }
-.yozuvT {
+
+ .yozuvT {
   position: absolute;
   top: 50px;
   left: 0px;
@@ -306,11 +307,11 @@ html {
   padding-top: 180px;
   z-index: 0;
   height: 590px;
-  /* background-color: rgba(0, 0, 0, 0.302); */
-}
+  /* background-color: rgba(0, 0, 0, 0.302);  */
+} 
+
 .yozuvT h4 {
   /* font-size: 18px; */
-  
 }
 .mytyped{
   font-size: 26px;

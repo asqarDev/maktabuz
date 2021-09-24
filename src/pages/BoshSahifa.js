@@ -161,19 +161,17 @@ export default class BoshSahifa extends Component {
               </div>
               <div className="yozuvT row">
                 <div className="col-6">
+
                 <div>
                 <Typed
                 className="typed-title text-center mytyped"
                 strings={['BIZNING MAKTABIMIZGA XUSH KELIBSIZ']}
                 typeSpeed={90}
                 backSpeed={50}
-                // loop
+                loop
                 
               />{" "}
                 </div>
-                  <h4></h4>
-                  <h1></h1>
-                  <br />
                   <div className="yozuvBtn">
                     <Link to="/hayot/">
                       <Button>Maktab hayoti</Button>
@@ -181,10 +179,38 @@ export default class BoshSahifa extends Component {
                   </div>
                 </div>
                 <div className="col-6">
-                  Assalomu aleykum
+                <div className='w-100 h-100vh'>
+                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+  <div className="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src="/src/img/5.jpg" className="d-block w-100" alt="images"/>
+    </div>
+    <div className="carousel-item">
+      <img src="/src/img/3.jpg" className="d-block w-100" alt="images"/>
+    </div>
+    <div className="carousel-item">
+      <img src="/src/img/axborot3.png" className="d-block w-100" alt="images"/>
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+                </div>
                 </div>
               </div>
             </div>
+           
             <div className={style.container}>
               <div className={style.bir}>
                 <div className={style.containercha}>
