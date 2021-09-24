@@ -210,9 +210,10 @@ class Qabul extends React.Component {
                       {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                     </p>
                   </div>
-
+                  
                   <div className={styles.jarayon_text}>
                     <h3>4. Kerakli hujjatlarni to'plang</h3>
+
                     <p>
                       {this.state.school !== null
                         ? this.state.school.q_j_hujjat !== null
@@ -231,7 +232,6 @@ class Qabul extends React.Component {
                           ? this.state.school.q_j_intervyu
                           : "Suhbat jarayoni haqida ma'lumot"
                         : "Suhbat jarayoni haqida ma'lumot"}
-
                       {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                     </p>
                   </div>
