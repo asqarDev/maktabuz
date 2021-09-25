@@ -4,7 +4,7 @@ import "../css/maktahayotiAli.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Carousel } from "antd";
 
-
+import '../css/video.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
@@ -63,6 +63,7 @@ export default class MaktabHayoti extends Component {
           </div>
         ) : (
           <>
+          
             <div className={styles.headerSliderText}>
               <h3 style={{ fontFamily: "font", fontWeight: "900" }}>
                 Maktab hayoti
@@ -76,58 +77,23 @@ export default class MaktabHayoti extends Component {
                 </a>
               </div>
             </div>
-            <Carousel autoplay className={styles.sliderHeader}>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h1 !== null
-                      ? data.m_h_h1
-                      : school1
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h2 !== null
-                      ? data.m_h_h2
-                      : school1
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h3 !== null
-                      ? data.m_h_h3
-                      : school3
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h4 !== null
-                      ? data.m_h_h4
-                      : school4
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h5 !== null
-                      ? data.m_h_h5
-                      : school5
-                  }
-                  className={styles.headerImage}
-                />
-              </div>
-            </Carousel>
+            <header>
+
+<div class="overlay"></div>
+
+<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+  <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4"/>
+</video>
+
+<div class="container h-100">
+  <div class="d-flex h-100 text-center align-items-center">
+    <div class="w-100 text-white">
+      <h1 class="display-3">Video Header</h1>
+      <p class="lead mb-0">Using HTML5 Video and Bootstrap</p>
+    </div>
+  </div>
+</div>
+</header>
 
             <Container fluid className={styles.secondContainer} id="1">
               <Row>
