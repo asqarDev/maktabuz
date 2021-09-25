@@ -81,8 +81,8 @@ object-fit: cover;
     background-color: #FFF;
 }
 .news2{
-    width: 100%;
-    height: auto;
+    padding: 2px 20px;
+    box-sizing: border-box;
 }
 .news2:hover img{
     transform: scale(1.02);
