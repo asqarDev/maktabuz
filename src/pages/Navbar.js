@@ -10,7 +10,7 @@ export default class NavBar extends Component {
   state = {
     school: null,
     id: null,
-    bool: true,
+    bool: false,
   };
   getSchool = () => {
     var v = user;
@@ -57,20 +57,20 @@ export default class NavBar extends Component {
               <Link to={`/`}>
                 <span>Bosh sahifa</span>
               </Link>
-              <Link to={`/hayot/`}>
-                <span>Maktab hayoti</span>
+              <Link to={`/qabul/`}>
+                <span>Qabul</span>
               </Link>
               <Link to={`/yangiliklar/`}>
                 <span>Yangiliklar</span>
+              </Link>
+              <Link to={`/hayot/`}>
+                <span onClick={this.handleClick.bind(this)}>Maktab hayoti</span>
               </Link>
               <Link to={`/alochilar/`}>
                 <span>Maktab a'lochilari</span>
               </Link>
               <Link to={`/rahbariyat/`}>
                 <span>Maktab ma'muriyati</span>
-              </Link>
-              <Link to={`/qabul/`}>
-                <span>Qabul</span>
               </Link>
             </div>
           </Container>
@@ -97,20 +97,26 @@ export default class NavBar extends Component {
               <Link to={`/`}>
                 <span>Bosh sahifa</span>
               </Link>
-              <Link to={`/hayot/`}>
-                <span>Maktab hayoti</span>
+
+              <Link to={`/qabul/`}>
+                <span onClick={this.handleClick.bind(this)}>Qabul</span>
               </Link>
+
               <Link to={`/yangiliklar/`}>
-                <span>Yangiliklar</span>
+                <span onClick={this.handleClick.bind(this)}>Yangiliklar</span>
+              </Link>
+              <Link to={`/hayot/`}>
+                <span onClick={this.handleClick.bind(this)}>Maktab hayoti</span>
               </Link>
               <Link to={`/alochilar/`}>
-                <span>Maktab a'lochilari</span>
+                <span onClick={this.handleClick.bind(this)}>
+                  Maktab a'lochilari
+                </span>
               </Link>
               <Link to={`/rahbariyat/`}>
-                <span>Maktab ma'muriyati</span>
-              </Link>
-              <Link to={`/qabul/`}>
-                <span>Qabul</span>
+                <span onClick={this.handleClick.bind(this)}>
+                  Maktab ma'muriyati
+                </span>
               </Link>
             </div>
           </div>

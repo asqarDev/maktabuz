@@ -23,7 +23,9 @@
 }
 .navar_logo a:hover,
 .navar_logo a:active,
-.navar_logo a:checked {
+.navar_logo a:checked,
+.navar_logo_md a:hover,
+.navar_logo_md a:active {
   color: #fff;
 }
 .navbar_items {
@@ -75,20 +77,20 @@
   .navar_logo_md {
     font-size: 2rem;
     font-weight: 700;
-    padding: 20px 0;
+    padding: 20px 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   .navbar_items_md a {
     display: block;
-    width: 20%;
     margin: 10px auto;
     text-align: center;
     font-weight: 600;
     font-size: 1.5rem;
   }
   .navbar_items_md a:hover {
-    border-bottom: 2px solid #fffff1;
+    font-size: 1.6rem;
+    text-shadow: 0 0 3px #fff;
   }
 }
