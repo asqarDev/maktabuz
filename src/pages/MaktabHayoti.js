@@ -4,7 +4,7 @@ import "../css/maktahayotiAli.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Carousel } from "antd";
 
-
+import '../css/video.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
@@ -77,103 +77,23 @@ export default class MaktabHayoti extends Component {
                 </a>
               </div>
             </div>
-            <div class="container">
-        <div class="full-view"></div>
-        <div class="preview-list">
-            <ul>
-                <li>
-                    <input type="radio" id="tab-1" name="gallery-group"/>
-                    <label for="tab-1">
-                        <div class="tab">
-                            <img
-                                src="https://images.pexels.com/photos/1559117/pexels-photo-1559117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        </div>
-                    </label>
-                    <div class="content">
-                        <img
-                            src="https://images.pexels.com/photos/1559117/pexels-photo-1559117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" id="tab-2" name="gallery-group"/>
-                    <label for="tab-2">
-                        <div class="tab">
-                            <img
-                                src="https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        </div>
-                    </label>
-                    <div class="content">
-                        <img
-                            src="https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" id="tab-3" name="gallery-group"/>
-                    <label for="tab-3">
-                        <div class="tab">
-                            <img
-                                src="https://images.pexels.com/photos/730256/pexels-photo-730256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        </div>
-                    </label>
-                    <div class="content">
-                        <img
-                            src="https://images.pexels.com/photos/730256/pexels-photo-730256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" id="tab-4" name="gallery-group" checked/>
-                    <label for="tab-4">
-                        <div class="tab">
-                            <img
-                                src="https://images.pexels.com/photos/22427/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        </div>
-                    </label>
-                    <div class="content">
-                        <img src="https://images.pexels.com/photos/22427/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" id="tab-5" name="gallery-group"/>
-                    <label for="tab-5">
-                        <div class="tab">
-                            <img
-                                src="https://images.pexels.com/photos/789380/pexels-photo-789380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        </div>
-                    </label>
-                    <div class="content">
-                            <img src="https://images.pexels.com/photos/789380/pexels-photo-789380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        </div>
-                </li>
-                <li>
-                    <input type="radio" id="tab-6" name="gallery-group"/>
-                    <label for="tab-6">
-                        <div class="tab">
-                            <img
-                                src="https://images.pexels.com/photos/355411/pexels-photo-355411.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-                        </div>
-                    </label>
-                    <div class="content">
-                            <img src="https://images.pexels.com/photos/355411/pexels-photo-355411.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
-                        </div>
-                </li>
-                <li>
-                    <input type="radio" id="tab-7" name="gallery-group"/>
-                    <label for="tab-7">
-                        <div class="tab">
-                            <img
-                                src="https://images.pexels.com/photos/1424246/pexels-photo-1424246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        </div>
-                    </label>
-                    <div class="content">
-                            <img src="https://images.pexels.com/photos/1424246/pexels-photo-1424246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                        </div>
-                </li>
-            </ul>
-        </div>
+            <header>
+
+<div class="overlay"></div>
+
+<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+  <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4"/>
+</video>
+
+<div class="container h-100">
+  <div class="d-flex h-100 text-center align-items-center">
+    <div class="w-100 text-white">
+      <h1 class="display-3">Video Header</h1>
+      <p class="lead mb-0">Using HTML5 Video and Bootstrap</p>
     </div>
-            <Carousel autoplay className={styles.sliderHeader}>
-                  
-            </Carousel>
+  </div>
+</div>
+</header>
 
             <Container fluid className={styles.secondContainer} id="1">
               <Row>
