@@ -1,5 +1,4 @@
 
-
 import React, { Component } from 'react'
 import yangilik1 from '../img/yangilik1.jpg'
 import yangilik2 from '../img/yangilik2.jpg'
@@ -70,7 +69,6 @@ export default class Yangiliklar extends Component {
             duration:2000
         })
         this.getNews()
-      
     }
 
     // onclick_new=(link)=>{
@@ -95,11 +93,9 @@ export default class Yangiliklar extends Component {
     </div>:<>
                 {/* ============Header============== */}
 
-                
                 <div className={styles.headerSliderText} style={{fontFamily: 'Lobster', zIndex:'100', paddingTop:'60px'}}>
                         <h3 style={{fontFamily: 'Lobster', zIndex:'100'}}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3> 
-                        </div>   
-
+                        </div>
                         <Carousel autoplay className={styles.sliderContainer}>
                         {/* {
                             this.state.news.map(item=>{
@@ -129,12 +125,12 @@ export default class Yangiliklar extends Component {
     </div>
   </Carousel>
                 {/* ==================Section===================== */}
-
+                            
                 <Container fluid >
                     <div className={styles.yangi}><h1 style={{fontSize:'60px'}} data-aos="fade-up">Yangiliklar</h1></div>
                     <div className={styles.line} data-aos="fade-up"></div>
                     <Row>
-                        <Col lg={7}>
+                        <Col lg={6}>
                             
                                {
                                  this.state.news.length!==0?
@@ -154,13 +150,13 @@ export default class Yangiliklar extends Component {
                                
                             
                         </Col>
-                        <Col lg={5} data-aos="zoom-in-left">
-                                <Card className={styles.cardsimg}>
+                        <Col lg={6} data-aos="zoom-in-left">
+                                <div className={styles.news}>
                                   <div className={styles.news2}>
                                   <img src={sports} className={styles.images}/>
 
                                   </div>
-                                </Card>
+                                </div>
                                
                         </Col>
 
