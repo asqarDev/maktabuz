@@ -52,8 +52,6 @@ export default class App extends Component {
           <div className="loaderT">
             <FadeLoader color="blue" loading={this.state.loader} size={120} />
           </div>
-        ) : this.state.error ? (
-          <SelectMap />
         ) : (
           <BrowserRouter>
             <Switch>

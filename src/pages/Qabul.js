@@ -48,8 +48,8 @@ class Qabul extends React.Component {
               <Container fluid style={{ padding: "0" }}>
                 <div className={styles.qabul_header}>
                   <Row className={styles.header_qabul}>
-                    <Col></Col>
-                    <Col lg={6} md={12} sm={12}>
+                    <Col lg={4} md={12} sm={12}></Col>
+                    <Col lg={8} md={12} sm={12}>
                       {" "}
                       <div data-aos="fade-right" className={styles.text_q}>
                         <h1>Qabul uchun ariza topshirishga hushkelibsiz!!!</h1>
@@ -210,7 +210,7 @@ class Qabul extends React.Component {
                       {/* Ajoyib osoyishtalik butun qalbimni egallab oldi, xuddi bahorning shu shirin tonglari kabi, men butun qalbim bilan zavqlanaman. Men yolg'izman va borliq jozibasini his qilaman. */}
                     </p>
                   </div>
-                  
+
                   <div className={styles.jarayon_text}>
                     <h3>4. Kerakli hujjatlarni to'plang</h3>
 
