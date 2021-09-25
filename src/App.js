@@ -57,6 +57,9 @@ export default class App extends Component {
         ) : (
           <BrowserRouter>
             <Switch>
+              <Route exact path="/">
+                <BoshSahifa />
+              </Route>
               <Route path="/login">
                 <Login />
               </Route>
@@ -117,10 +120,6 @@ export default class App extends Component {
                 <NavBar />
                 <Tadbirlar />
                 <Footer />
-              </Route>
-
-              <Route exact path="/">
-                <BoshSahifa />
               </Route>
               <Route path="*">
                 <Error404 />
