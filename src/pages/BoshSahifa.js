@@ -5,17 +5,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Image } from "react-bootstrap";
 import React, { Component } from "react";
-import { ContainerDashboard } from "./StyleBoshSahifa";
 import style from "./BoshSahifa.module.css";
-import { Button, Container, Nav, Navbar, Row, Col } from "react-bootstrap";
+import { Button, Container, Navbar, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import rasm1 from "../img/vasily-koloda-8CqDvPuo_kI-unsplash.jpg";
 import rasm2 from "../img/mira-kireeva-xTq26wLo5do-unsplash.jpg";
 import rasm3 from "../img/javier-trueba-iQPr1XkF5F0-unsplash.jpg";
 import gerb from "../img/pngegg.png";
-import bg3t from "../img/bg3t.jpg";
 import "../App.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import BoshSahifaDavomi from "./BoshSahifaDavomi";
 import MaktabTadbirlari from "./MaktabTadbirlari";
 import Footer from "./Footer";
@@ -26,8 +24,10 @@ import axios from "axios";
 import YouTube from "react-youtube";
 import Global from "../host/Global";
 import { Clock } from "./Clock";
-import Typed from 'react-typed';
-import ReactSlick from "./ReactSlick";
+import Typed from "react-typed";
+import "aos";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+
 export default class BoshSahifa extends Component {
   state = {
     loader: false,
@@ -35,6 +35,7 @@ export default class BoshSahifa extends Component {
     id: 0,
     school: null,
     clock: "00 : 00 : 00",
+    bool: false,
   };
   getSchool = () => {
     axios.get(`${url}/school-by-admin/${Global.user}`).then((res) => {
@@ -73,6 +74,9 @@ export default class BoshSahifa extends Component {
       });
   };
 
+  handleClick() {
+    this.setState({ bool: !this.state.bool });
+  }
   componentDidMount() {
     this.getNews();
     this.getSchool();
@@ -94,99 +98,137 @@ export default class BoshSahifa extends Component {
           </div>
         ) : (
           <div>
-            {/* <NavBar/> */}
-            <ContainerDashboard>
-              <div
-                className="yuqori"
-                style={{ backgroundColor: "transparent", width: "100vw" }}
-              >
-                <div className="gerbHead" style={{ width: "100%" }}>
-                  <Image src={gerb} alt="" />
-                  <p>
-                    Surxondaryo viloyati Bandixon tumani 25 -
-                    iqtisoslashtirilgan davlat umumta'lim maktabi
-                  </p>
+            <div className={style.bosh_logo_item}>
+              <div className={style.bosh_image}>
+                <div className={style.bosh_image_item}>
+                  <Image
+                    style={{ width: "100%", height: "100%" }}
+                    src={gerb}
+                    alt=""
+                  />
                 </div>
-                <div id="vaqt">{this.state.clock}</div>
+                <p className={style.bosh_p1}>
+                  Surxondaryo viloyati Bandixon tumani 33 - davlat
+                  iqtisoslashtirilgan umumta'lim maktabi
+                </p>
+                <p className={style.bosh_p2}>33 - DIUM</p>
               </div>
-            </ContainerDashboard>
+              <div className={style.bosh_clock}>{this.state.clock}</div>
+            </div>
 
             <div style={{ width: "100vw" }}>
-              <Navbar collapseOnSelect expand="lg" className={style.Navbar}>
-                <Container fluid>
-                  <Navbar.Toggle
-                    style={{ backgroundColor: "darkblue", outline: "none" }}
+              <Navbar expand="lg" className={style.navbar_menu}>
+                <Container className={style.navbar_container}>
+                  <Button
+                    value="primay"
+                    className={style.navbar_button}
+                    onClick={this.handleClick.bind(this)}
                   >
-                    <i
-                      class="fa fa-bars"
-                      aria-hidden="true"
-                      style={{ fontSize: "1.6rem", color: "white" }}
-                    ></i>
-                  </Navbar.Toggle>
-                  <Navbar.Collapse
-                    id="responsive-navbar-nav"
-                    style={{ width: "60%", color: "white" }}
-                  >
-                    <Nav className={style.meauto}>
-                      <NavLink to={`/`}>
-                        <span className={style.navLink}>Bosh sahifa</span>
-                      </NavLink>
-                      <NavLink to={`/hayot/`}>
-                        <span className={style.navLink}>Maktab hayoti</span>
-                      </NavLink>
-                      <NavLink to={`/qabul/`}>
-                        <span className={style.navLink}>Qabul</span>
-                      </NavLink>
-                      <NavLink to={`/yangiliklar/`}>
-                        <span className={style.navLink}>Yangiliklar</span>
-                      </NavLink>
-                      <NavLink to={`/rahbariyat/`}>
-                        <span className={style.navLink}>
-                          Maktab ma'muriyati
-                        </span>
-                      </NavLink>
-                      <NavLink to={`/alochilar/`}>
-                        <span className={style.navLink}>Maktab alochilari</span>
-                      </NavLink>
-                    </Nav>
-                  </Navbar.Collapse>
+                    <AiOutlineMenu />
+                  </Button>
+                  <div className={style.navbar_items}>
+                    <Link to={`/`}>
+                      <span>Bosh sahifa</span>
+                    </Link>
+                    <Link to={`/qabul/`}>
+                      <span>Qabul</span>
+                    </Link>
+                    <Link to={`/yangiliklar/`}>
+                      <span>Yangiliklar</span>
+                    </Link>
+                    <Link to={`/hayot/`}>
+                      <span onClick={this.handleClick.bind(this)}>
+                        Maktab hayoti
+                      </span>
+                    </Link>
+                    <Link to={`/alochilar/`}>
+                      <span>Maktab a'lochilari</span>
+                    </Link>
+                    <Link to={`/rahbariyat/`}>
+                      <span>Maktab ma'muriyati</span>
+                    </Link>
+                  </div>
                 </Container>
               </Navbar>
+              {this.state.bool ? (
+                <div className={style.navbar_md}>
+                  <Container>
+                    <div className={style.navar_logo_md}>
+                      <Link to={`/`}>
+                        {this.state.school !== null
+                          ? this.state.school.school_number + " - maktab"
+                          : "Maktab raqami"}
+                      </Link>
+                      <Button
+                        value="primay"
+                        className={style.navbar_button}
+                        onClick={this.handleClick.bind(this)}
+                      >
+                        <AiOutlineClose />
+                      </Button>
+                    </div>
+                  </Container>
+                  <div className={style.navbar_items_md}>
+                    <Link to={`/`}>
+                      <span>Bosh sahifa</span>
+                    </Link>
+
+                    <Link to={`/qabul/`}>
+                      <span onClick={this.handleClick.bind(this)}>Qabul</span>
+                    </Link>
+
+                    <Link to={`/yangiliklar/`}>
+                      <span onClick={this.handleClick.bind(this)}>
+                        Yangiliklar
+                      </span>
+                    </Link>
+                    <Link to={`/hayot/`}>
+                      <span onClick={this.handleClick.bind(this)}>
+                        Maktab hayoti
+                      </span>
+                    </Link>
+                    <Link to={`/alochilar/`}>
+                      <span onClick={this.handleClick.bind(this)}>
+                        Maktab a'lochilari
+                      </span>
+                    </Link>
+                    <Link to={`/rahbariyat/`}>
+                      <span onClick={this.handleClick.bind(this)}>
+                        Maktab ma'muriyati
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
 
             <div className="gth">
               <div className="carg" style={{ zIndex: "-345" }}>
-                <div className="carg_item">
-                  {/* <Image src={bg3t} /> */}
-                </div>{" "}
+                <div className="carg_item">{/* <Image src={bg3t} /> */}</div>{" "}
               </div>
               <div className="yozuvT row">
                 <div className="col-6">
-
-                <div>
-                <Typed
-                className="typed-title text-center mytyped"
-                strings={['BIZNING MAKTABIMIZGA XUSH KELIBSIZ']}
-                typeSpeed={90}
-                backSpeed={50}
-                loop
-                
-              />{" "}
-                </div>
+                  <div>
+                    <Typed
+                      className="typed-title text-center mytyped"
+                      strings={["BIZNING MAKTABIMIZGA XUSH KELIBSIZ"]}
+                      typeSpeed={90}
+                      backSpeed={50}
+                      loop
+                    />{" "}
+                  </div>
                   <div className="yozuvBtn">
                     <Link to="/hayot/">
                       <Button>Maktab hayoti</Button>
                     </Link>
                   </div>
                 </div>
-                <div className="col-lg-6">
-                    {/* <ReactSlick/> */}
-
-                    
-                </div>
+                <div className="col-lg-6">{/* <ReactSlick/> */}</div>
               </div>
             </div>
-           
+
             <div className={style.container}>
               <div className={style.bir}>
                 <div className={style.containercha}>
@@ -302,9 +344,9 @@ export default class BoshSahifa extends Component {
                 <Col xs={12} sm={12} md={8} lg={12} className={style.col}>
                   <h3>Maktabdagi yangiliklari va o'zgarishlar</h3>
 
-                  <Row className='mb-4'>
+                  <Row className="mb-4">
                     <Col xs={12} sm={12} md={12} lg={12}>
-                      <Row >
+                      <Row>
                         {this.state.news.map((item, key) => {
                           return key < 6 ? (
                             <Col lg={6}>

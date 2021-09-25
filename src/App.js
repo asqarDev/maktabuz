@@ -20,7 +20,7 @@ import Global from "./host/Global";
 import axios from "axios";
 import { url, user } from "./host/Host";
 import { FadeLoader } from "react-spinners";
-import SelectMap from "./pages/Error";
+//import SelectMap from "./pages/Error";
 import Error404 from "./pages/Error404";
 export default class App extends Component {
   state = {
