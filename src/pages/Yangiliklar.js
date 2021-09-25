@@ -147,8 +147,7 @@ export default class Yangiliklar extends Component {
                                 </div>
                                 </div>:''
                                }
-                               
-                            
+
                         </Col>
                         <Col lg={6} data-aos="zoom-in-left">
                                 <div className={styles.news}>
