@@ -344,7 +344,10 @@ export default class BoshSahifa extends Component {
                   {this.state.news.map((item) => {
                     return (
                       <Col key={item.id} sm={12} md={6} lg={4}>
-                        <Card style={{ width: "18rem" }}>
+                        <Card
+                          style={{ width: "18rem" }}
+                          className={style.card_item}
+                        >
                           <Card.Img variant="top" src={item.image} />
                           <Card.Body>
                             <Card.Title>{item.title}</Card.Title>
@@ -364,9 +367,7 @@ export default class BoshSahifa extends Component {
                   })}
                   <div className={style.tugmacha}>
                     <Link to={`/yangiliklar/`}>
-                      <button className={style.buttoncha}>
-                        <span>Barchasini o'qish</span>
-                      </button>
+                      <Button>Barchasini o'qish {">>"}</Button>
                     </Link>
                   </div>
                 </Row>

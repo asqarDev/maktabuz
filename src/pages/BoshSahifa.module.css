@@ -113,7 +113,7 @@
   align-items: center;
   flex-wrap: wrap;
 }
-.card_items .card_item {
+.card_item {
   border-right: 10px;
   margin: 15px 5px;
   box-shadow: 0 0 5px #000;
@@ -155,6 +155,12 @@
   font-size: 20px;
   text-align: center;
   text-shadow: 0 0 2px #555;
+}
+.tugmacha {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 1200px) {
   .navbar_button {
