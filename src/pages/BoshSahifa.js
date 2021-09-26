@@ -310,96 +310,67 @@ export default class BoshSahifa extends Component {
             </div>
 
             <div className={style.containerRow}>
-              <Row className={style.videos}>
-                <Col xs={12} sm={12} md={10} lg={10} className={style.col}>
-                  <h3>Maktabga video sayohat</h3>
-                  {/* <Image src={rasm1} className={style.img}/> */}
-                  <YouTube
-                    videoId={
-                      this.state.school !== null
-                        ? this.state.school.video !== null
-                          ? this.state.school.video.slice(
-                              this.state.school.video.indexOf("youtu.be/") + 9
-                            )
-                          : ""
+              <div>
+                <h3 className={style.main_header}>Maktabga video sayohat</h3>
+                <YouTube
+                  videoId={
+                    this.state.school !== null
+                      ? this.state.school.video !== null
+                        ? this.state.school.video.slice(
+                            this.state.school.video.indexOf("youtu.be/") + 9
+                          )
                         : ""
-                    }
-                    opts={{
-                      width: "100%",
-                      height: "500px",
-                      playerVars: {
-                        // https://developers.google.com/youtube/player_parameters
-                        autoplay: 0,
-                      },
-                    }}
-                    className={style.video}
-                  />
-                  <p className={style.pp}>
-                    Maktabimizga virtual sayohat qiling va siz bizning
-                    maktabimiz haqida ko'proq ma'lumotga ega bo'ling.
-                  </p>
-                </Col>
+                      : ""
+                  }
+                  opts={{
+                    width: "100%",
+                    height: "500px",
+                    playerVars: {
+                      autoplay: 0,
+                    },
+                  }}
+                />
+                <p className={style.pp}>
+                  Maktabimizga virtual sayohat qiling va siz bizning maktabimiz
+                  haqida ko'proq ma'lumotga ega bo'ling.
+                </p>
+              </div>
+              <div>
+                <h3 className={style.main_header}>
+                  Maktabdagi yangiliklari va o'zgarishlar
+                </h3>
 
-                <Col xs={12} sm={12} md={8} lg={12} className={style.col}>
-                  <h3>Maktabdagi yangiliklari va o'zgarishlar</h3>
-
-                  <Row className="mb-4">
-                    <Col xs={12} sm={12} md={12} lg={12}>
-                      <Row>
-                        {this.state.news.map((item, key) => {
-                          return key < 6 ? (
-                            <Col lg={6}>
-                              <Row>
-                                <Col
-                                  xs={3}
-                                  sm={3}
-                                  md={3}
-                                  lg={3}
-                                  className={style.colNews}
-                                >
-                                  <Image
-                                    src={item.image}
-                                    className={style.rasm}
-                                  />
-                                </Col>
-                                <Col
-                                  xs={9}
-                                  sm={9}
-                                  md={9}
-                                  lg={9}
-                                  className={style.colNews}
-                                  style={{
-                                    paddingLeft: "10px",
-                                    paddingRight: "8px",
-                                  }}
-                                >
-                                  <p>{item.title}</p>
-                                  <h5>
-                                    <i
-                                      style={{ marginRight: "10px" }}
-                                      className="far fa-calendar-alt"
-                                    ></i>
-                                    {item.published_time.substring(0, 10)}
-                                  </h5>
-                                </Col>
-                              </Row>
-                            </Col>
-                          ) : (
-                            ""
-                          );
-                        })}
-                      </Row>
-                    </Col>
-                    <div className={style.tugmacha}>
-                      <Link to={`/yangiliklar/`}>
-                        <button className={style.buttoncha}>
-                          <span>Barchasini o'qish</span>
-                        </button>
-                      </Link>
-                    </div>
-                  </Row>
-                </Col>
-              </Row>
+                <Row>
+                  {this.state.news.map((item) => {
+                    return (
+                      <Col key={item.id} sm={12} md={6} lg={4}>
+                        <Card style={{ width: "18rem" }}>
+                          <Card.Img variant="top" src={item.image} />
+                          <Card.Body>
+                            <Card.Title>{item.title}</Card.Title>
+                            <Card.Text>
+                              <h5>
+                                <i
+                                  style={{ marginRight: "10px" }}
+                                  className="far fa-calendar-alt"
+                                ></i>
+                                {item.published_time.substring(0, 10)}
+                              </h5>
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+                    );
+                  })}
+                  <div className={style.tugmacha}>
+                    <Link to={`/yangiliklar/`}>
+                      <button className={style.buttoncha}>
+                        <span>Barchasini o'qish</span>
+                      </button>
+                    </Link>
+                  </div>
+                </Row>
+              </div>
             </div>
             <BoshSahifaDavomi />
             <MaktabTadbirlari />

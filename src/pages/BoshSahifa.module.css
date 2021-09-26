@@ -141,7 +141,21 @@
   color: #318ce3;
   font-size: 30px;
 }
-
+.main_header {
+  text-align: center;
+  border: 2px solid rgb(202, 202, 32);
+  margin: 15px auto;
+  padding: 20px 5px;
+}
+.containerRow {
+  width: 90%;
+  margin: 15px auto;
+}
+.containerRow .pp {
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0 0 2px #555;
+}
 @media screen and (max-width: 1200px) {
   .navbar_button {
     display: block;
