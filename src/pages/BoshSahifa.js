@@ -6,7 +6,7 @@ import {
 import { Image } from "react-bootstrap";
 import React, { Component } from "react";
 import style from "./BoshSahifa.module.css";
-import { Button, Container, Navbar, Row, Col } from "react-bootstrap";
+import { Button, Container, Navbar, Row, Col, Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import rasm1 from "../img/vasily-koloda-8CqDvPuo_kI-unsplash.jpg";
 import rasm2 from "../img/mira-kireeva-xTq26wLo5do-unsplash.jpg";
@@ -220,7 +220,7 @@ export default class BoshSahifa extends Component {
                     loop
                   />
                   <div className={style.yozuvBtn}>
-                    <Link to="/hayot/">
+                    <Link to="/ha yot/">
                       <Button>Maktab hayoti</Button>
                     </Link>
                   </div>
@@ -228,85 +228,85 @@ export default class BoshSahifa extends Component {
               </div>
             </div>
 
-            <div className={style.container}>
-              <div className={style.bir}>
-                <div className={style.containercha}>
-                  <Image
-                    src={
-                      this.state.school !== null
-                        ? this.state.school.b_c2 !== null
-                          ? this.state.school.b_c2
-                          : rasm2
+            <div className={style.card_items}>
+              <Card style={{ width: "20rem" }} className={style.card_item}>
+                <Card.Img
+                  variant="top"
+                  src={
+                    this.state.school !== null
+                      ? this.state.school.b_c2 !== null
+                        ? this.state.school.b_c2
                         : rasm2
-                    }
-                    className={style.image}
-                  />
-                  <div className={style.overlay}>
-                    <Link style={{ color: "white" }} to={`/yangiliklar/`}>
-                      <FontAwesomeIcon
-                        icon={faNewspaper}
-                        className={style.icon}
-                      />
-                      <h3>Yangiliklar</h3>
-                      <p>
-                        Maktabimizga doir bo'lgan yangiliklardan xabardor
-                        bo'ling
-                      </p>
+                      : rasm2
+                  }
+                />
+                <Card.Body>
+                  <Card.Title className={style.card_title}>
+                    <FontAwesomeIcon
+                      icon={faNewspaper}
+                      className={style.card_icon}
+                    />
+                    <h3>Yangiliklar</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <Link to={`/yangiliklar/`}>
+                      Maktabimizga doir bo'lgan yangiliklardan xabardor bo'ling
                     </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className={style.ikki}>
-                <div className={style.containercha}>
-                  <Image
-                    src={
-                      this.state.school !== null
-                        ? this.state.school.b_c1 !== null
-                          ? this.state.school.b_c1
-                          : rasm1
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: "20rem" }} className={style.card_item}>
+                <Card.Img
+                  variant="top"
+                  src={
+                    this.state.school !== null
+                      ? this.state.school.b_c1 !== null
+                        ? this.state.school.b_c1
                         : rasm1
-                    }
-                    className={style.image}
-                  />
-                  <div className={style.overlay}>
-                    <FontAwesomeIcon icon={faSchool} className={style.icon} />
+                      : rasm1
+                  }
+                />
+                <Card.Body>
+                  <Card.Title className={style.card_title}>
+                    <FontAwesomeIcon
+                      icon={faSchool}
+                      className={style.card_icon}
+                    />
                     <h3>Yutuqlarimiz</h3>
-                    <p>
-                      Sizda bizning maktabimiz yutuqlari bilan tanishib chiqish
-                      uchun qulay imkoniyat bor
-                    </p>
-                    {/* </Link> */}
-                  </div>
-                </div>
-              </div>
-              <div className={style.uch}>
-                <div className={style.containercha}>
-                  <Image
-                    src={
-                      this.state.school !== null
-                        ? this.state.school.b_c3 !== null
-                          ? this.state.school.b_c3
-                          : rasm3
+                  </Card.Title>
+                  <Card.Text>
+                    Sizda bizning maktabimiz yutuqlari bilan tanishib chiqish
+                    uchun qulay imkoniyat bor
+                  </Card.Text>
+                </Card.Body>
+              </Card>{" "}
+              <Card style={{ width: "20rem" }} className={style.card_item}>
+                <Card.Img
+                  variant="top"
+                  src={
+                    this.state.school !== null
+                      ? this.state.school.b_c3 !== null
+                        ? this.state.school.b_c3
                         : rasm3
-                    }
-                    className={style.image}
-                  />
-                  <div className={style.overlay}>
-                    <Link style={{ color: "white" }} to={`/gallery/`}>
-                      <FontAwesomeIcon
-                        icon={faDoorOpen}
-                        className={style.icon}
-                      />
-                      <h3>Fotolavhalar</h3>
-                      <p>
-                        Endi siz maktabimizning fotolavhalarini ko'rishingiz
-                        mumkin
-                      </p>
-                    </Link>{" "}
-                  </div>
-                </div>
-              </div>
+                      : rasm3
+                  }
+                />
+                <Card.Body>
+                  <Card.Title className={style.card_title}>
+                    <FontAwesomeIcon
+                      icon={faDoorOpen}
+                      className={style.card_icon}
+                    />
+                    <h3>Fotolavhalar</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <Link to={`/gallery/`}>
+                      Endi siz maktabimizning fotolavhalarini ko'rishingiz
+                      mumkin
+                    </Link>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </div>
 
             <div className={style.containerRow}>
