@@ -4,127 +4,7 @@
 body {
   background-color: white;
 }
-.header {
-  width: 100%;
-  height: 100vh !important;
-  position: relative;
-  overflow: hidden;
-  /* z-index: 1; */
-  text-align: center;
-}
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  --line-offset: calc((10vh + 8px) / 2);
-}
-.container {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 5fr 1fr;
-  background: #021919;
-}
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  display: flex;
-}
-.tab {
-  width: calc(10vh + 8px);
-  height: calc(10vh + 8px);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
-  shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
-  z-index: 0;
-  transition: width 0.5s;
-}
-.tab img {
-  width: 10vh;
-  height: 10vh;
-  z-index: 10;
-  cursor: pointer;
-  clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
-  shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
-  transition: width 0.5s;
-}
-[type="radio"] {
-  display: none;
-}
-.preview-list {
-  background: linear-gradient(#021919, #021919 var(--line-offset), #efefef var(--line-offset));
-}
-.tab {
-  background: linear-gradient(#efefef, #efefef var(--line-offset), #021919 var(--line-offset));
-}
-[type="radio"]:checked ~ label ~ .content {
-  text-align: center;
-  z-index: 8;
-}
-[type="radio"]:checked ~ label .tab {
-  width: 0;
-}
-.content {
-  position: absolute;
-  background: #021919;
-  top: 1vh;
-  left: 0;
-  width: 100vw;
-  height: 80vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-.content img {
-  height: auto;
-  width: 100vw;
-}
 
-.headerImage {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  filter: brightness(40%);
-}
-.sliderHeader {
-  position: relative;
-  width: 100%;
-  top: -20px;
-}
-.headerSliderText {
-  position: absolute;
-  top: 77% !important;
-  left: 50%;
-  transform: translate(-50%, -70%);
-  z-index: 10 !important;
-}
-.headerSliderText h3 {
-  font-size: 100px;
-  color: white;
-  opacity: 1;
-  font-weight: 900;
-}
-.headerIcons {
-  margin-top: 100px;
-  position: relative;
-  height: 40px;
-  cursor: pointer;
-}
-.headerIcon {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  animation-name: icondonw;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  cursor: pointer !important;
-}
 @keyframes icondonw {
   0% {
     top: 0%;
@@ -148,13 +28,13 @@ ul {
 }
 .secondHeading {
   font-size: 50px;
-  font-family: "Lobster", cursive;
+  font-family: sans-serif;
 }
 
 .secondText {
   padding: 20px;
-  text-align: center;
   font-size: 20px;
+  text-align: left !important;
   line-height: 40px;
 }
 .iconPath {
@@ -181,7 +61,6 @@ ul {
   text-align: center;
   height: 10vh;
   line-height: 2.6;
-  font-family: "Lobster", cursive;
 }
 .box > img {
   width: 100%;
@@ -254,7 +133,6 @@ ul {
   object-fit: cover;
 }
 .cardBolimlar h1 {
-  font-family: "Lobster", cursive;
   font-size: 30px !important;
   color: white;
 }

@@ -25,7 +25,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { FadeLoader } from "react-spinners";
 import axios from "axios";
-
+import '../css/maktabhayoti.css'
 import { Pannellum } from "pannellum-react";
 import myImage from "../img/360.jpeg";
 
@@ -79,7 +79,7 @@ export default class MaktabHayoti extends Component {
             </div>
             <header>
 
-<div class="overlay"></div>
+<div class="overlay mt-5"></div>
 
 <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
   <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4"/>
@@ -168,22 +168,7 @@ export default class MaktabHayoti extends Component {
                   </div>
                   <Container fluid>
                     <Row>
-                      <Col lg={12}>
-                        <p className={styles.secondText} data-aos="zoom-in-up">
-                          {data !== null && data.m_h_tq !== null
-                            ? data.m_h_tq
-                            : `Uzoqlarda, tog'lar so'zining orqasida, Vokaliya va
-                        Consonantia mamlakatlaridan uzoqroqda ko'r matnlar
-                        yashaydi. Ular alohida yashashadi Alohida ular Semantika
-                        qirg'og'idagi Bookmarksgroveda, katta til okeanida
-                        yashaydilar. Duden nomli kichik daryo ularning joylari
-                        bo'ylab oqadi va uni zarur regelialiya bilan ta'minlaydi.
-                        Bu paradisematik mamlakat, unda jumlaning qovurilgan
-                        qismlari og'zingizga uchadi. Hattoki qudratli ishora ham
-                        ko'r-ko'rona matnlarni nazorat qila olmaydi, bu deyarli
-                        nostografik hayot.`}
-                        </p>
-                      </Col>
+                      
                       <Col lg={12}>
                         <Row>
                           <Col xs={12} sm={12} md={12} lg={4}>
@@ -228,6 +213,22 @@ export default class MaktabHayoti extends Component {
                               <span>Bitiruv tadbiri</span>
                             </div>
                           </Col>
+                          <Col lg={12}>
+                        <p className={styles.secondText} data-aos="zoom-in-up">
+                          {data !== null && data.m_h_tq !== null
+                            ? data.m_h_tq
+                            : `Uzoqlarda, tog'lar so'zining orqasida, Vokaliya va
+                        Consonantia mamlakatlaridan uzoqroqda ko'r matnlar
+                        yashaydi. Ular alohida yashashadi Alohida ular Semantika
+                        qirg'og'idagi Bookmarksgroveda, katta til okeanida
+                        yashaydilar. Duden nomli kichik daryo ularning joylari
+                        bo'ylab oqadi va uni zarur regelialiya bilan ta'minlaydi.
+                        Bu paradisematik mamlakat, unda jumlaning qovurilgan
+                        qismlari og'zingizga uchadi. Hattoki qudratli ishora ham
+                        ko'r-ko'rona matnlarni nazorat qila olmaydi, bu deyarli
+                        nostografik hayot.`}
+                        </p>
+                      </Col>
                         </Row>
                       </Col>
                       <Col lg={4} md={12} sm={12} className={styles.transport}>
@@ -263,6 +264,7 @@ export default class MaktabHayoti extends Component {
                             ketadigan jannat matikasi mamlakati.`}
                         </p>
                       </Col>
+                     
                     </Row>
                   </Container>
                 </Col>
@@ -363,6 +365,8 @@ export default class MaktabHayoti extends Component {
                 </Col>
                 <Col lg={11} md={12} sm={12}>
                   <Row>
+
+
                     <Col
                       lg={4}
                       md={6}
@@ -662,6 +666,7 @@ export default class MaktabHayoti extends Component {
                     </Col>
                   </Row>
                 </Col>
+               
                 <Col lg={12}>
                   <Row>
                     <Col lg={6} md={6} sm={12} className={styles.director}>
@@ -696,6 +701,7 @@ export default class MaktabHayoti extends Component {
                   </Row>
                 </Col>
               </Row>
+              
             </Container>
           </>
         )}

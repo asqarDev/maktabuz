@@ -1,7 +1,7 @@
 header {
     position: relative;
     background-color: black;
-    height: 75vh;
+    height: 90vh;
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
@@ -28,6 +28,7 @@ header {
   }
   
   header .overlay {
+    /* margin-top: 100px; */
     position: absolute;
     top: 0;
     left: 0;
