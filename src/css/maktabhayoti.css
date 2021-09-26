@@ -1,0 +1,29 @@
+
+
+
+ .container12 img {
+    width: 90%;
+    height: 100%;
+    object-fit:cover;
+    -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+    
+    transform-origin:center;
+    transform:perspective(800px) rotateY(25deg);
+    transition:0.5s;
+  }
+ .container12  {
+     margin: 40px ;
+    max-width:100%;
+    height: 350px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* gap:20px; */
+  }
+  .container12:hover img {
+    opacity:0.3;
+  }
+ .container12 img:hover {
+    transform:perspective(800px)       rotateY(0deg);
+    opacity:1;
+  }
