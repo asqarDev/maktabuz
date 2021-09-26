@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Image, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import style from "./MaktabTadbirlari.module.css";
@@ -17,15 +17,11 @@ import {
   Map,
   Placemark,
   RouteButton,
-  TrafficControl,
-  TypeSelector,
   YMaps,
   ZoomControl,
 } from "react-yandex-maps";
 import "react-multi-carousel/lib/styles.css";
-import rasm3 from "../img/13.jpg";
 import Carousel from "react-multi-carousel";
-import { Tooltip } from "antd";
 
 import {
   faClock,
@@ -33,7 +29,6 @@ import {
   faCalendarAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { getEvents } from "../host/Config";
-import Global from "../host/Global";
 export default class MaktabTadbirlari extends Component {
   state = {
     events: [],
@@ -68,7 +63,6 @@ export default class MaktabTadbirlari extends Component {
   render() {
     const responsive = {
       superLargeDesktop: {
-        // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
         items: 7,
       },
@@ -268,7 +262,6 @@ export default class MaktabTadbirlari extends Component {
                   <Map
                     width="100%"
                     height="400px"
-                    // style={{marginLeft:"10%"}}
                     state={{
                       center: [39.651698, 66.97187],
                       zoom: 13,
@@ -299,7 +292,7 @@ export default class MaktabTadbirlari extends Component {
                   </Map>
                 </YMaps>
                 <br />
-                <img className="yil" src={yil} />
+                <Image className="yil" src={yil} />
                 <br />
               </div>
             </Col>
@@ -309,7 +302,6 @@ export default class MaktabTadbirlari extends Component {
               <div className="formFER">
                 <div className="container">
                   <div className="brand-logo"></div>
-                  {/* <div className="brand-title">TWITTER</div> */}
                   <div className="inputs">
                     <form>
                       <label>F.I.O.</label>
