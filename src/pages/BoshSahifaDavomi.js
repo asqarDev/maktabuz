@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import style from "./BoshSahifaDavomi.module.css";
 import { ButtonWrapper } from "./StyleBoshSahifa";
 import ustoz1 from "../img/ustoz1.jpg";
@@ -92,14 +92,12 @@ export default class BoshSahifaDavomi extends Component {
     console.log(123);
   }
 
-
   render() {
     return (
       <div>
         <div className={style.container}>
           <Container>
             <Row>
-              <Col xs={0} sm={0} md={6} lg={6}></Col>
               <Col xs={12} sm={12} md={6} lg={6}>
                 <h1>Qabul uchun ariza topshiring</h1>
                 <h3>Kuzgi qabul jarayoni hozir mavjud</h3>
@@ -120,15 +118,21 @@ export default class BoshSahifaDavomi extends Component {
                   </button>
                 </ButtonWrapper>
               </Col>
+              <Col md={6} lg={6} className={style.row_image}>
+                <div>
+                  <Image
+                    style={{ width: "100%" }}
+                    src="data:image/jpeg;base64,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"
+                  />
+                </div>
+              </Col>
             </Row>
           </Container>
         </div>
-        <Container fluid style={{ backgroundColor: "white"} }>
+        <Container fluid>
           <Row>
-            <Col lg={12} md={12} sm={12}>
+            <Col lg={6} md={12} sm={12}>
               <div className={style.tana}>
-                <br />
-                <br />
                 <h1 className={style.sarlavha} style={{ fontSize: "28px" }}>
                   A'lochilar doskasi
                 </h1>
@@ -183,10 +187,8 @@ export default class BoshSahifaDavomi extends Component {
                 </Container>
               </div>
             </Col>
-            <Col lg={12} md={12} sm={12}>
+            <Col lg={6} md={12} sm={12}>
               <div className={style.tana}>
-                <br />
-                <br />
                 <h1 className={style.sarlavha} style={{ fontSize: "28px" }}>
                   O'qituvchilar doskasi
                 </h1>
@@ -224,13 +226,8 @@ export default class BoshSahifaDavomi extends Component {
                               >
                                 Ingliz tili o'qituvchisi
                               </p>
-
-                              {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
                             </Col>
                           </Row>
-                          {/* <p style={{fontSize:'18px', color:'black'}}>Ko'plab ko'rik tanlovlarda erishgan yuqori natijalari bilan maktabimiz nomini yuqori darajaga yetkazgan. Fanlar bo'yicha o'zlashtirishi, odob axloqi va maktabimizda o'tkaziladigan tadbirlarda faol ishtiroki bilan maktabimiz o'quvchilaridan ajralib turadi. 
-                           Maktabimizning barcha o'qituvchilari bu o'quvchimizning o'zlashtirish darajasidan mamnun. Biz bunday yoshlarimiz bilan faxrlanamiz !!!
-                       </p> */}
                         </div>
                       </div>
                     </Col>
@@ -265,13 +262,8 @@ export default class BoshSahifaDavomi extends Component {
                               >
                                 Ona tili o'qituvchisi
                               </p>
-
-                              {/* <div style={{ cursor: "pointer" }}>Baholarini ko'rish</div> */}
                             </Col>
                           </Row>
-                          {/* <p style={{fontSize:'18px', color:'black'}}>Ko'plab ko'rik tanlovlarda erishgan yuqori natijalari bilan maktabimiz nomini yuqori darajaga yetkazgan. Fanlar bo'yicha o'zlashtirishi, odob axloqi va maktabimizda o'tkaziladigan tadbirlarda faol ishtiroki bilan maktabimiz o'quvchilaridan ajralib turadi. 
-                           Maktabimizning barcha o'qituvchilari bu o'quvchimizning o'zlashtirish darajasidan mamnun. Biz bunday yoshlarimiz bilan faxrlanamiz !!!
-                       </p> */}
                         </div>
                       </div>
                     </Col>
