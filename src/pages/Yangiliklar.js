@@ -22,7 +22,7 @@ import styled from 'styled-components'
 import sports from '../img/sport1.jpg'
 
 // import {DownCircleOutlined} from '@ant-design/icons'
-
+import school8 from "../img/school8.jpg";
 
 export default class Yangiliklar extends Component {
   state={
@@ -83,6 +83,7 @@ export default class Yangiliklar extends Component {
         textAlign: 'center',
         fontFamily: 'Lobster',
       };
+      const { news } = this.state;
         return (
 
             <div>
@@ -97,17 +98,7 @@ export default class Yangiliklar extends Component {
                         <h3 style={{fontFamily: 'Lobster', zIndex:'100'}}>Maktabimiz so'ngi yangiliklari bilan tanishing</h3> 
                         </div>
                         <Carousel autoplay className={styles.sliderContainer}>
-                        {/* {
-                            this.state.news.map(item=>{
-                              return(
-                                <div>
-                                <img src={item.image} style={{width:'100%', height:'100vh',zIndex:'-100'}} className={styles.headerImage}/> 
-                                             
-                                </div>
-                                
-                              )
-                            })
-                          } */}
+                      
     <div className={styles.sliderIMG}>
       <img  src={new1}/>
     </div>
@@ -127,9 +118,13 @@ export default class Yangiliklar extends Component {
                 {/* ==================Section===================== */}
                             
                 <Container fluid >
-                    <div className={styles.yangi}><h1 style={{fontSize:'60px'}} data-aos="fade-up">Yangiliklar</h1></div>
-                    <div className={styles.line} data-aos="fade-up"></div>
-                    <Row>
+                    <div className={styles.yangi}>
+                      <div className={styles.h11} data-aos="fade-up">
+                      <h1 style={{fontSize:'60px'}} data-aos="fade-up">Yangiliklar</h1>
+                      </div>
+                    </div>
+                    {/* <div className={styles.line} data-aos="fade-up"></div> */}
+                    <Row className='my-5'>
                         <Col lg={6}>
                             
                                {
@@ -152,7 +147,10 @@ export default class Yangiliklar extends Component {
                         <Col lg={6} data-aos="zoom-in-left">
                                 <div className={styles.news}>
                                   <div className={styles.news2}>
-                                  <img src={sports} className={styles.images}/>
+                                  <img src={ news.m_h_sport !== null && news !== null
+                            ? news.m_h_sport
+                            : school8
+                        } className={styles.images}/>
 
                                   </div>
                                 </div>
