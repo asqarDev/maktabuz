@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import style from "../css/alochilar.module.css";
-//import img from "../img/pl.jpg";
 import { Carousel } from "antd";
-import { Image } from "react-bootstrap";
+import { Image, Row, Col, Card } from "react-bootstrap";
 import axios from "axios";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
@@ -170,36 +169,61 @@ export default class Alochilar extends Component {
             <div id="first">
               <h1 className={style.sarlavha}>A'lochilar doskasi</h1>
               <div className={style.line}></div>
-              <div className={style.tana}>
+              <Row className={style.tana}>
                 {this.state.excellent !== []
                   ? this.state.excellent.map((item) => {
                       var pupil = this.setPupils(item.pupil);
                       return (
-                        <div className={style.card}>
-                          <div className={style.image}>
-                            <img
-                              src={pupil.image !== null ? pupil.image : school2}
-                              alt="no images"
-                            />
-                          </div>
-                          <div className={style.content}>
-                            <p>
-                              <b>O'quvchi: </b> {pupil.full_name}
-                            </p>
-                            <p>
-                              <b>Tug'ulgan sanasi: </b> {pupil.birth_day}
-                            </p>
-                            <p>
-                              <b>Sinfi: </b>
-                              {this.echoClasses(pupil.clas).class_number} - "
-                              {this.echoClasses(pupil.clas).class_char}" sinf
-                            </p>
-                          </div>
-                        </div>
+                        <Col sm={12} md={6} lg={3} className={style.row_col}>
+                          <div className={style.card1}>
+                            <div className={style.card2}>
+                              <div className={style.card3}>
+                                <Card
+                                  style={{ width: "18rem" }}
+                                  className={style.card_item}
+                                >
+                                  <Card.Img
+                                    variant="top"
+                                    src={
+                                      pupil.image !== null
+                                        ? pupil.image
+                                        : school2
+                                    }
+                                  />
+                                  <Card.Body>
+                                    <Card.Title>Bizning faxrimiz</Card.Title>
+                                    <Card.Text>
+                                      <p>
+                                        <b>O'quvchi: </b> {pupil.full_name}
+                                      </p>
+                                      <p>
+                                        <b>Tug'ulgan sanasi: </b>{" "}
+                                        {pupil.birth_day}
+                                      </p>
+                                      <p>
+                                        <b>Sinfi: </b>
+                                        {
+                                          this.echoClasses(pupil.clas)
+                                            .class_number
+                                        }{" "}
+                                        - "
+                                        {
+                                          this.echoClasses(pupil.clas)
+                                            .class_char
+                                        }
+                                        " sinf
+                                      </p>
+                                    </Card.Text>
+                                  </Card.Body>
+                                </Card>
+                              </div>
+                            </div>
+                          </div>{" "}
+                        </Col>
                       );
                     })
                   : ""}
-              </div>
+              </Row>
             </div>
           </>
         )}

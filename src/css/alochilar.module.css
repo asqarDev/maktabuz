@@ -54,58 +54,13 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-
 .sarlavha {
+  margin-top: 5%;
   text-align: center;
   font-size: 60px;
   font-weight: 700;
   color: #051000;
   text-shadow: 0 0 2px #000;
-}
-.tana {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  background-color: white;
-}
-.content {
-  width: 500px;
-  text-align: left;
-  padding: 10px 20px;
-}
-.content p {
-  font-size: 25px;
-  margin: 2px 0;
-  color: rgb(43, 43, 43);
-  text-shadow: 0 0 1px #000;
-}
-.content p b {
-  margin: 1px 0px 6px 0px;
-  color: black;
-}
-
-.content div {
-  width: 145px;
-  height: 34px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 15px;
-  border-radius: 5px;
-  border: 2px solid #0f0f0f;
-  margin-left: 20px;
-  background-color: none;
-  font-weight: 500;
-  box-shadow: 0px 5px 8px black;
-  transition: all 0.4s linear;
-}
-.content div:hover {
-  background-color: rgb(20, 20, 204);
-  border: rgb(20, 20, 204);
-  color: #f0f0f0;
-  line-height: 34px;
-  border-radius: 17px;
 }
 .line {
   width: 30%;
@@ -113,29 +68,34 @@
   margin: auto;
   margin-bottom: 5%;
 }
-.card {
-  width: 500px;
-  margin: 20px;
-  background-image: url("../img/bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  transition: all 0.5s;
-  overflow: hidden;
+.tana {
+  background-color: rgb(55, 124, 214);
+  padding: 20px 0;
 }
-.card:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transform: scale(1.05);
+.row_col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.card .image {
-  width: 500px;
-  margin: 0 auto;
+.card1,
+.card2,
+.card3 {
+  padding: 3px;
+  border-radius: 6px;
 }
-.image img {
-  width: 100%;
+.card1 {
+  transition: 1s;
+}
+.card2 {
+  transition: 0.6s;
+}
+.card3 {
+  transition: 0.3s;
+}
+.row_col:hover .card1,
+.row_col:hover .card2,
+.row_col:hover .card3 {
+  box-shadow: 0 0 5px #fff;
 }
 @media screen and (max-width: 1500px) {
   .headerSliderText h3 {
@@ -166,29 +126,10 @@
     border: 2px solid #fff;
     font-size: 15px;
   }
-  .card {
-    margin: 40px 30px;
-    display: flex;
-    flex-direction: row;
-    background-image: url("../img/bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    transition: all 0.5s;
-  }
-  .content p {
-    font-size: 15px;
-    margin: 2px 0;
-    color: rgb(43, 43, 43);
-  }
   .sarlavha {
     font-size: 30px;
   }
 }
-
 @media screen and (max-width: 520px) {
   .line {
     width: 50%;
@@ -202,31 +143,6 @@
   .headerIcon:hover {
     padding: 0 10px;
     font-size: 20px;
-  }
-  .content {
-    width: 90%;
-    text-align: center;
-    margin: 12px 5% 21px 5%;
-  }
-  .content div {
-    margin: 2px auto;
-  }
-  .card {
-    margin: 20px 4%;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../img/bg.png");
-    background-size: 100% 112%;
-    background-position: center 12%;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-      rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  }
-  .image {
-    width: 100%;
-  }
-  .content p {
-    font-size: 10px;
   }
 
   .sarlavha {
