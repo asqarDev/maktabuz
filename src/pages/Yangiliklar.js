@@ -85,7 +85,6 @@ export default class Yangiliklar extends Component {
       };
       const { news } = this.state;
         return (
-
             <div>
 { this.state.loader?<div className="loaderT">
 <FadeLoader
