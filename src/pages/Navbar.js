@@ -7,11 +7,14 @@ import axios from "axios";
 import { url, user } from "../host/Host";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 export default class NavBar extends Component {
-  state = {
-    school: null,
-    id: null,
-    bool: false,
-  };
+  constructor() {
+    super();
+    this.state = {
+      school: null,
+      id: null,
+      bool: false,
+    };
+  }
   getSchool = () => {
     var v = user;
     axios
@@ -29,7 +32,6 @@ export default class NavBar extends Component {
   handleClick() {
     this.setState({ bool: !this.state.bool });
   }
-
   componentDidMount() {
     this.getSchool();
   }

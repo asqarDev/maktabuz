@@ -36,6 +36,7 @@ export default class BoshSahifa extends Component {
     school: null,
     clock: "00 : 00 : 00",
     bool: false,
+    top: false,
   };
   getSchool = () => {
     axios.get(`${url}/school-by-admin/${Global.user}`).then((res) => {
@@ -83,10 +84,22 @@ export default class BoshSahifa extends Component {
     setInterval(() => {
       this.setState({ clock: Clock() });
     }, 1000);
+
+    window.addEventListener("scroll", this.scrollfunction);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.scrollfunction);
+  }
+  scrollfunction = () => {
+    if (window.scrollY > 83) {
+      this.setState({ top: true });
+    } else {
+      this.setState({ top: false });
+    }
+  };
+
   render() {
-    console.log(this.state.school);
     return (
       <div>
         {this.state.loader ? (
@@ -113,7 +126,12 @@ export default class BoshSahifa extends Component {
               <div className={style.bosh_clock}>{this.state.clock}</div>
             </div>
 
-            <Navbar expand="lg" className={`${style.navbar_menu} `}>
+            <Navbar
+              expand="lg"
+              className={`${style.navbar_menu} ${
+                this.state.top ? style.active : ""
+              }`}
+            >
               <Container className={style.navbar_container}>
                 <div
                   className={style.navar_logo}
