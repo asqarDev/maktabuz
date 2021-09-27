@@ -108,6 +108,7 @@
 }
 
 .card_items {
+  margin-top: 15px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -115,16 +116,17 @@
 }
 .card_item {
   border-right: 10px;
-  margin: 15px 5px;
-  box-shadow: 0 0 5px #000;
+  margin: 15p 5px;
+  box-shadow: 0 0 2px #000;
 }
 .card_item:hover {
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 5px #00f;
 }
-.card_items .card_title {
+.card_title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 20px;
 }
 .card_item a,
 .card_item p {
@@ -136,6 +138,11 @@
   color: #555;
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+.card_for_body {
+  width: 90%;
+  margin: 0 auto;
 }
 .card_title svg {
   color: #318ce3;
