@@ -80,9 +80,6 @@
 .header_types {
   width: 100vw;
   height: 80vh;
-  background-image: url("https://media.istockphoto.com/photos/workspace-desk-top-view-no-people-copy-space-picture-id1161855233?k=20&m=1161855233&s=612x612&w=0&h=tK8VfzjtBSBaoOrUl4QhQ71xwGkBsMBQIAOf3CB8qjA=");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .header_type {
   width: 100%;

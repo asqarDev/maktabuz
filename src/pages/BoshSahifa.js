@@ -69,7 +69,6 @@ export default class BoshSahifa extends Component {
         console.log(err);
       });
   };
-
   handleClick() {
     this.setState({ bool: !this.state.bool });
   }
@@ -87,6 +86,7 @@ export default class BoshSahifa extends Component {
   }
 
   render() {
+    console.log(this.state.school);
     return (
       <div>
         {this.state.loader ? (
@@ -105,10 +105,10 @@ export default class BoshSahifa extends Component {
                   />
                 </div>
                 <p className={style.bosh_p1}>
-                  Surxondaryo viloyati Bandixon tumani 33 - davlat
+                  Surxondaryo viloyati Bandixon tumani 5 - davlat
                   iqtisoslashtirilgan umumta'lim maktabi
                 </p>
-                <p className={style.bosh_p2}>33 - DIUM</p>
+                <p className={style.bosh_p2}>5 - DIUM</p>
               </div>
               <div className={style.bosh_clock}>{this.state.clock}</div>
             </div>
@@ -209,7 +209,18 @@ export default class BoshSahifa extends Component {
               ""
             )}
 
-            <div className={style.header_types}>
+            <div
+              className={style.header_types}
+              style={{
+                backgroundImage: `url(${
+                  this.state.school !== null && this.state.school.b_r1 !== null
+                    ? this.state.school.b_r1
+                    : "https://media.istockphoto.com/photos/workspace-desk-top-view-no-people-copy-space-picture-id1161855233?k=20&m=1161855233&s=612x612&w=0&h=tK8VfzjtBSBaoOrUl4QhQ71xwGkBsMBQIAOf3CB8qjA="
+                })`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+            >
               <div className={`${style.header_type}`}>
                 <div className={style.header_center}>
                   <Typed
