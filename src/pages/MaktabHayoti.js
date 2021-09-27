@@ -18,6 +18,7 @@ import school10 from "../img/school10.jpg";
 import school11 from "../img/school11.jpg";
 import school12 from "../img/school12.jpg";
 import school13 from "../img/school13.jpg";
+import Images2 from '../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg'
 import { Link } from "react-router-dom";
 import { DownCircleOutlined } from "@ant-design/icons";
 import { BiStop, BiRightArrowAlt } from "react-icons/bi";
@@ -52,6 +53,8 @@ export default class MaktabHayoti extends Component {
       }, 2000);
     });
   }
+  
+  
 
   render() {
     const { data } = this.state;
@@ -258,7 +261,7 @@ export default class MaktabHayoti extends Component {
                       className={styles.PannellumReact}
                       width="100%"
                       height="500px"
-                      image={myImage}
+                      image={Images2}
                       pitch={10}
                       yaw={180}
                       hfov={110}
@@ -348,328 +351,181 @@ export default class MaktabHayoti extends Component {
                   </div>
                 </Col>
                 <Col lg={11} md={12} sm={12}>
-                  <Row>
-                    <Col lg={12}>
-                   
-                    </Col>
 
-                    <Col
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      className={styles.cardBolimlar}
-                      data-aos="zoom-in-up"
-                    >
-                      <Image
-                        src={
+                  <Row className="my-5">
+                  <Col
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  style={{ marginTop: "15px" }}
+                >
+                  <div className={styles.flipBox}>
+                    <div className={styles.flipBoxInner}>
+                      <div className={styles.flipBoxFront}>
+                        <img src={
                           data.m_h_oshxona !== null && data !== null
                             ? data.m_h_oshxona
                             : school7
-                        }
-                      />
-                      <div
-                        style={{
-                          backgroundColor: "#0F4C81",
-                          marginTop: "30px",
-                          padding: "10%",
-                          height: "380px",
-                        }}
-                      >
-                        <h1>Maktab oshxonasi</h1>
-                        <p>
-                          {data.m_h_oshxona_t !== null && data !== null
+                        } alt="Paris" />
+                      </div>
+                      <div className={styles.flipBoxBack}>
+                      <h6>Maktab oshxonasi</h6>
+                        <p> {data.m_h_oshxona_t !== null && data !== null
                             ? data.m_h_oshxona_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                             katta til okeanida yashaydilar. Dudenmut nomli kichik
-                            daryo.`}
-                        </p>
-                        {/* <h3 style={{ marginBottom: "20px" }}>
-                          <Link
-                            to="/maktaboshxonasi/uz"
-                            style={{
-                              color: "rgba(255,255,255,0.7)",
-                              textDecoration: "none",
-                            }}
-                          >
-                            Batafsil{" "}
-                            <BiRightArrowAlt
-                              style={{
-                                fontSize: "30px",
-                                color: "rgba(255,255,255,0.7)",
-                              }}
-                            />
-                          </Link>
-                        </h3> */}
+                            daryo.`}</p>
                       </div>
-                    </Col>
-                    <Col
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      className={styles.cardBolimlar}
-                      data-aos="zoom-in-up"
-                    >
-                      <Image
-                        src={
+                    </div>
+                  </div>
+                  </Col>
+                  <Col
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  style={{ marginTop: "15px" }}
+                >
+                  <div className={styles.flipBox}>
+                    <div className={styles.flipBoxInner}>
+                      <div className={styles.flipBoxFront}>
+                        <img  src={
                           data.m_h_sport !== null && data !== null
                             ? data.m_h_sport
                             : school8
-                        }
-                      />
-                      <div
-                        style={{
-                          backgroundColor: "#0F4C81",
-                          marginTop: "30px",
-                          padding: "10%",
-                          height: "380px",
-                        }}
-                      >
-                        <h1>Sport mashg'ulotlari</h1>
-                        <p>
-                          {data.m_h_sport_t !== null && data !== null
+                        } alt="Paris" />
+                      </div>
+                      <div className={styles.flipBoxBack}>
+                      <h6>Sport mashg'ulotlari</h6>
+                        <p>  {data.m_h_sport_t !== null && data !== null
                             ? data.m_h_sport_t
                             : `
                             Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                             katta til okeanida yashaydilar. Dudenmut nomli kichik
-                            daryo.`}
-                        </p>
-                        {/* <h3 style={{ marginBottom: "20px" }}>
-                          <Link
-                            to="/sportmashgulotlari/uz"
-                            style={{
-                              color: "rgba(255,255,255,0.7)",
-                              textDecoration: "none",
-                            }}
-                          >
-                            Batafsil{" "}
-                            <BiRightArrowAlt
-                              style={{
-                                fontSize: "30px",
-                                color: "rgba(255,255,255,0.7)",
-                              }}
-                            />
-                          </Link>
-                        </h3> */}
+                            daryo.`}</p>
                       </div>
-                    </Col>
-                    <Col
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      className={styles.cardBolimlar}
-                      style={{ marginRight: "0%" }}
-                      data-aos="zoom-in-up"
-                    >
-                      <Image
-                        src={
+                    </div>
+                  </div>
+                  </Col>
+                  <Col  
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  style={{ marginTop: "15px" }} >
+                  <div className={styles.flipBox}>
+                    <div className={styles.flipBoxInner}>
+                      <div className={styles.flipBoxFront}>
+                        <img  src={
                           data.m_h_musiqa !== null && data !== null
                             ? data.m_h_musiqa
                             : school9
-                        }
-                      />
-                      <div
-                        style={{
-                          backgroundColor: "#0F4C81",
-                          marginTop: "30px",
-                          padding: "10%",
-                          height: "380px",
-                        }}
-                      >
-                        <h1>San'at & madaniyat</h1>
-                        <p>
-                          {data.m_h_musiqa_t !== null && data !== null
+                        } alt="Paris" />
+                      </div>
+                      <div className={styles.flipBoxBack}>
+                      <h6>San'at & madaniyat</h6>
+                        <p> {data.m_h_musiqa_t !== null && data !== null
                             ? data.m_h_musiqa_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                             katta til okeanida yashaydilar. Dudenmut nomli kichik
-                            daryo.`}
-                        </p>
-                        {/* <h3 style={{ marginBottom: "20px" }}>
-                          <Link
-                            to="/sanatvamadaniyat/uz"
-                            style={{
-                              color: "rgba(255,255,255,0.7)",
-                              textDecoration: "none",
-                            }}
-                          >
-                            Batafsil{" "}
-                            <BiRightArrowAlt
-                              style={{
-                                fontSize: "30px",
-                                color: "rgba(255,255,255,0.7)",
-                              }}
-                            />
-                          </Link>
-                        </h3> */}
+                            daryo.`}</p>
                       </div>
-                    </Col>
-                    <Col
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      className={styles.cardBolimlar}
-                      data-aos="zoom-in-up"
-                    >
-                      <Image
-                        src={
+                    </div>
+                  </div>
+                  </Col>
+                  <Col  
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  style={{ marginTop: "15px" }} >
+                  <div className={styles.flipBox}>
+                    <div className={styles.flipBoxInner}>
+                      <div className={styles.flipBoxFront}>
+                        <img  src={
                           data.m_h_axborot !== null && data !== null
                             ? data.m_h_axborot
                             : school10
-                        }
-                      />
-                      <div
-                        style={{
-                          backgroundColor: "#0F4C81",
-                          marginTop: "30px",
-                          padding: "10%",
-                          height: "380px",
-                        }}
-                      >
-                        <h1>Axborot texnologiyalari</h1>
-                        <p>
-                          {data.m_h_axborot_t !== null && data !== null
+                        } alt="Paris" />
+                      </div>
+                      <div className={styles.flipBoxBack}>
+                      <h6>Axborot texnologiyalari</h6>
+                        <p> {data.m_h_axborot_t !== null && data !== null
                             ? data.m_h_axborot_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                           katta til okeanida yashaydilar. Dudenmut nomli kichik
-                          daryo.`}
-                        </p>
-                        {/* <h3 style={{ marginBottom: "20px" }}>
-                          <Link
-                            to="/axborottexnologiyalari/uz"
-                            style={{
-                              color: "rgba(255,255,255,0.7)",
-                              textDecoration: "none",
-                            }}
-                          >
-                            Batafsil{" "}
-                            <BiRightArrowAlt
-                              style={{
-                                fontSize: "30px",
-                                color: "rgba(255,255,255,0.7)",
-                              }}
-                            />
-                          </Link>
-                        </h3> */}
+                          daryo.`}</p>
                       </div>
-                    </Col>
-                    <Col
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      className={styles.cardBolimlar}
-                      data-aos="zoom-in-up"
-                    >
-                      <Image
-                        src={
+                    </div>
+                  </div>
+                  </Col>
+                  <Col  
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  style={{ marginTop: "15px" }} >
+                  <div className={styles.flipBox}>
+                    <div className={styles.flipBoxInner}>
+                      <div className={styles.flipBoxFront}>
+                        <img  src={
                           data.m_h_xavfsizlik !== null && data !== null
                             ? data.m_h_xavfsizlik
                             : school11
-                        }
-                      />
-                      <div
-                        style={{
-                          backgroundColor: "#0F4C81",
-                          marginTop: "30px",
-                          padding: "10%",
-                          height: "380px",
-                        }}
-                      >
-                        <h1>Xavfsizlik va qo'riqlash</h1>
-                        <p>
-                          {data.m_h_xavfsizlik_t !== null && data !== null
+                        } alt="Paris" />
+                      </div>
+                      <div className={styles.flipBoxBack}>
+                      <h6>Xavfsizlik va qo'riqlash</h6>
+                        <p>{data.m_h_xavfsizlik_t !== null && data !== null
                             ? data.m_h_xavfsizlik_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                           katta til okeanida yashaydilar. Dudenmut nomli kichik
-                          daryo.`}
-                        </p>
-                        {/* <h3 style={{ marginBottom: "20px" }}>
-                          <Link
-                            to="/xavfsizlikvaqoriqlash/uz"
-                            style={{
-                              color: "rgba(255,255,255,0.7)",
-                              textDecoration: "none",
-                            }}
-                          >
-                            Batafsil{" "}
-                            <BiRightArrowAlt
-                              style={{
-                                fontSize: "30px",
-                                color: "rgba(255,255,255,0.7)",
-                              }}
-                            />
-                          </Link>
-                        </h3> */}
+                          daryo.`}</p>
                       </div>
-                    </Col>
-                    <Col
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      className={styles.cardBolimlar}
-                      style={{ marginRight: "0%" }}
-                      data-aos="zoom-in-up"
-                    >
-                      <Image
-                        src={
+                    </div>
+                  </div>
+                  </Col>
+                  <Col  
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={4}
+                  style={{ marginTop: "15px" }} >
+                  <div className={styles.flipBox}>
+                    <div className={styles.flipBoxInner}>
+                      <div className={styles.flipBoxFront}>
+                        <img  src={
                           data.m_h_tibbiyot !== null && data !== null
                             ? data.m_h_tibbiyot
                             : school12
-                        }
-                      />
-                      <div
-                        style={{
-                          backgroundColor: "#0F4C81",
-                          marginTop: "30px",
-                          padding: "10%",
-                          height: "380px",
-                        }}
-                      >
-                        <h1>Sog'lik va salomatlik</h1>
-                        <p>
-                          {data.m_h_tibbiyot_t !== null && data !== null
+                        } alt="Paris" />
+                      </div>
+                      <div className={styles.flipBoxBack}>
+                      <h6>Sog'lik va salomatlik</h6>
+                        <p>{data.m_h_tibbiyot_t !== null && data !== null
                             ? data.m_h_tibbiyot_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                           katta til okeanida yashaydilar. Dudenmut nomli kichik
-                          daryo.`}
-                        </p>
-                        {/* <h3 style={{ marginBottom: "20px" }}>
-                          <Link
-                            to="/soglikvayaxshilik/uz"
-                            style={{
-                              color: "rgba(255,255,255,0.7)",
-                              textDecoration: "none",
-                            }}
-                          >
-                            Batafsil{" "}
-                            <BiRightArrowAlt
-                              style={{
-                                fontSize: "30px",
-                                color: "rgba(255,255,255,0.7)",
-                              }}
-                            />
-                          </Link>
-                        </h3> */}
+                          daryo.`}</p>
                       </div>
-                    </Col>
+                    </div>
+                  </div>
+                  </Col>
+
+                  
                   </Row>
                 </Col>
                
       <Col lg={12}>
                   <Row>
-                    <Col lg={6} md={6} sm={12} className={styles.director}>
-                      <Image
-                        src={
-                          data.m_h_o_r !== null && data !== null
-                            ? data.m_h_o_r
-                            : school13
-                        }
-                      />
-                    </Col>
+                    
                     <Col
                       lg={6}
                       md={6}
                       sm={12}
                       className={styles.director}
-                      style={{ backgroundColor: "#0F4C81", padding: "10%" }}
+                      style={{ backgroundColor: "#0F4C81", padding: "0" }}
                     >
                       <p>
                         {data.m_h_o !== null && data !== null
@@ -683,6 +539,15 @@ export default class MaktabHayoti extends Component {
                           ? data.m_h_o_t
                           : "Alisa"}
                       </h1>
+                    </Col>
+                    <Col lg={6} md={6} sm={12} className={styles.director}>
+                      <Image
+                        src={
+                          data.m_h_o_r !== null && data !== null
+                            ? data.m_h_o_r
+                            : school13
+                        }
+                      />
                     </Col>
                   </Row>
                 </Col>

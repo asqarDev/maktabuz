@@ -69,7 +69,7 @@ body {
 .transporttext {
   padding-left: 10% !important;
   padding-top: 5%;
-  background-color: #0f4c81 !important;
+  background-color: #0f7081 !important;
   height: 650px;
   padding-right: 5% !important;
   z-index: 2 !important;
@@ -98,61 +98,79 @@ body {
 .PannellumReactContainer {
   position: relative;
 }
-.cardBolimlar {
-  margin-top: 80px !important;
-  padding-right: 2% !important;
-  width: 31% !important;
-  margin-bottom: 50px;
-  z-index: 1 !important;
-}
-.cardBolimlar img {
+.flipBox {
+  background-color: transparent;
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: 320px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  border-radius: 10px;
+  margin-top: 40px !important;
+  
 }
-.cardBolimlar h1 {
-  font-size: 30px !important;
+.flipBoxInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+.flipBox:hover .flipBoxInner {
+  transform: rotateY(180deg);
+}
+
+.flipBoxFront,
+.flipBoxBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flipBoxFront {
+  background-color: #bbb;
+  color: black;
+}
+.flipBoxFront img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.flipBoxBack {
+  background-image: url("../img/bgfon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.flipBoxBack p {
+  font-size: 1.5rem;
+  margin-top: 25%;
   color: white;
 }
-.cardBolimlar p {
-  font-size: 18px;
-  line-height: 25px;
-  margin-top: 50px !important;
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.7);
+.flipBoxBack h6{
+  color: white;
 }
-.cardBolimlar h3 {
-  font-size: 22px;
-  position: relative;
-  display: inline-block;
-  z-index: 5 !important;
-  cursor: pointer;
+.cardBolimlar {
+  /* position: relative; */
+  margin-top: 80px !important;
+  padding-right: 2% !important;
+  width: 27% !important;
+  margin-bottom: 50px;
+  margin-right: 25px;
+  z-index: 1 !important;
 }
-.cardBolimlar h3::before {
-  content: "";
-  position: absolute;
-  top: 110%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #04376a;
-  z-index: -4 !important;
-  transition: all 0.3s;
-}
-.cardBolimlar h3::after {
-  content: "";
-  position: absolute;
-  top: 110%;
-  left: 0;
-  width: 0%;
-  height: 4px;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: -4 !important;
-  transition: all 0.3s;
-}
-.cardBolimlar h3:hover::after {
-  width: 100%;
-}
+
+
+
 .director img {
   width: 100% !important;
   height: 100%;
@@ -160,6 +178,7 @@ body {
 }
 .director {
   text-align: left !important;
+  padding: 0 !important;
 }
 .director p {
   font-size: 20px;
