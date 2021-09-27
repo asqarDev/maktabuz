@@ -29,7 +29,7 @@ import axios from "axios";
 import '../css/maktabhayoti.css'
 import { Pannellum } from "pannellum-react";
 import myImage from "../img/360.jpeg";
-
+import video from '../Video/360 Video Of Computers Inside A Library.mp4'
 import Global from "../host/Global";
 import { url, user } from "../host/Host";
 
@@ -73,14 +73,13 @@ export default class MaktabHayoti extends Component {
 <div class="overlay mt-5"></div>
 
 <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-  <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4"/>
+  <source src={video} type="video/mp4"/>
 </video>
 
 <div class="container h-100">
   <div class="d-flex h-100 text-center align-items-center">
     <div class="w-100 text-white">
-      <h1 class="display-3">Video Header</h1>
-      <p class="lead mb-0">Using HTML5 Video and Bootstrap</p>
+      <h3 style={{ fontFamily: "font", fontWeight: "900",color:'white',marginTop:'50px' }}>Maktab hayoti</h3>
     </div>
   </div>
 </div>
@@ -397,7 +396,7 @@ export default class MaktabHayoti extends Component {
                         } alt="Paris" />
                       </div>
                       <div className={styles.flipBoxBack}>
-                      <h6>Sport mashg'ulotlari</h6>
+                      <h3>Sport mashg'ulotlari</h3>
                         <p>  {data.m_h_sport_t !== null && data !== null
                             ? data.m_h_sport_t
                             : `
@@ -424,7 +423,7 @@ export default class MaktabHayoti extends Component {
                         } alt="Paris" />
                       </div>
                       <div className={styles.flipBoxBack}>
-                      <h6>San'at & madaniyat</h6>
+                      <h3>San'at & madaniyat</h3>
                         <p> {data.m_h_musiqa_t !== null && data !== null
                             ? data.m_h_musiqa_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
@@ -450,7 +449,7 @@ export default class MaktabHayoti extends Component {
                         } alt="Paris" />
                       </div>
                       <div className={styles.flipBoxBack}>
-                      <h6>Axborot texnologiyalari</h6>
+                      <h3>Axborot texnologiyalari</h3>
                         <p> {data.m_h_axborot_t !== null && data !== null
                             ? data.m_h_axborot_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
@@ -476,7 +475,7 @@ export default class MaktabHayoti extends Component {
                         } alt="Paris" />
                       </div>
                       <div className={styles.flipBoxBack}>
-                      <h6>Xavfsizlik va qo'riqlash</h6>
+                      <h3>Xavfsizlik va qo'riqlash</h3>
                         <p>{data.m_h_xavfsizlik_t !== null && data !== null
                             ? data.m_h_xavfsizlik_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
@@ -502,7 +501,7 @@ export default class MaktabHayoti extends Component {
                         } alt="Paris" />
                       </div>
                       <div className={styles.flipBoxBack}>
-                      <h6>Sog'lik va salomatlik</h6>
+                      <h3>Sog'lik va salomatlik</h3>
                         <p>{data.m_h_tibbiyot_t !== null && data !== null
                             ? data.m_h_tibbiyot_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
@@ -525,9 +524,10 @@ export default class MaktabHayoti extends Component {
                       md={6}
                       sm={12}
                       className={styles.director}
-                      style={{ backgroundColor: "#0F4C81", padding: "0" }}
+                      
                     >
-                      <p>
+                     <div className='p-3'>
+                     <p>
                         {data.m_h_o !== null && data !== null
                           ? data.m_h_o
                           : `Bizning maqsadimiz moliyaviy xizmatlar sohasining
@@ -539,6 +539,7 @@ export default class MaktabHayoti extends Component {
                           ? data.m_h_o_t
                           : "Alisa"}
                       </h1>
+                     </div>
                     </Col>
                     <Col lg={6} md={6} sm={12} className={styles.director}>
                       <Image

@@ -69,7 +69,10 @@ body {
 .transporttext {
   padding-left: 10% !important;
   padding-top: 5%;
-  background-color: #0f7081 !important;
+  background-image: url("../img/bgfon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 650px;
   padding-right: 5% !important;
   z-index: 2 !important;
@@ -99,6 +102,7 @@ body {
   position: relative;
 }
 .flipBox {
+  
   background-color: transparent;
   width: 100%;
   height: 320px;
@@ -154,9 +158,11 @@ body {
 .flipBoxBack p {
   font-size: 1rem;
   color: white;
+  font-family: "Lobster", cursive;
 }
 .flipBoxBack h3{
   margin-top: 25%;
+  font-family: "Lobster", cursive;
   color: white;
 }
 .cardBolimlar {
@@ -177,13 +183,20 @@ body {
   object-fit: cover;
 }
 .director {
-  text-align: left !important;
   padding: 0 !important;
+  background-image: url("../img/bgfon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .director p {
+  font-family: "Lobster", cursive;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.7);
-  text-align: left !important;
+  text-align: center !important;
 }
 .director h1 {
   font-family: "Lobster", cursive;
