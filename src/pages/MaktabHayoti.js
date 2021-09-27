@@ -370,7 +370,7 @@ export default class MaktabHayoti extends Component {
                         } alt="Paris" />
                       </div>
                       <div className={styles.flipBoxBack}>
-                      <h6>Maktab oshxonasi</h6>
+                      <h3>Maktab oshxonasi</h3>
                         <p> {data.m_h_oshxona_t !== null && data !== null
                             ? data.m_h_oshxona_t
                             : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
