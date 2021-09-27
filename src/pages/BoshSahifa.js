@@ -215,7 +215,7 @@ export default class BoshSahifa extends Component {
                   <Typed
                     className={`typed-title text-center ${style.typed_item}`}
                     strings={["BIZNING MAKTABIMIZGA XUSH KELIBSIZ"]}
-                    typeSpeed={90}
+                    typeSpeed={50}
                     backSpeed={50}
                     loop
                   />
@@ -240,7 +240,7 @@ export default class BoshSahifa extends Component {
                       : rasm2
                   }
                 />
-                <Card.Body>
+                <Card.Body className={style.card_for_body}>
                   <Card.Title className={style.card_title}>
                     <FontAwesomeIcon
                       icon={faNewspaper}
@@ -266,7 +266,7 @@ export default class BoshSahifa extends Component {
                       : rasm1
                   }
                 />
-                <Card.Body>
+                <Card.Body className={style.card_for_body}>
                   <Card.Title className={style.card_title}>
                     <FontAwesomeIcon
                       icon={faSchool}
@@ -291,7 +291,7 @@ export default class BoshSahifa extends Component {
                       : rasm3
                   }
                 />
-                <Card.Body>
+                <Card.Body className={style.card_for_body}>
                   <Card.Title className={style.card_title}>
                     <FontAwesomeIcon
                       icon={faDoorOpen}

@@ -112,7 +112,13 @@ export default class Maktabmamuriyati extends Component {
             <div className={styles.mamuryat_header}>
               <Image
                 className="d-block w-100"
-                src={this.state.direktor[0].image}
+                src={
+                  this.state.direktor.image !== null &&
+                  this.state.direktor !== null
+                    ? this.state.direktor.image
+                    : `"https://cdn.wallpapersafari.com/46/99/Vh6QFJ.jpg"
+                    `
+                }
                 alt="First slide"
               />
               <div>
@@ -129,7 +135,13 @@ export default class Maktabmamuriyati extends Component {
                           <div className={styles.carddirektor}>
                             <Row>
                               <Col lg={4} className={styles.mamuryat_person}>
-                                <Image src={item.image} />
+                                <Image
+                                  src={
+                                    item.image !== null && item !== null
+                                      ? item.image
+                                      : "https://cdn.wallpapersafari.com/46/99/Vh6QFJ.jpg"
+                                  }
+                                />
                                 <p>Maktab direktori</p>
                               </Col>
                               <Col className={styles.cardwrap} lg={8}>
