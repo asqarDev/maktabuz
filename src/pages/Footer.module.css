@@ -7,6 +7,22 @@
 .container * {
   color: #fff;
 }
+.boglanish{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.boglanish p{
+  font-size: 20px;
+}
+.boglanish  a{
+  
+  transition: linear 0.4s;
+}
+.boglanish  a:hover{
+  font-size: 22px;
+  
+}
 .logoUchun h2 {
   font-weight: 700;
   margin-bottom: 20px;
@@ -42,6 +58,9 @@
   .ulLi h2 {
     font-size: 1.4rem;
   }
+  .boglanish{
+    margin-top: 20px;
+  }
 }
 @media (max-width: 970px) {
   .logoUchun p {
@@ -49,6 +68,9 @@
   }
   .ulLi h2 {
     font-size: 1.3rem;
+  }
+  .boglanish p{
+    font-size: 30px;
   }
 }
 @media (max-width: 890px) {

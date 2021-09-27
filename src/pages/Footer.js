@@ -1,10 +1,14 @@
 import React, { Component } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Tooltip } from "react-bootstrap";
 import style from "./Footer.module.css";
 import axios from "axios";
 import { url, user } from "../host/Host";
 import { NavLink } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaTelegram,FaFacebook , FaPhoneAlt} from 'react-icons/fa';
+import {FiInstagram } from 'react-icons/fi';
+import {AiFillYoutube } from 'react-icons/ai';
+import { SiGmail } from "react-icons/si";
 export default class Footer extends Component {
   state = {
     data: [],
@@ -84,7 +88,34 @@ export default class Footer extends Component {
                   </NavLink>
                 </li>
               </ul>
+              <div className='row'>
+                <Col className={style.boglanish} lg={10} md={10} sm={12} xl={10}>
+                    <p>
+                      <a href="#"><SiGmail  className={style.relations}/></a>
+                    </p>
+                    <p>
+                      <a href="#"><FaTelegram className={style.relations}/></a>
+                    </p>
+                    <p>
+                      <a href="#"><FiInstagram className={style.relations}/></a>
+                    </p>
+                    <p>
+                      <a href="#"><FaFacebook className={style.relations}/></a>
+                    </p>
+                    <p>
+                      <a href="#"><AiFillYoutube className={style.relations}/></a>
+                    </p>
+                    <p>
+                      <a href="#"><FaPhoneAlt className={style.relations}/></a>
+                    </p>
+                </Col>
+                  
+              </div>
             </Col>
+            <Col>
+                  
+            </Col>
+          
           </Row>
         </div>
       </>
