@@ -249,7 +249,7 @@ export default class BoshSahifa extends Component {
                     loop
                   />
                   <div className={style.yozuvBtn}>
-                    <Link to="/ha yot/">
+                    <Link to="/hayot/">
                       <Button>Maktab hayoti</Button>
                     </Link>
                   </div>
