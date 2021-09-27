@@ -1,16 +1,8 @@
 import React, { Component } from "react";
 import { Col, Row } from "react-bootstrap";
 import style from "./Footer.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faTelegram,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
-import { idMaktab, url, user } from "../host/Host";
-import Global from "../host/Global";
+import { url, user } from "../host/Host";
 import { NavLink } from "react-router-dom";
 
 export default class Footer extends Component {
@@ -18,7 +10,6 @@ export default class Footer extends Component {
     data: [],
   };
   componentDidMount() {
-    //   var a = window.location.href.split("/");
     var v = user;
     axios.get(`${url}/school-by-admin/${v}`).then((res) => {
       this.setState({ data: res.data });
@@ -26,7 +17,7 @@ export default class Footer extends Component {
   }
   render() {
     return (
-      <div>
+      <>
         <div className={style.container}>
           <Row>
             <Col xs={12} sm={12} md={6} lg={4} className={style.logoUchun}>
@@ -78,19 +69,16 @@ export default class Footer extends Component {
               <h2>Maktab hayoti</h2>
               <ul>
                 <li>
-                  {" "}
                   <NavLink className={style.navLink} to={`/yangiliklar/`}>
                     <p>Yangiliklar</p>
                   </NavLink>
                 </li>
                 <li>
-                  {" "}
                   <NavLink className={style.navLink} to={`/rahbariyat/`}>
                     <p>Maktab ma'muriyati</p>
                   </NavLink>
                 </li>
                 <li>
-                  {" "}
                   <NavLink className={style.navLink} to={`/alochilar/`}>
                     <p>Maktab a'lochilari</p>
                   </NavLink>
@@ -99,7 +87,7 @@ export default class Footer extends Component {
             </Col>
           </Row>
         </div>
-      </div>
+      </>
     );
   }
 }
