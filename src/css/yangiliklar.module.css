@@ -44,12 +44,21 @@ object-fit: cover;
 .sliderHeader{
     width: 100%;
 }
+.rgbas{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(28, 76, 167, 0.4);
+    position: absolute;
+    z-index: 212;
+}
 .headerSliderText{
     position: absolute;
+    z-index: 211;
     top:60% !important;
     left: 50%;
     transform: translate(-50%,-70%);
     z-index: 10 !important;
+    
 }
 .headerSliderText h3{
   font-size: 60px;
@@ -96,6 +105,7 @@ object-fit: cover;
 .news2:hover img{
     transform: scale(1.02);
 }
+
 .news2 img{
     transition: linear 0.4s;
     width: 100%;

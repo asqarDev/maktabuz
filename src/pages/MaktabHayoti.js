@@ -71,7 +71,6 @@ export default class MaktabHayoti extends Component {
             <header>
 
 <div class="overlay mt-5"></div>
-
 <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
   <source src={video} type="video/mp4"/>
 </video>
@@ -79,7 +78,7 @@ export default class MaktabHayoti extends Component {
 <div class="container h-100">
   <div class="d-flex h-100 text-center align-items-center">
     <div class="w-100 text-white">
-      <h3 style={{ fontFamily: "font", fontWeight: "900",color:'white',marginTop:'50px' }}>Maktab hayoti</h3>
+      <h1 style={{ fontFamily: "font",fontSize:"60px", fontWeight: "900",color:'white',marginTop:'50px' }}>Maktab hayoti</h1>
     </div>
   </div>
 </div>
