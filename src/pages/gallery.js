@@ -6,19 +6,16 @@ import img3 from "../img/b3.jpg";
 import img4 from "../img/b4.jpg";
 import img5 from "../img/b5.jpg";
 import img6 from "../img/b6.jpg";
-import img7 from "../img/b7.png";
 import FadeLoader from "react-spinners/FadeLoader";
-import { idMaktab, url, user } from "../host/Host";
+import { url, user } from "../host/Host";
 import axios from "axios";
 import { Col, Container, Row } from "react-bootstrap";
-import Global from "../host/Global";
 export default class Gallery extends Component {
   state = {
     school: [],
     loader: true,
   };
   getSchool = () => {
-    // var a = window.location.href.split("/");
     var v = user;
     axios
       .get(`${url}/school-by-admin/${v}`)
@@ -51,28 +48,26 @@ export default class Gallery extends Component {
           </div>
         ) : (
           <div className={style.mat}>
-            <br />
-            <div className={style.header}>
-              <img
-                alt=" "
-                src={
+            <div
+              className={style.header}
+              style={{
+                backgroundImage: `url(${
                   this.state.school !== null
                     ? this.state.school.foto !== null
                       ? this.state.school.foto
                       : img1
                     : img1
-                }
-                style={{ width: "100%", height: "100%" }}
-              />
+                })`,
+              }}
+            >
               <div className={style.sarlavha}>
-                <h2>Bizning Fotogalareya</h2>
-                <h1>Maktabimiz hayotidan fotolavhalar</h1>
+                <h2>Maktabimiz hayotidan fotolavhalar</h2>
               </div>
             </div>
 
             <Container>
-              <Row style={{ justifyContent: "center" }}>
-                <Col lg={6} md={6} cm={12}>
+              <Row style={{ justifyContent: "center", marginTop: "10vh" }}>
+                <Col lg={4} md={6} cm={12}>
                   <div class={style.imagewrapper}>
                     <img
                       alt=" "
@@ -120,7 +115,7 @@ export default class Gallery extends Component {
                     />
                   </div>{" "}
                 </Col>
-                <Col lg={6} md={6} cm={12}>
+                <Col lg={4} md={6} cm={12}>
                   <div class={style.imagewrapper}>
                     <img
                       alt=" "
@@ -168,7 +163,7 @@ export default class Gallery extends Component {
                     />
                   </div>
                 </Col>
-                <Col lg={6} md={6} cm={12}>
+                <Col lg={4} md={6} cm={12}>
                   <div class={style.imagewrapper}>
                     <img
                       alt=" "
@@ -216,7 +211,7 @@ export default class Gallery extends Component {
                     />
                   </div>
                 </Col>
-                <Col lg={6} md={6} cm={12}>
+                <Col lg={4} md={6} cm={12}>
                   <div class={style.imagewrapper}>
                     <img
                       alt=" "
@@ -264,7 +259,7 @@ export default class Gallery extends Component {
                     />
                   </div>
                 </Col>
-                <Col lg={6} md={6} cm={12}>
+                <Col lg={4} md={6} cm={12}>
                   <div class={style.imagewrapper}>
                     <img
                       alt=" "
@@ -312,7 +307,7 @@ export default class Gallery extends Component {
                     />
                   </div>
                 </Col>
-                <Col lg={6} md={12} cm={12}>
+                <Col lg={4} md={12} cm={12}>
                   <div class={style.imagewrapper}>
                     <img
                       alt=" "
@@ -360,7 +355,7 @@ export default class Gallery extends Component {
                     />
                   </div>
                 </Col>
-                <Col lg={6} md={12} cm={12}>
+                <Col lg={4} md={12} cm={12}>
                   <div class={style.imagewrapper}>
                     <img
                       alt=" "

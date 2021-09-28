@@ -159,7 +159,7 @@
     background-size: 100% 450px;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container p {
     font-size: 1.2rem;
   }
@@ -168,7 +168,7 @@
   }
   .flipBoxInner {
     margin-top: 10px;
-    height: 300px;
+    height: 250px;
   }
   .flipBoxBack * {
     font-size: 0.9rem;
@@ -180,7 +180,7 @@
     padding: 20px;
   }
 }
-@media (max-width: 350px) {
+@media screen and (max-width: 350px) {
   .container h1 {
     margin-top: 5%;
     font-size: 1.2rem;
@@ -190,6 +190,10 @@
   }
   .container p {
     font-size: 0.9rem;
+  }
+
+  .flipBoxInner {
+    height: 200px;
   }
 }
 

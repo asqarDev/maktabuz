@@ -16,7 +16,7 @@ body {
 }
 .body_makatab * {
   color: #fff;
-  font-family: "Lobster", cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .dark_maktab {
   background-color: rgba(0, 0, 0, 0.5);
