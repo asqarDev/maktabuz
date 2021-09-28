@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import styles from "../css/maktabHayoti.module.css";
 import "../css/maktahayotiAli.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import { Carousel } from "antd";
 
 import '../css/video.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
-import school3 from "../img/school3.jpg";
 import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import school7 from "../img/school7.jpg";
@@ -19,9 +17,7 @@ import school11 from "../img/school11.jpg";
 import school12 from "../img/school12.jpg";
 import school13 from "../img/school13.jpg";
 import Images2 from '../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg'
-import { Link } from "react-router-dom";
-import { DownCircleOutlined } from "@ant-design/icons";
-import { BiStop, BiRightArrowAlt } from "react-icons/bi";
+import { BiStop } from "react-icons/bi";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FadeLoader } from "react-spinners";
@@ -167,7 +163,6 @@ export default class MaktabHayoti extends Component {
                                  src={data !== null && data.m_h_navruz !== null
                                     ? data.m_h_navruz
                                     : school1} alt=""/>
-
                               {/* <span>Navro'z bayrami</span> */}
                             </div>
                           </Col>
@@ -255,19 +250,11 @@ export default class MaktabHayoti extends Component {
                 </Col>
                 <Col lg={12} className={styles.panoramic}>
                   <div className={styles.PannellumReactContainer}>
-                    <Pannellum
-                      className={styles.PannellumReact}
-                      width="100%"
-                      height="500px"
-                      image={Images2}
-                      pitch={10}
-                      yaw={180}
-                      hfov={110}
-                      autoLoad
-                      onLoad={() => {
-                        console.log("panorama loaded");
-                      }}
-                    ></Pannellum>
+                   
+                    <div className={styles.PannellumReact}>
+                      <Image  width="100%"
+                      height="500px" src={Images2}/>
+                    </div>
                     <div className="paramumic_data">
                       <div>
                         <h2 style={{ width: "80%", marginLeft: "10%" }}>
@@ -467,12 +454,14 @@ export default class MaktabHayoti extends Component {
                   <div className={styles.flipBox}>
                     <div className={styles.flipBoxInner}>
                       <div className={styles.flipBoxFront}>
+                        <div className={}>
                         <img  src={
                           data.m_h_xavfsizlik !== null && data !== null
                             ? data.m_h_xavfsizlik
                             : school11
                         } alt="Paris" />
                       </div>
+                        </div>
                       <div className={styles.flipBoxBack}>
                       <h3>Xavfsizlik va qo'riqlash</h3>
                         <p>{data.m_h_xavfsizlik_t !== null && data !== null
@@ -493,11 +482,16 @@ export default class MaktabHayoti extends Component {
                   <div className={styles.flipBox}>
                     <div className={styles.flipBoxInner}>
                       <div className={styles.flipBoxFront}>
-                        <img  src={
+                       <div className={styles.hayotiy}>
+                       <img  src={
                           data.m_h_tibbiyot !== null && data !== null
                             ? data.m_h_tibbiyot
                             : school12
                         } alt="Paris" />
+                        
+                        <h3>Sog'lik va salomatlik</h3>
+                        
+                       </div>
                       </div>
                       <div className={styles.flipBoxBack}>
                       <h3>Sog'lik va salomatlik</h3>
@@ -511,7 +505,7 @@ export default class MaktabHayoti extends Component {
                   </div>
                   </Col>
 
-                  
+                
                   </Row>
                 </Col>
                

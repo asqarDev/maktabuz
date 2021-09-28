@@ -21,9 +21,17 @@
     /* gap:20px; */
   }
   .container12:hover img {
-    opacity:0.3;
+    opacity:0.4;
   }
  .container12 img:hover {
     transform:perspective(800px)       rotateY(0deg);
     opacity:1;
+  }
+  @media screen and (max-width: 720px) {
+      .container12 img {
+        width: 100%;
+        transform:perspective(400px) rotateY(0deg);
+        -webkit-box-reflect:below 0.4px linear-gradient(transparent, transparent, rgba(43, 42, 42, 0.267));
+
+      }
   }
