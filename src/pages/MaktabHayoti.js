@@ -29,7 +29,7 @@ import axios from "axios";
 import '../css/maktabhayoti.css'
 import { Pannellum } from "pannellum-react";
 import myImage from "../img/360.jpeg";
-import video from '../Video/360 Video Of Computers Inside A Library.mp4'
+import video from '../Video/teacher.mp4'
 import Global from "../host/Global";
 import { url, user } from "../host/Host";
 
