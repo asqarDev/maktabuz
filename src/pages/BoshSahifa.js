@@ -118,8 +118,11 @@ export default class BoshSahifa extends Component {
                   />
                 </div>
                 <p className={style.bosh_p1}>
-                  Surxondaryo viloyati Bandixon tumani 5 - davlat
-                  iqtisoslashtirilgan umumta'lim maktabi
+                  Surxondaryo viloyati Bandixon tumani
+                  {this.state.school !== null
+                    ? this.state.school.school_number + " - maktab"
+                    : "Maktab raqami "}
+                  - davlat iqtisoslashtirilgan umumta'lim maktabi
                 </p>
                 <p className={style.bosh_p2}>5 - DIUM</p>
               </div>
