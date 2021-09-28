@@ -237,6 +237,7 @@ export default class BoshSahifa extends Component {
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               <div className={`${style.header_type}`}>
