@@ -35,12 +35,14 @@ export default class MaktabHayoti extends Component {
     data: [],
   };
   componentDidMount() {
+    
     Aos.init({
       duration: 2000,
     });
     // var a = window.location.href.split("/");
     var v = user;
     axios.get(`${url}/school-by-admin/${v}`).then((res) => {
+      console.log(res.user)
       this.setState({ data: res.data });
       setTimeout(() => {
         this.setState({
