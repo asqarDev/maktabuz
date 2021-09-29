@@ -1,36 +1,35 @@
-.maktabHayoti_director__1koTa{
+.maktabHayoti_director__1koTa {
   padding: 0 !important;
 }
- .container12 img {
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
-    transform-origin:center;
-    transform:perspective(800px) rotateY(25deg);
-    transition:0.5s;
-  }
- .container12  {
-     margin: 40px;
-    max-width:100%;
-    height: 350px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
-  }
-  .container12:hover img {
-    opacity:0.4;
-  }
- .container12 img:hover {
-    transform:perspective(800px)     rotateY(0deg);
-    opacity:1;
-  }
-  @media screen and (max-width: 920px) {
-      .container12 img {
-        width: 100%;
-        transform:perspective(800px) rotateY(0deg);
-        -webkit-box-reflect:below -100px linear-gradient(transparent, transparent, rgba(54, 49, 49, 0.267));
+.container12 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-      }
+  transform-origin: center;
+  transform: perspective(800px) rotateY(25deg);
+  transition: 0.5s;
+}
+.container12 {
+  margin: 40px;
+  max-width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container12:hover img {
+  opacity: 0.4;
+}
+.container12 img:hover {
+  transform: perspective(800px) rotateY(0deg);
+  opacity: 1;
+}
+@media screen and (max-width: 920px) {
+  .container12 img {
+    width: 100%;
+    transform: perspective(800px) rotateY(0deg);
+    -webkit-box-reflect: below -100px linear-gradient(transparent, transparent, rgba(54, 49, 49, 0.267));
   }
+}
