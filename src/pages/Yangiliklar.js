@@ -4,22 +4,12 @@ import new2 from "../img/new2.jpg";
 import new3 from "../img/new3.jpg";
 import new4 from "../img/new4.jpg";
 import styles from "../css/yangiliklar.module.css";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import {
-  MDBCard,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardImage,
-  MDBRow,
-  MDBCol,
-} from "mdb-react-ui-kit";
+import { Container, Row, Col, Image, Card } from "react-bootstrap";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { getNews } from "../host/Config";
 import FadeLoader from "react-spinners/FadeLoader";
 import { Carousel } from "antd";
-import school8 from "../img/school8.jpg";
 
 export default class Yangiliklar extends Component {
   state = {
@@ -153,45 +143,32 @@ export default class Yangiliklar extends Component {
                   </div>
                   <div className={styles.body}>
                     <Row>
-                      {this.state.news.map((item, key) => {
+                      {this.state.news.map((item) => {
                         return (
                           <Col
-                            lg={6}
+                            key={item.id}
+                            lg={4}
+                            md={6}
                             sm={12}
-                            style={{ marginBottom: "10px" }}
                             className={styles.body_card}
                           >
-                            <MDBCard
-                              onClick={() => {
-                                this.setState({ id: key });
-                              }}
-                            >
-                              <MDBRow className="g-0">
-                                <MDBCol md="4">
-                                  <MDBCardImage
-                                    src={item.image}
-                                    alt="..."
-                                    fluid
-                                  />
-                                </MDBCol>
-                                <MDBCol md="8">
-                                  <MDBCardBody>
-                                    <MDBCardTitle>{item.title}</MDBCardTitle>
-                                    <MDBCardText>
-                                      <small className="text-muted">
-                                        <p className={styles.date}>
-                                          <i
-                                            style={{ marginRight: "10px" }}
-                                            class="far fa-calendar-alt"
-                                          ></i>
-                                          {item.published_time.substring(0, 10)}{" "}
-                                        </p>{" "}
-                                      </small>
-                                    </MDBCardText>
-                                  </MDBCardBody>
-                                </MDBCol>
-                              </MDBRow>
-                            </MDBCard>
+                            <Card className={styles.card_item}>
+                              <Card.Img variant="top" src={item.image} />
+                              <Card.Body>
+                                <Card.Title>
+                                  <small>
+                                    <p className={styles.date}>
+                                      <i
+                                        style={{ marginRight: "10px" }}
+                                        class="far fa-calendar-alt"
+                                      ></i>
+                                      {item.published_time.substring(0, 10)}{" "}
+                                    </p>
+                                  </small>
+                                </Card.Title>
+                                <Card.Text>{item.title}</Card.Text>
+                              </Card.Body>
+                            </Card>
                           </Col>
                         );
                       })}
