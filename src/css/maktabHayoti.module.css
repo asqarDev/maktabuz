@@ -171,12 +171,15 @@ body {
   position: relative;
 }
 .hayotiy h3{
+  width: 100%;
   position: absolute;
-  bottom: 10%;
-  padding: 0;
+  bottom: 0;
+  padding: 0 10px;
   margin: 0;
-  left: 20%;
+  left: 0;
   color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px 15px;
   /* transform: rotateY(10px); */
 }
 
