@@ -3,7 +3,7 @@ import styles from "../css/maktabHayoti.module.css";
 import "../css/maktahayotiAli.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
-import '../css/video.css'
+import "../css/video.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import school1 from "../img/school1.jpg";
 import school2 from "../img/school2.jpg";
@@ -16,17 +16,14 @@ import school10 from "../img/school10.jpg";
 import school11 from "../img/school11.jpg";
 import school12 from "../img/school12.jpg";
 import school13 from "../img/school13.jpg";
-import Images2 from '../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg'
+import Images2 from "../img/priscilla-du-preez-XkKCui44iM0-unsplash.jpg";
 import { BiStop } from "react-icons/bi";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FadeLoader } from "react-spinners";
 import axios from "axios";
-import '../css/maktabhayoti.css'
-import { Pannellum } from "pannellum-react";
-import myImage from "../img/360.jpeg";
-import video from '../Video/teacher.mp4'
-import Global from "../host/Global";
+import "../css/maktabhayoti.css";
+import video from "../Video/teacher.mp4";
 import { url, user } from "../host/Host";
 
 export default class MaktabHayoti extends Component {
@@ -35,14 +32,12 @@ export default class MaktabHayoti extends Component {
     data: [],
   };
   componentDidMount() {
-    
     Aos.init({
       duration: 2000,
     });
-    // var a = window.location.href.split("/");
     var v = user;
     axios.get(`${url}/school-by-admin/${v}`).then((res) => {
-      console.log(res.user)
+      console.log(res.user);
       this.setState({ data: res.data });
       setTimeout(() => {
         this.setState({
@@ -51,8 +46,6 @@ export default class MaktabHayoti extends Component {
       }, 2000);
     });
   }
-  
-  
 
   render() {
     const { data } = this.state;
@@ -64,23 +57,35 @@ export default class MaktabHayoti extends Component {
           </div>
         ) : (
           <>
-          
-           
             <header>
+              <div class="overlay mt-5"></div>
+              <video
+                playsinline="playsinline"
+                autoplay="autoplay"
+                muted="muted"
+                loop="loop"
+              >
+                <source src={video} type="video/mp4" />
+              </video>
 
-<div class="overlay mt-5"></div>
-<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-  <source src={video} type="video/mp4"/>
-</video>
-
-<div class="container h-100">
-  <div class="d-flex h-100 text-center align-items-center">
-    <div class="w-100 text-white">
-      <h1 style={{ fontFamily: "font",fontSize:"60px", fontWeight: "900",color:'white',marginTop:'50px' }}>Maktab hayoti</h1>
-    </div>
-  </div>
-</div>
-</header>
+              <div class="container h-100">
+                <div class="d-flex h-100 text-center align-items-center">
+                  <div class="w-100 text-white">
+                    <h1
+                      style={{
+                        fontFamily: "font",
+                        fontSize: "60px",
+                        fontWeight: "900",
+                        color: "white",
+                        marginTop: "50px",
+                      }}
+                    >
+                      Maktab hayoti
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </header>
 
             <Container fluid className={styles.secondContainer} id="1">
               <Row>
@@ -155,51 +160,58 @@ export default class MaktabHayoti extends Component {
                   </div>
                   <Container fluid>
                     <Row>
-                      
                       <Col lg={12}>
                         <Row>
                           <Col xs={12} sm={12} md={12} lg={4}>
-                            <div className='container12'>
-                             
-      <img 
-                                 src={data !== null && data.m_h_navruz !== null
+                            <div className="container12">
+                              <img
+                                src={
+                                  data !== null && data.m_h_navruz !== null
                                     ? data.m_h_navruz
-                                    : school1} alt=""/>
+                                    : school1
+                                }
+                                alt=""
+                              />
                               {/* <span>Navro'z bayrami</span> */}
                             </div>
                           </Col>
                           <Col xs={12} sm={12} md={12} lg={4}>
-                            <div className='container12'>
-                    
-      <img 
-                                 src={
+                            <div className="container12">
+                              <img
+                                src={
                                   data !== null && data.m_h_mustaqillik !== null
                                     ? data.m_h_mustaqillik
                                     : school2
-                                }  alt=""/>
+                                }
+                                alt=""
+                              />
 
                               {/* <span>Mustaqillik kuni</span> */}
                             </div>
                           </Col>
                           <Col xs={12} sm={12} md={12} lg={4}>
-                            <div className='container12'>
-                             
-                           <img 
-                                  src={
+                            <div className="container12">
+                              <img
+                                src={
                                   data !== null && data.m_h_bitiruv !== null
                                     ? data.m_h_bitiruv
                                     : school4
-                                }  alt=""/>
+                                }
+                                alt=""
+                              />
 
                               {/* <span>Bitiruv tadbiri</span> */}
                             </div>
                           </Col>
-                         
+
                           <Col lg={12}>
-                        <p className={styles.secondText} data-aos="zoom-in-up">
-                          {data !== null && data.m_h_tq !== null
-                            ? data.m_h_tq
-                            : `Uzoqlarda, tog'lar so'zining orqasida, Vokaliya va
+                            <p
+                              className={styles.secondText}
+                              data-aos="zoom-in-up"
+                            >
+                              {data !== null && data.m_h_tq !== null
+                                ? data.m_h_tq
+                                : `Uzoqlarda, tog'lar so'zining orqasida, Vokaliya va
                         Consonantia mamlakatlaridan uzoqroqda ko'r matnlar
                         yashaydi. Ular alohida yashashadi Alohida ular Semantika
                         qirg'og'idagi Bookmarksgroveda, katta til okeanida
@@ -209,8 +221,8 @@ export default class MaktabHayoti extends Component {
                         qismlari og'zingizga uchadi. Hattoki qudratli ishora ham
                         ko'r-ko'rona matnlarni nazorat qila olmaydi, bu deyarli
                         nostografik hayot.`}
-                        </p>
-                      </Col>
+                            </p>
+                          </Col>
                         </Row>
                       </Col>
                       <Col lg={4} md={12} sm={12} className={styles.transport}>
@@ -246,16 +258,13 @@ export default class MaktabHayoti extends Component {
                             ketadigan jannat matikasi mamlakati.`}
                         </p>
                       </Col>
-                     
                     </Row>
                   </Container>
                 </Col>
                 <Col lg={12} className={styles.panoramic}>
                   <div className={styles.PannellumReactContainer}>
-                   
                     <div className={styles.PannellumReact}>
-                      <Image  width="100%"
-                      height="500px" src={Images2}/>
+                      <Image width="100%" height="500px" src={Images2} />
                     </div>
                     <div className="paramumic_data">
                       <div>
@@ -338,216 +347,243 @@ export default class MaktabHayoti extends Component {
                   </div>
                 </Col>
                 <Col lg={11} md={12} sm={12}>
-
                   <Row className="my-5">
-                  <Col
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
-                  style={{ marginTop: "15px" }}
-                >
-                  <div className={styles.flipBox}>
-                    <div className={styles.flipBoxInner}>
-                      <div className={styles.flipBoxFront}>
-                        <div className={styles.hayotiy}>
-                        <img src={
-                          data.m_h_oshxona !== null && data !== null
-                            ? data.m_h_oshxona
-                            : school7
-                        } alt="Paris" />
-                      <h3>Maktab oshxonasi</h3>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={4}
+                      style={{ marginTop: "15px" }}
+                    >
+                      <div className={styles.flipBox}>
+                        <div className={styles.flipBoxInner}>
+                          <div className={styles.flipBoxFront}>
+                            <div className={styles.hayotiy}>
+                              <img
+                                src={
+                                  data.m_h_oshxona !== null && data !== null
+                                    ? data.m_h_oshxona
+                                    : school7
+                                }
+                                alt="Paris"
+                              />
+                              <h3>Maktab oshxonasi</h3>
+                            </div>
+                          </div>
+                          <div className={styles.flipBoxBack}>
+                            <h3>Maktab oshxonasi</h3>
+                            <p>
+                              {" "}
+                              {data.m_h_oshxona_t !== null && data !== null
+                                ? data.m_h_oshxona_t
+                                : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
+                            katta til okeanida yashaydilar. Dudenmut nomli kichik
+                            daryo.`}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className={styles.flipBoxBack}>
-                      <h3>Maktab oshxonasi</h3>
-                        <p> {data.m_h_oshxona_t !== null && data !== null
-                            ? data.m_h_oshxona_t
-                            : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
-                            katta til okeanida yashaydilar. Dudenmut nomli kichik
-                            daryo.`}</p>
-                      </div>
-                    </div>
-                  </div>
-                  </Col>
-                  <Col
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
-                  style={{ marginTop: "15px" }}
-                >
-                  <div className={styles.flipBox}>
-                    <div className={styles.flipBoxInner}>
-                      <div className={styles.flipBoxFront}>
-                       <div className={styles.hayotiy}>
-                       <img  src={
-                          data.m_h_sport !== null && data !== null
-                            ? data.m_h_sport
-                            : school8
-                        } alt="Paris" />
-                      <h3>Sport mashg'ulotlari</h3>
-                       </div>
-                      </div>
-                      <div className={styles.flipBoxBack}>
-                      <h3>Sport mashg'ulotlari</h3>
-                        <p>  {data.m_h_sport_t !== null && data !== null
-                            ? data.m_h_sport_t
-                            : `
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={4}
+                      style={{ marginTop: "15px" }}
+                    >
+                      <div className={styles.flipBox}>
+                        <div className={styles.flipBoxInner}>
+                          <div className={styles.flipBoxFront}>
+                            <div className={styles.hayotiy}>
+                              <img
+                                src={
+                                  data.m_h_sport !== null && data !== null
+                                    ? data.m_h_sport
+                                    : school8
+                                }
+                                alt="Paris"
+                              />
+                              <h3>Sport mashg'ulotlari</h3>
+                            </div>
+                          </div>
+                          <div className={styles.flipBoxBack}>
+                            <h3>Sport mashg'ulotlari</h3>
+                            <p>
+                              {" "}
+                              {data.m_h_sport_t !== null && data !== null
+                                ? data.m_h_sport_t
+                                : `
                             Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                             katta til okeanida yashaydilar. Dudenmut nomli kichik
-                            daryo.`}</p>
-                      </div>
-                    </div>
-                  </div>
-                  </Col>
-                  <Col  
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
-                  style={{ marginTop: "15px" }} >
-                  <div className={styles.flipBox}>
-                    <div className={styles.flipBoxInner}>
-                      <div className={styles.flipBoxFront}>
-                        <div className={styles.hayotiy}>
-                        <img  src={
-                          data.m_h_musiqa !== null && data !== null
-                            ? data.m_h_musiqa
-                            : school9
-                        } alt="Paris" />
-                      <h3>San'at & madaniyat</h3>
+                            daryo.`}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className={styles.flipBoxBack}>
-                      <h3>San'at & madaniyat</h3>
-                        <p> {data.m_h_musiqa_t !== null && data !== null
-                            ? data.m_h_musiqa_t
-                            : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={4}
+                      style={{ marginTop: "15px" }}
+                    >
+                      <div className={styles.flipBox}>
+                        <div className={styles.flipBoxInner}>
+                          <div className={styles.flipBoxFront}>
+                            <div className={styles.hayotiy}>
+                              <img
+                                src={
+                                  data.m_h_musiqa !== null && data !== null
+                                    ? data.m_h_musiqa
+                                    : school9
+                                }
+                                alt="Paris"
+                              />
+                              <h3>San'at & madaniyat</h3>
+                            </div>
+                          </div>
+                          <div className={styles.flipBoxBack}>
+                            <h3>San'at & madaniyat</h3>
+                            <p>
+                              {" "}
+                              {data.m_h_musiqa_t !== null && data !== null
+                                ? data.m_h_musiqa_t
+                                : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                             katta til okeanida yashaydilar. Dudenmut nomli kichik
-                            daryo.`}</p>
-                      </div>
-                    </div>
-                  </div>
-                  </Col>
-                  <Col  
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
-                  style={{ marginTop: "15px" }} >
-                  <div className={styles.flipBox}>
-                    <div className={styles.flipBoxInner}>
-                      <div className={styles.flipBoxFront}>
-                        <div className={styles.hayotiy}>
-                        <img  src={
-                          data.m_h_axborot !== null && data !== null
-                            ? data.m_h_axborot
-                            : school10
-                        } alt="Paris" />
-                      <h3>Axborot texnologiyalari</h3>
+                            daryo.`}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className={styles.flipBoxBack}>
-                      <h3>Axborot texnologiyalari</h3>
-                        <p> {data.m_h_axborot_t !== null && data !== null
-                            ? data.m_h_axborot_t
-                            : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={4}
+                      style={{ marginTop: "15px" }}
+                    >
+                      <div className={styles.flipBox}>
+                        <div className={styles.flipBoxInner}>
+                          <div className={styles.flipBoxFront}>
+                            <div className={styles.hayotiy}>
+                              <img
+                                src={
+                                  data.m_h_axborot !== null && data !== null
+                                    ? data.m_h_axborot
+                                    : school10
+                                }
+                                alt="Paris"
+                              />
+                              <h3>Axborot texnologiyalari</h3>
+                            </div>
+                          </div>
+                          <div className={styles.flipBoxBack}>
+                            <h3>Axborot texnologiyalari</h3>
+                            <p>
+                              {" "}
+                              {data.m_h_axborot_t !== null && data !== null
+                                ? data.m_h_axborot_t
+                                : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                           katta til okeanida yashaydilar. Dudenmut nomli kichik
-                          daryo.`}</p>
-                      </div>
-                    </div>
-                  </div>
-                  </Col>
-                  <Col  
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
-                  style={{ marginTop: "15px" }} >
-                  <div className={styles.flipBox}>
-                    <div className={styles.flipBoxInner}>
-                      <div className={styles.flipBoxFront}>
-                        <div className={styles.hayotiy}>
-                        <img  src={
-                          data.m_h_xavfsizlik !== null && data !== null
-                            ? data.m_h_xavfsizlik
-                            : school11
-                        } alt="Paris" />
-                        <h3>Xavfsizlik va qo'riqlash</h3>
-                      </div>
+                          daryo.`}
+                            </p>
+                          </div>
                         </div>
-                      <div className={styles.flipBoxBack}>
-                      <h3>Xavfsizlik va qo'riqlash</h3>
-                        <p>{data.m_h_xavfsizlik_t !== null && data !== null
-                            ? data.m_h_xavfsizlik_t
-                            : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
+                      </div>
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={4}
+                      style={{ marginTop: "15px" }}
+                    >
+                      <div className={styles.flipBox}>
+                        <div className={styles.flipBoxInner}>
+                          <div className={styles.flipBoxFront}>
+                            <div className={styles.hayotiy}>
+                              <img
+                                src={
+                                  data.m_h_xavfsizlik !== null && data !== null
+                                    ? data.m_h_xavfsizlik
+                                    : school11
+                                }
+                                alt="Paris"
+                              />
+                              <h3>Xavfsizlik va qo'riqlash</h3>
+                            </div>
+                          </div>
+                          <div className={styles.flipBoxBack}>
+                            <h3>Xavfsizlik va qo'riqlash</h3>
+                            <p>
+                              {data.m_h_xavfsizlik_t !== null && data !== null
+                                ? data.m_h_xavfsizlik_t
+                                : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
                           katta til okeanida yashaydilar. Dudenmut nomli kichik
-                          daryo.`}</p>
+                          daryo.`}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  </Col>
-                  <Col  
-                  xs={12}
-                  sm={12}
-                  md={4}
-                  lg={4}
-                  style={{ marginTop: "15px" }} >
-                  <div className={styles.flipBox}>
-                    <div className={styles.flipBoxInner}>
-                      <div className={styles.flipBoxFront}>
-                       <div className={styles.hayotiy}>
-                       <img  src={
-                          data.m_h_tibbiyot !== null && data !== null
-                            ? data.m_h_tibbiyot
-                            : school12
-                        } alt="Paris" />
-                        
-                        <h3>Sog'lik va salomatlik</h3>
-                        
-                       </div>
-                      </div>
-                      <div className={styles.flipBoxBack}>
-                      <h3>Sog'lik va salomatlik</h3>
-                        <p>{data.m_h_tibbiyot_t !== null && data !== null
-                            ? data.m_h_tibbiyot_t
-                            : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
-                          katta til okeanida yashaydilar. Dudenmut nomli kichik
-                          daryo.`}</p>
-                      </div>
-                    </div>
-                  </div>
-                  </Col>
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={4}
+                      style={{ marginTop: "15px" }}
+                    >
+                      <div className={styles.flipBox}>
+                        <div className={styles.flipBoxInner}>
+                          <div className={styles.flipBoxFront}>
+                            <div className={styles.hayotiy}>
+                              <img
+                                src={
+                                  data.m_h_tibbiyot !== null && data !== null
+                                    ? data.m_h_tibbiyot
+                                    : school12
+                                }
+                                alt="Paris"
+                              />
 
-                
+                              <h3>Sog'lik va salomatlik</h3>
+                            </div>
+                          </div>
+                          <div className={styles.flipBoxBack}>
+                            <h3>Sog'lik va salomatlik</h3>
+                            <p>
+                              {data.m_h_tibbiyot_t !== null && data !== null
+                                ? data.m_h_tibbiyot_t
+                                : `Alohida ular Semantika qirg'og'idagi Bookmarksgroveda,
+                          katta til okeanida yashaydilar. Dudenmut nomli kichik
+                          daryo.`}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Col>
                   </Row>
                 </Col>
-               
-      <Col lg={12}>
+
+                <Col lg={12}>
                   <Row>
-                    
-                    <Col
-                      lg={6}
-                      md={6}
-                      sm={12}
-                      className={styles.director}
-                      
-                    >
-                     <div className='p-3'>
-                     <p>
-                        {data.m_h_o !== null && data !== null
-                          ? data.m_h_o
-                          : `Bizning maqsadimiz moliyaviy xizmatlar sohasining
+                    <Col lg={6} md={6} sm={12} className={styles.director}>
+                      <div className="p-3">
+                        <p>
+                          {data.m_h_o !== null && data !== null
+                            ? data.m_h_o
+                            : `Bizning maqsadimiz moliyaviy xizmatlar sohasining
                           markazida bo'lishdir, chunki korxonalar bo'ylab biznes
                           kengaymoqda.`}
-                      </p>
-                      <h1>
-                        {data.m_h_o_t !== null && data !== null
-                          ? data.m_h_o_t
-                          : "Alisa"}
-                      </h1>
-                     </div>
+                        </p>
+                        <h1>
+                          {data.m_h_o_t !== null && data !== null
+                            ? data.m_h_o_t
+                            : "Alisa"}
+                        </h1>
+                      </div>
                     </Col>
                     <Col lg={6} md={6} sm={12} className={styles.director}>
                       <Image
@@ -561,7 +597,6 @@ export default class MaktabHayoti extends Component {
                   </Row>
                 </Col>
               </Row>
-              
             </Container>
           </>
         )}
