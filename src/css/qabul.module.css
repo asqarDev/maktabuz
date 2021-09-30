@@ -42,13 +42,18 @@ body {
   padding-left: 10%;
 }
 .text_q h1 {
-  font-size: 70px;
+  font-size: 50px;
   text-align: center;
   color: #fff;
   text-shadow: 0 0 1px #000;
   line-height: 100px;
   letter-spacing: 5px;
   font-family: "Enriqueta", serif;
+}
+.header_image_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header_image {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -91,12 +96,12 @@ body {
 }
 
 .tavsilottext h3 {
-  font-size: 60px;
+  font-size: 50px;
   color: #fff;
   margin-bottom: 3%;
 }
 .tavsilottext p {
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 1px;
   word-spacing: 5px;
   color: #fff;
@@ -137,12 +142,12 @@ body {
 }
 .info h3 {
   padding: 2px;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   text-shadow: 0 0 5px #fff;
 }
 .info p {
-  font-size: 30px;
+  font-size: 25px;
 }
 .jarayon {
   background-color: #318ce7;
@@ -204,7 +209,7 @@ body {
 }
 
 .talabtext h3 {
-  font-size: 50px;
+  font-size: 40px;
   text-shadow: 0 0 5px #fff;
   color: black;
   margin-bottom: 3%;
@@ -248,7 +253,7 @@ body {
 .muddat_text1 h3,
 .muddat_text2 h3,
 .muddat_text3 h3 {
-  font-size: 30px;
+  font-size: 25px;
 }
 .muddat_text1 p,
 .muddat_text2 p,
@@ -280,16 +285,16 @@ body {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .hujjat_text h3 {
-  font-size: 60px;
+  font-size: 50px;
 }
 .hujjat_text p {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 /* media =============*/
 @media screen and (max-width: 1500px) {
   .text_q h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .header_image {
     display: none;
@@ -300,10 +305,10 @@ body {
     border-radius: 50%;
   }
   .tavsilottext h3 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .tavsilottext p {
-    font-size: 15px;
+    font-size: 14px;
   }
   .talim {
     width: 100%;

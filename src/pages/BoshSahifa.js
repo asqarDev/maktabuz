@@ -118,7 +118,7 @@ export default class BoshSahifa extends Component {
                   />
                 </div>
                 <p className={style.bosh_p1}>
-                  Surxondaryo viloyati Bandixon tumani
+                  Surxondaryo viloyati Bandixon tumani{" "}
                   {this.state.school !== null
                     ? this.state.school.school_number + " - maktab"
                     : "Maktab raqami "}
