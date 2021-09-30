@@ -114,16 +114,12 @@ export default class Alochilar extends Component {
               </div>
             </div>
             <Carousel autoplay className={style.sliderHeader}>
-              <div>
-                <Image
-                  src={
-                    data !== null && data.m_h_h1 !== null
-                      ? data.m_h_h1
-                      : school1
-                  }
-                  className={style.headerImage}
-                />
-              </div>
+              <Image
+                src={
+                  data !== null && data.m_h_h1 !== null ? data.m_h_h1 : school1
+                }
+                className={style.headerImage}
+              />
               <div>
                 <Image
                   src={

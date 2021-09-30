@@ -587,35 +587,6 @@ body {
     position: relative;
   }
 
-  /* .PannellumReactContainer::before {
-    content: "Kampus tajribasi";
-    position: absolute;
-    top: 36%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: max-content;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
-    font-size: 40px;
-    text-align: center;
-    font-family: "Lobster", cursive;
-  } */
-  /* .PannellumReactContainer::after {
-    content: "Kingster universiteti 1920 yilda Jon Smit tomonidan jamoat foydasi uchun tashkil etilgan va u dunyo miqyosida tan olingan. Bizning buyuk tariximiz davomida Kingster keng ilmiy imkoniyatlardan foydalanishni taklif qildi. Dunyo oliy ta'lim sohasida etakchi o'rinni egallab, ushbu sohada o'zgarishlarni boshlab berdi.";
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px;
-    height: max-content;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
-    font-size: 25px;
-    text-align: center;
-  } */
   .cardBolimlar {
     margin-top: 80px !important;
     padding-right: 2% !important;
