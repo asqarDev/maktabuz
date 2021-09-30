@@ -107,7 +107,11 @@
 .yozuvBtn {
   margin-top: 40px;
 }
-
+.row_col_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card_items {
   margin-top: 15px;
   display: flex;

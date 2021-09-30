@@ -376,9 +376,15 @@ export default class BoshSahifa extends Component {
                 <Row>
                   {this.state.news.map((item) => {
                     return (
-                      <Col key={item.id} sm={12} md={6} lg={4}>
+                      <Col
+                        className={style.row_col_item}
+                        key={item.id}
+                        sm={12}
+                        md={6}
+                        lg={4}
+                      >
                         <Card
-                          style={{ width: "18rem" }}
+                          style={{ width: "20rem" }}
                           className={style.card_item}
                         >
                           <Card.Img variant="top" src={item.image} />
