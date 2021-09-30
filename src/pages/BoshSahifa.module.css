@@ -108,24 +108,32 @@
   margin-top: 40px;
 }
 .row_col_item {
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.card_item1 {
+  height: 23rem;
+  border-right: 10px;
+  box-shadow: 0 0 2px #000;
+}
 .card_items {
-  margin-top: 15px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 .card_item {
+  margin: 5px 0;
+  height: 23rem;
   border-right: 10px;
-  margin: 15px 5px;
   box-shadow: 0 0 2px #000;
 }
-.card_item:hover {
-  box-shadow: 0 0 5px #00f;
+.card_item:hover,
+.card_item1:hover {
+  box-shadow: 0 0 5px #000;
 }
 .card_title {
   display: flex;

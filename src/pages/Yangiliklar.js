@@ -10,12 +10,14 @@ import "aos/dist/aos.css";
 import { getNews } from "../host/Config";
 import FadeLoader from "react-spinners/FadeLoader";
 import { Carousel } from "antd";
-
+import axios from "axios";
+import { url, user } from "../host/Host";
 export default class Yangiliklar extends Component {
   state = {
     news: [],
     id: 0,
     loader: true,
+    data: [],
   };
 
   getNews = () => {
@@ -38,21 +40,35 @@ export default class Yangiliklar extends Component {
       })
       .catch((err) => {
         console.log(err);
-
         this.setState({
           loader: false,
         });
       });
   };
+
+  getExcellents = () => {
+    var v = user;
+
+    axios
+      .get(`${url}/school-by-admin/${v}/`)
+      .then((res) => {
+        this.setState({ data: res.data });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   componentDidMount() {
     Aos.init({
       duration: 2000,
     });
     this.getNews();
+    this.getExcellents();
   }
 
   render() {
-    const { news } = this.state;
+    const { news, data } = this.state;
     return (
       <div>
         {this.state.loader ? (
@@ -67,19 +83,34 @@ export default class Yangiliklar extends Component {
                   <h3>Maktabimiz so'ngi yangiliklari bilan tanishing</h3>
                 </div>
               </div>
-
               <Carousel autoplay className={styles.sliderContainer}>
                 <div className={styles.sliderIMG}>
-                  <Image src={new1} />
+                  <Image
+                    src={
+                      data !== null && data.m_h_h1 !== null ? data.m_h_h1 : new1
+                    }
+                  />
                 </div>
                 <div className={styles.sliderIMG}>
-                  <Image src={new2} />
+                  <Image
+                    src={
+                      data !== null && data.m_h_h2 !== null ? data.m_h_h2 : new2
+                    }
+                  />
                 </div>
                 <div className={styles.sliderIMG}>
-                  <Image src={new3} />
+                  <Image
+                    src={
+                      data !== null && data.m_h_h3 !== null ? data.m_h_h3 : new3
+                    }
+                  />
                 </div>
                 <div className={styles.sliderIMG}>
-                  <Image src={new4} />
+                  <Image
+                    src={
+                      data !== null && data.m_h_h4 !== null ? data.m_h_h4 : new4
+                    }
+                  />
                 </div>
               </Carousel>
             </div>

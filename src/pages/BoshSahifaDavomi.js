@@ -143,14 +143,14 @@ export default class BoshSahifaDavomi extends Component {
                           var pupil = this.setPupils(item.pupil);
                           return (
                             <Col
-                              lg={3}
+                              lg={this.state.excellent.length > 3 ? 3 : 6}
                               md={6}
                               sm={12}
                               data-aos="zoom-in-up"
                               className={style.card_items}
                             >
                               <Card
-                                style={{ width: "20rem" }}
+                                style={{ width: "18rem" }}
                                 className={style.card_item}
                               >
                                 <Card.Img
@@ -161,7 +161,7 @@ export default class BoshSahifaDavomi extends Component {
                                 />
                                 <Card.Body className={style.card_for_body}>
                                   <Card.Title className={style.card_title}>
-                                    <h3>{pupil.full_name}</h3>
+                                    <h4>{pupil.full_name}</h4>
                                   </Card.Title>
                                   <Card.Text>
                                     {this.echoClasses(pupil.clas).class_number}{" "}

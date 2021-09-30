@@ -170,7 +170,13 @@ export default class Alochilar extends Component {
                   ? this.state.excellent.map((item) => {
                       var pupil = this.setPupils(item.pupil);
                       return (
-                        <Col sm={12} md={6} lg={3} className={style.row_col}>
+                        <Col
+                          key={item.id}
+                          sm={12}
+                          md={6}
+                          lg={this.state.excellent.length > 3 ? 3 : 6}
+                          className={style.row_col}
+                        >
                           <div className={style.card1}>
                             <div className={style.card2}>
                               <div className={style.card3}>

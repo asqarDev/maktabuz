@@ -387,10 +387,7 @@ export default class BoshSahifa extends Component {
                         md={6}
                         lg={4}
                       >
-                        <Card
-                          style={{ width: "20rem" }}
-                          className={style.card_item}
-                        >
+                        <Card className={style.card_item1}>
                           <Card.Img variant="top" src={item.image} />
                           <Card.Body>
                             <Card.Title>{item.title}</Card.Title>
