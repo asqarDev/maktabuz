@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styles from "../css/maktabHayoti.module.css";
 import "../css/maktahayotiAli.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
-
 import "../css/video.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import school1 from "../img/school1.jpg";
@@ -58,7 +57,7 @@ export default class MaktabHayoti extends Component {
         ) : (
           <>
             <header>
-              <div class="overlay mt-5"></div>
+              <div class="overlay"></div>
               <video
                 playsinline="playsinline"
                 autoplay="autoplay"
