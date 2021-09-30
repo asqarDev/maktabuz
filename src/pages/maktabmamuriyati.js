@@ -6,8 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 //import { FaQuoteRight } from "react-icons/fa";
 import axios from "axios";
-import { url } from "../host/Host";
-import Global from "../host/Global";
+import { idMaktab, url } from "../host/Host";
 import { FadeLoader } from "react-spinners";
 
 export default class Maktabmamuriyati extends Component {
@@ -25,7 +24,7 @@ export default class Maktabmamuriyati extends Component {
   };
   getStaff = () => {
     axios
-      .get(`${url}/staff-by-school/${Global.schoolId}/`)
+      .get(`${url}/staff-by-school/${idMaktab}/`)
       .then((res) => {
         var direktor = [];
         var orin1 = [];
@@ -37,42 +36,37 @@ export default class Maktabmamuriyati extends Component {
         var yetakchi = [];
         var chqbt = [];
         res.data.map((item) => {
-          if(item.speciality.length!==0){
-            item.speciality.map(item1=>{
-              if(item1===3){
-                direktor.push(item)
+          if (item.speciality.length !== 0) {
+            item.speciality.map((item1) => {
+              if (item1 === 3) {
+                direktor.push(item);
               }
-              if(item1===4){
-                orin1.push(item)
+              if (item1 === 4) {
+                orin1.push(item);
               }
-              if(item1===5){
-                orin2.push(item)
+              if (item1 === 5) {
+                orin2.push(item);
               }
-              if(item1===9){
-                orin3.push(item)
+              if (item1 === 9) {
+                orin3.push(item);
               }
-              if(item1===6){
-                
-                psixolog.push(item)
+              if (item1 === 6) {
+                psixolog.push(item);
               }
-              if(item1===7){
-                yetakchi.push(item)
+              if (item1 === 7) {
+                yetakchi.push(item);
               }
-              if(item1===8){
-              
-                kutubxona.push(item)
+              if (item1 === 8) {
+                kutubxona.push(item);
               }
-              if(item1===9){
-              
-                kasaba.push(item)
+              if (item1 === 9) {
+                kasaba.push(item);
               }
-              if(item1===10){
-                chqbt.push(item)
+              if (item1 === 10) {
+                chqbt.push(item);
               }
-    
-            })
+            });
           }
-    
         });
         this.setState({
           direktor: direktor,

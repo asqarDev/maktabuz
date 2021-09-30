@@ -10,9 +10,8 @@ import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import Aos from "aos";
 import { getPupil } from "../host/Config";
-import { url, user } from "../host/Host";
+import { url, user, idMaktab } from "../host/Host";
 import { FadeLoader } from "react-spinners";
-import Global from "../host/Global";
 
 export default class Alochilar extends Component {
   state = {
@@ -46,7 +45,7 @@ export default class Alochilar extends Component {
       this.setState({ data: res.data });
     });
     axios
-      .get(`${url}/class-by-school/${Global.schoolId}/`)
+      .get(`${url}/class-by-school/${idMaktab}/`)
       .then((res) => {
         this.setState({
           class: res.data,
