@@ -42,7 +42,7 @@ body {
   padding-left: 10%;
 }
 .text_q h1 {
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   color: #fff;
   text-shadow: 0 0 1px #000;
@@ -58,8 +58,8 @@ body {
 .header_image {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   margin: 0 30% 0 10%;
 }
@@ -74,11 +74,10 @@ body {
   z-index: 3;
 }
 .qabul_image {
-  height: 600px;
+  height: 400px;
   width: 600px;
 }
 .tavsilot img {
-  border-radius: 50%;
   border: 1px inset;
   height: 100%;
   width: 100%;
@@ -96,12 +95,12 @@ body {
 }
 
 .tavsilottext h3 {
-  font-size: 50px;
+  font-size: 40px;
   color: #fff;
   margin-bottom: 3%;
 }
 .tavsilottext p {
-  font-size: 25px;
+  font-size: 15px;
   letter-spacing: 1px;
   word-spacing: 5px;
   color: #fff;
@@ -116,7 +115,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .info {
-  min-height: 500px;
+  min-height: 250px;
   margin: 0 20px;
   border-radius: 20px;
   padding: 20px;
@@ -128,8 +127,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background-color: #fff;
   margin: auto;
@@ -142,12 +141,12 @@ body {
 }
 .info h3 {
   padding: 2px;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   text-shadow: 0 0 5px #fff;
 }
 .info p {
-  font-size: 25px;
+  font-size: 15px;
 }
 .jarayon {
   background-color: #318ce7;
@@ -166,11 +165,11 @@ body {
 }
 .jarayon_text h3,
 .jarayon h1 {
-  font-size: 40px;
+  font-size: 30px;
   text-shadow: 0 0 5px #fff;
 }
 .jarayon_text p {
-  font-size: 30px;
+  font-size: 20px;
 }
 .line {
   width: 10%;
@@ -209,7 +208,7 @@ body {
 }
 
 .talabtext h3 {
-  font-size: 40px;
+  font-size: 30px;
   text-shadow: 0 0 5px #fff;
   color: black;
   margin-bottom: 3%;
@@ -227,7 +226,7 @@ body {
   padding-bottom: 30px;
 }
 .muddat_header h1 {
-  font-size: 50px;
+  font-size: 40px;
   text-shadow: 0 0 5px #fff;
 }
 .muddat_item {
@@ -240,25 +239,24 @@ body {
 .muddat_text3 {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0 100px;
-  padding: 20px;
+  margin: 0 80px;
+  padding: 25px 10px;
   text-align: center;
-  box-shadow: 0 0 20px #fff;
+  box-shadow: 0 0 20px #fffeff;
   background-color: #318ce7;
   border-radius: 10px;
-  height: 200px;
+  min-height: 150px;
 }
 
 .muddat_text1 h3,
 .muddat_text2 h3,
 .muddat_text3 h3 {
-  font-size: 25px;
+  font-size: 20px;
 }
 .muddat_text1 p,
 .muddat_text2 p,
 .muddat_text3 p {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .hujjat {
@@ -285,27 +283,27 @@ body {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .hujjat_text h3 {
-  font-size: 50px;
+  font-size: 30px;
 }
 .hujjat_text p {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 /* media =============*/
 @media screen and (max-width: 1500px) {
   .text_q h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .header_image {
     display: none;
   }
   .qabul_image {
-    height: 400px;
+    height: 300px;
     width: 400px;
     border-radius: 50%;
   }
   .tavsilottext h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .tavsilottext p {
     font-size: 14px;
@@ -407,7 +405,7 @@ body {
   }
   .qabul_image {
     height: 200px;
-    width: 200px;
+    width: 250px;
     border-radius: none;
   }
 

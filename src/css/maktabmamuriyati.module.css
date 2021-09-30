@@ -1,5 +1,11 @@
 .mamuryat_header {
   position: relative;
+  height: 100vh;
+  width: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .mamuryat_header > div {
   position: absolute;
@@ -15,7 +21,7 @@
   color: #fff;
   text-shadow: 0 0 5px #fff;
   letter-spacing: 10px;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
   padding: 30px;
 }
@@ -54,7 +60,7 @@
 }
 .slidertext p {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 10px;
   background-color: rgba(0, 0, 0, 0.371);
 }
@@ -76,7 +82,7 @@
 .carddirektor p {
   color: rgba(255, 255, 255, 0.8);
   background-color: #04376a;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   padding: 5px 15px;
   border-radius: 10px;
@@ -96,6 +102,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 35px;
   background-image: url("../img/schoolpattern.png");
   background-size: cover;
   background-attachment: fixed;
@@ -183,7 +190,7 @@
 .job {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 1.25rem 0;
   color: hsl(210, 22%, 49%);
 }
@@ -195,7 +202,7 @@
   margin-right: 20px;
 }
 .carddirektor * {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 @media screen and (max-width: 1200px) {
   .sliderHeader {
@@ -214,7 +221,7 @@
   }
 
   .carddirektor * {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 992px) {
@@ -222,7 +229,7 @@
     top: 80% !important;
   }
   .slidertext p {
-    font-size: 25px;
+    font-size: 15px;
   }
   .carddirektor {
     margin-top: 80px !important;
@@ -238,7 +245,7 @@
   .mamuryat_header p {
     text-align: center;
     letter-spacing: 10px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
     padding: 10px;
   }
@@ -250,7 +257,7 @@
     top: 80% !important;
   }
   .slidertext p {
-    font-size: 25px;
+    font-size: 15px;
   }
   .direktorbr {
     margin-left: 10px;
@@ -264,7 +271,7 @@
   }
 
   .carddirektor * {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 566px) {
@@ -272,7 +279,7 @@
     top: 70% !important;
   }
   .slidertext p {
-    font-size: 25px;
+    font-size: 10px;
   }
   .direktorbr {
     margin-left: 10px;

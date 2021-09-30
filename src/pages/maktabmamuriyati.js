@@ -47,14 +47,14 @@ export default class Maktabmamuriyati extends Component {
               if (item1 === 5) {
                 orin2.push(item);
               }
-              if(item1===7){
-                orin3.push(item)
+              if (item1 === 7) {
+                orin3.push(item);
               }
               if (item1 === 6) {
                 psixolog.push(item);
               }
-              if(item1===9){
-                yetakchi.push(item)
+              if (item1 === 9) {
+                yetakchi.push(item);
               }
               if (item1 === 8) {
                 kutubxona.push(item);
@@ -108,18 +108,18 @@ export default class Maktabmamuriyati extends Component {
           </div>
         ) : (
           <>
-            <div className={styles.mamuryat_header}>
-              <Image
-                className="d-block w-100"
-                src={
+            <div
+              className={styles.mamuryat_header}
+              style={{
+                backgroundImage: `url(${
                   this.state.direktor.image !== null &&
                   this.state.direktor !== null
-                    ? this.state.direktor.image
+                    ? this.state.direktor[0].image
                     : `"https://cdn.wallpapersafari.com/46/99/Vh6QFJ.jpg"
                     `
-                }
-                alt="First slide"
-              />
+                })`,
+              }}
+            >
               <div>
                 <p>Maktab direktori</p>
               </div>
