@@ -118,10 +118,17 @@ export default class BoshSahifa extends Component {
                   />
                 </div>
                 <p className={style.bosh_p1}>
-                  Surxondaryo viloyati Bandixon tumani 5 - davlat
-                  iqtisoslashtirilgan umumta'lim maktabi
+                  {this.state.school !== null
+                    ? this.state.school.school_number + ""
+                    : "Maktab raqami "}
+                  - sonli davlat ixtisoslashtirilgan umumta'lim maktab
                 </p>
-                <p className={style.bosh_p2}>5 - DIUM</p>
+                <p className={style.bosh_p2}>
+                  {this.state.school !== null
+                    ? this.state.school.school_number + ""
+                    : "Maktab raqami "}{" "}
+                  - maktab
+                </p>
               </div>
               <div className={style.bosh_clock}>{this.state.clock}</div>
             </div>
@@ -237,6 +244,7 @@ export default class BoshSahifa extends Component {
                 })`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               <div className={`${style.header_type}`}>
@@ -372,9 +380,15 @@ export default class BoshSahifa extends Component {
                 <Row>
                   {this.state.news.map((item) => {
                     return (
-                      <Col key={item.id} sm={12} md={6} lg={4}>
+                      <Col
+                        className={style.row_col_item}
+                        key={item.id}
+                        sm={12}
+                        md={6}
+                        lg={4}
+                      >
                         <Card
-                          style={{ width: "18rem" }}
+                          style={{ width: "20rem" }}
                           className={style.card_item}
                         >
                           <Card.Img variant="top" src={item.image} />

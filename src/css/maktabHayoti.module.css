@@ -4,15 +4,6 @@
 body {
   background-color: white;
 }
-
-
-
-
-
-
-
-
-
 @keyframes icondonw {
   0% {
     top: 0%;
@@ -36,7 +27,7 @@ body {
 }
 .secondHeading {
   font-size: 50px;
-  font-family: sans-serif;
+  font-family: "Lobster" sans-serif;
 }
 
 .secondText {
@@ -79,7 +70,7 @@ body {
 }
 
 .transporttext h1 {
-  font-family: "Lobster", cursive;
+  font-family: "Lobster", sans-serif;
   font-size: 40px !important;
   color: white !important;
 }
@@ -102,7 +93,6 @@ body {
   position: relative;
 }
 .flipBox {
-  
   background-color: transparent;
   width: 100%;
   height: 320px;
@@ -110,7 +100,6 @@ body {
   perspective: 1000px;
   border-radius: 10px;
   margin-top: 40px !important;
-  
 }
 .flipBoxInner {
   position: relative;
@@ -137,11 +126,11 @@ body {
 
 .flipBoxFront {
   background-color: #bbb;
-  color: black;
+  color: white;
 }
 .flipBoxFront img {
   width: 100%;
-  height: 100%;
+  height: 318px;
   border-radius: 10px;
 }
 .flipBoxBack {
@@ -158,24 +147,30 @@ body {
 .flipBoxBack p {
   font-size: 1rem;
   color: white;
-  font-family: "Lobster", cursive;
+  font-family: "Lobster", sans-serif;
 }
-.flipBoxBack h3{
-  margin-top: 25%;
-  font-family: "Lobster", cursive;
+.flipBoxBack h3 {
+  margin-top: 15%;
+  font-family: "Lobster", sans-serif;
   color: white;
 }
-.cardBolimlar {
-  /* position: relative; */
-  margin-top: 80px !important;
-  padding-right: 2% !important;
-  width: 27% !important;
-  margin-bottom: 50px;
-  margin-right: 25px;
-  z-index: 1 !important;
+.hayotiy {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-
-
+.hayotiy h3 {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0 10px;
+  margin: 0;
+  left: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px 15px;
+  /* transform: rotateY(10px); */
+}
 
 .director img {
   width: 100% !important;
@@ -193,13 +188,13 @@ body {
   align-items: center;
 }
 .director p {
-  font-family: "Lobster", cursive;
+  font-family: "Lobster", sans-serif;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.7);
   text-align: center !important;
 }
 .director h1 {
-  font-family: "Lobster", cursive;
+  font-family: "Lobster", sans-serif;
   font-weight: 400 !important;
   margin-top: 30px;
   color: white;
@@ -212,6 +207,7 @@ body {
     height: 300px;
     position: relative !important;
   }
+
   .headerSliderText {
     text-align: center;
     top: 30% !important;
@@ -245,8 +241,15 @@ body {
     width: 95% !important;
     padding-right: 2% !important;
   }
+  .transporttext h1 {
+    font-size: 25px !important;
+  }
+  .transporttext p {
+    font-size: 15px !important;
+    font-weight: 300;
+  }
   .PannellumReactContainer::before {
-    font-size: 35px;
+    font-size: 30px;
   }
   .PannellumReactContainer::after {
     width: 500px;
@@ -300,7 +303,7 @@ body {
     padding-right: 2% !important;
   }
   .PannellumReactContainer::before {
-    font-size: 35px;
+    font-size: 30px;
   }
   .PannellumReactContainer::after {
     width: 500px;
@@ -584,35 +587,6 @@ body {
     position: relative;
   }
 
-  /* .PannellumReactContainer::before {
-    content: "Kampus tajribasi";
-    position: absolute;
-    top: 36%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: max-content;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
-    font-size: 40px;
-    text-align: center;
-    font-family: "Lobster", cursive;
-  } */
-  /* .PannellumReactContainer::after {
-    content: "Kingster universiteti 1920 yilda Jon Smit tomonidan jamoat foydasi uchun tashkil etilgan va u dunyo miqyosida tan olingan. Bizning buyuk tariximiz davomida Kingster keng ilmiy imkoniyatlardan foydalanishni taklif qildi. Dunyo oliy ta'lim sohasida etakchi o'rinni egallab, ushbu sohada o'zgarishlarni boshlab berdi.";
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px;
-    height: max-content;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
-    font-size: 25px;
-    text-align: center;
-  } */
   .cardBolimlar {
     margin-top: 80px !important;
     padding-right: 2% !important;

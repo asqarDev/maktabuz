@@ -52,11 +52,13 @@ class Qabul extends React.Component {
                     <Col lg={8} md={12} sm={12}>
                       {" "}
                       <div data-aos="fade-right" className={styles.text_q}>
-                        <h1>Qabul uchun ariza topshirishga hushkelibsiz!!!</h1>
-                        <Image
-                          src="https://as2.ftcdn.net/jpg/01/17/65/19/500_F_117651987_mJuEArLJWmdeGSmSqbntiI5i04RBvhXX.jpg"
-                          className={styles.header_image}
-                        />
+                        <h1>Qabul uchun ariza topshirishga xush kelibsiz!!!</h1>
+                        <div className={styles.header_image_item}>
+                          <Image
+                            src="https://as2.ftcdn.net/jpg/01/17/65/19/500_F_117651987_mJuEArLJWmdeGSmSqbntiI5i04RBvhXX.jpg"
+                            className={styles.header_image}
+                          />
+                        </div>
                       </div>
                     </Col>
                   </Row>
