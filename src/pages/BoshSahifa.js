@@ -30,7 +30,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default class BoshSahifa extends Component {
   state = {
-    loader: false,
+    loader: true,
     news: [],
     id: 0,
     school: null,
@@ -42,7 +42,6 @@ export default class BoshSahifa extends Component {
     axios.get(`${url}/school-by-admin/${Global.user}`).then((res) => {
       this.setState({
         school: res.data,
-        loader: false,
       });
     });
   };
@@ -76,11 +75,9 @@ export default class BoshSahifa extends Component {
   componentDidMount() {
     this.getNews();
     this.getSchool();
-    window.addEventListener("load", () => {
-      this.setState({
-        loader: false,
-      });
-    });
+    setTimeout(() => {
+      this.setState({ loader: false });
+    }, 2000);
     setInterval(() => {
       this.setState({ clock: Clock() });
     }, 1000);

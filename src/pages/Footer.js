@@ -96,12 +96,20 @@ export default class Footer extends Component {
                 >
                   <p></p>
                   <p>
-                    <a href={"https://t.me/Xorazm_5_maktab"}>
+                    <a
+                      href={"https://t.me/Xorazm_5_maktab"}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <FaTelegram className={style.relations} />
                     </a>
                   </p>
                   <p>
-                    <a href={"https://www.instagram.com/5ummumtalimmaktabi/"}>
+                    <a
+                      href={"https://www.instagram.com/5ummumtalimmaktabi/"}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <FiInstagram className={style.relations} />
                     </a>
                   </p>
@@ -110,6 +118,8 @@ export default class Footer extends Component {
                       href={
                         "https://www.facebook.com/5-sonli-maktab-283432626789189/?ref=pages_you_manage"
                       }
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       <FaFacebook className={style.relations} />
                     </a>
@@ -119,6 +129,8 @@ export default class Footer extends Component {
                       href={
                         "https://www.youtube.com/channel/UCTU9AVjpeZQLSSh3rlwTpDw"
                       }
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       <AiFillYoutube className={style.relations} />
                     </a>
