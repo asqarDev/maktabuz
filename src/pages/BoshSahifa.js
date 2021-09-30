@@ -124,7 +124,12 @@ export default class BoshSahifa extends Component {
                     : "Maktab raqami "}
                   - davlat iqtisoslashtirilgan umumta'lim maktabi
                 </p>
-                <p className={style.bosh_p2}>5 - DIUM</p>
+                <p className={style.bosh_p2}>
+                  {this.state.school !== null
+                    ? this.state.school.school_number + ""
+                    : "Maktab raqami "}{" "}
+                  - maktab
+                </p>
               </div>
               <div className={style.bosh_clock}>{this.state.clock}</div>
             </div>
