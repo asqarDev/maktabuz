@@ -8,8 +8,7 @@ import school2 from "../img/school2.jpg";
 import axios from "axios";
 import Aos from "aos";
 import { getPupil } from "../host/Config";
-import { url, user } from "../host/Host";
-import Global from "../host/Global";
+import { idMaktab, url, user } from "../host/Host";
 
 export default class BoshSahifaDavomi extends Component {
   state = {
@@ -37,9 +36,11 @@ export default class BoshSahifaDavomi extends Component {
       });
     axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
       this.setState({ data: res.data });
+
+      console.log(res.data);
     });
     axios
-      .get(`${url}/class-by-school/${Global.schoolId}/`)
+      .get(`${url}/class-by-school/${idMaktab}/`)
       .then((res) => {
         this.setState({
           class: res.data,

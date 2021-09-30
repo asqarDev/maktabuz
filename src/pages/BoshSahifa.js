@@ -384,9 +384,31 @@ export default class BoshSahifa extends Component {
                         md={6}
                         lg={4}
                       >
-                        <Card className={style.card_item1}>
+                        <Card
+                          style={{ width: "20rem" }}
+                          className={style.card_item}
+                        >
                           <Card.Img variant="top" src={item.image} />
-                          <Card.Body>
+                          <Card.Body className={style.card_for_body}>
+                            <Card.Title
+                              className={style.card_title}
+                              style={{ marginBottom: 0 }}
+                            >
+                              <h5>
+                                <i
+                                  style={{ marginRight: "10px" }}
+                                  className="far fa-calendar-alt"
+                                ></i>
+                                {item.published_time.substring(0, 10)}
+                              </h5>
+                            </Card.Title>
+                            <Card.Text>{item.title}</Card.Text>
+                          </Card.Body>
+                        </Card>
+
+                        {/* <Card className={style.card_item1}>
+                          <Card.Img variant="top" src={item.image} />
+                          <Card.Body className={style.card_for_body1}>
                             <Card.Title>{item.title}</Card.Title>
                             <Card.Text>
                               <h5>
@@ -398,7 +420,7 @@ export default class BoshSahifa extends Component {
                               </h5>
                             </Card.Text>
                           </Card.Body>
-                        </Card>
+                        </Card> */}
                       </Col>
                     );
                   })}
