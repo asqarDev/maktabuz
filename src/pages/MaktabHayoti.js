@@ -356,16 +356,17 @@ export default class MaktabHayoti extends Component {
                     >
                       <div className={styles.flipBox}>
                         <div className={styles.flipBoxInner}>
-                          <div className={styles.flipBoxFront}>
+                          <div
+                            style={{
+                              backgroundImage: `url('${
+                                data.m_h_oshxona !== null && data !== null
+                                  ? data.m_h_oshxona
+                                  : school7
+                              }')`,
+                            }}
+                            className={styles.flipBoxFront}
+                          >
                             <div className={styles.hayotiy}>
-                              <img
-                                src={
-                                  data.m_h_oshxona !== null && data !== null
-                                    ? data.m_h_oshxona
-                                    : school7
-                                }
-                                alt="Paris"
-                              />
                               <h3>Maktab oshxonasi</h3>
                             </div>
                           </div>
@@ -392,16 +393,17 @@ export default class MaktabHayoti extends Component {
                     >
                       <div className={styles.flipBox}>
                         <div className={styles.flipBoxInner}>
-                          <div className={styles.flipBoxFront}>
+                          <div
+                            style={{
+                              backgroundImage: `url('${
+                                data.m_h_sport !== null && data !== null
+                                  ? data.m_h_sport
+                                  : school8
+                              }')`,
+                            }}
+                            className={styles.flipBoxFront}
+                          >
                             <div className={styles.hayotiy}>
-                              <img
-                                src={
-                                  data.m_h_sport !== null && data !== null
-                                    ? data.m_h_sport
-                                    : school8
-                                }
-                                alt="Paris"
-                              />
                               <h3>Sport mashg'ulotlari</h3>
                             </div>
                           </div>
@@ -429,16 +431,17 @@ export default class MaktabHayoti extends Component {
                     >
                       <div className={styles.flipBox}>
                         <div className={styles.flipBoxInner}>
-                          <div className={styles.flipBoxFront}>
+                          <div
+                            style={{
+                              backgroundImage: `url('${
+                                data.m_h_musiqa !== null && data !== null
+                                  ? data.m_h_musiqa
+                                  : school9
+                              }')`,
+                            }}
+                            className={styles.flipBoxFront}
+                          >
                             <div className={styles.hayotiy}>
-                              <img
-                                src={
-                                  data.m_h_musiqa !== null && data !== null
-                                    ? data.m_h_musiqa
-                                    : school9
-                                }
-                                alt="Paris"
-                              />
                               <h3>San'at & madaniyat</h3>
                             </div>
                           </div>
@@ -465,16 +468,17 @@ export default class MaktabHayoti extends Component {
                     >
                       <div className={styles.flipBox}>
                         <div className={styles.flipBoxInner}>
-                          <div className={styles.flipBoxFront}>
+                          <div
+                            style={{
+                              backgroundImage: `url('${
+                                data.m_h_axborot !== null && data !== null
+                                  ? data.m_h_axborot
+                                  : school10
+                              }')`,
+                            }}
+                            className={styles.flipBoxFront}
+                          >
                             <div className={styles.hayotiy}>
-                              <img
-                                src={
-                                  data.m_h_axborot !== null && data !== null
-                                    ? data.m_h_axborot
-                                    : school10
-                                }
-                                alt="Paris"
-                              />
                               <h3>Axborot texnologiyalari</h3>
                             </div>
                           </div>
@@ -501,16 +505,17 @@ export default class MaktabHayoti extends Component {
                     >
                       <div className={styles.flipBox}>
                         <div className={styles.flipBoxInner}>
-                          <div className={styles.flipBoxFront}>
+                          <div
+                            style={{
+                              backgroundImage: `url('${
+                                data.m_h_xavfsizlik !== null && data !== null
+                                  ? data.m_h_xavfsizlik
+                                  : school11
+                              }')`,
+                            }}
+                            className={styles.flipBoxFront}
+                          >
                             <div className={styles.hayotiy}>
-                              <img
-                                src={
-                                  data.m_h_xavfsizlik !== null && data !== null
-                                    ? data.m_h_xavfsizlik
-                                    : school11
-                                }
-                                alt="Paris"
-                              />
                               <h3>Xavfsizlik va qo'riqlash</h3>
                             </div>
                           </div>
@@ -536,17 +541,17 @@ export default class MaktabHayoti extends Component {
                     >
                       <div className={styles.flipBox}>
                         <div className={styles.flipBoxInner}>
-                          <div className={styles.flipBoxFront}>
+                          <div
+                            style={{
+                              backgroundImage: `url('${
+                                data.m_h_tibbiyot !== null && data !== null
+                                  ? data.m_h_tibbiyot
+                                  : school12
+                              }')`,
+                            }}
+                            className={styles.flipBoxFront}
+                          >
                             <div className={styles.hayotiy}>
-                              <img
-                                src={
-                                  data.m_h_tibbiyot !== null && data !== null
-                                    ? data.m_h_tibbiyot
-                                    : school12
-                                }
-                                alt="Paris"
-                              />
-
                               <h3>Sog'lik va salomatlik</h3>
                             </div>
                           </div>

@@ -127,6 +127,9 @@ body {
 .flipBoxFront {
   background-color: #bbb;
   color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .flipBoxFront img {
   width: 100%;
@@ -138,11 +141,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: white;
   transform: rotateY(180deg);
   text-align: center;
   padding: 15px;
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 .flipBoxBack p {
   font-size: 1rem;
