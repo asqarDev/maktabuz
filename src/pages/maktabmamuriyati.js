@@ -83,7 +83,7 @@ export default class Maktabmamuriyati extends Component {
           this.setState({
             loader: false,
           });
-        }, 4000);
+        }, 5000);
       })
       .catch((err) => {
         this.setState({

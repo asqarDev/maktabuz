@@ -115,10 +115,7 @@ export default class BoshSahifa extends Component {
                   />
                 </div>
                 <p className={style.bosh_p1}>
-                  {this.state.school !== null
-                    ? this.state.school.school_number + ""
-                    : "Maktab raqami "}
-                  - sonli davlat ixtisoslashtirilgan umumta'lim maktab
+                Xorazm viloyati Gurlan tumani 1-ayrim fanlar chuqur o'rganiladigan Davlat ixtisoslashtirilgan maktabi
                 </p>
                 <p className={style.bosh_p2}>
                   {this.state.school !== null
