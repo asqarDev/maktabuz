@@ -39,11 +39,13 @@ export default class Footer extends Component {
               <p>
                 <a
                   className={style.navLink}
-                  href={`tel: ${
-                    this.state.data !== null ? this.state.data.phone : "#"
-                  }`}
+                  href={`tel: +998977902801`}
+                  // href={`tel: ${
+                  //   this.state.data !== null ? this.state.data.phone : "#"
+                  // }`}
                 >
-                  {this.state.data !== null ? this.state.data.phone : ""}
+                  +99897 790 28 01
+                  {/* {this.state.data !== null ? this.state.data.phone : ""} */}
                 </a>
               </p>
             </Col>
