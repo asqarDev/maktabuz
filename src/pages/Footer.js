@@ -96,10 +96,14 @@ export default class Footer extends Component {
                   sm={12}
                   xl={10}
                 >
-                  <p></p>
+                  {/* https://bit.ly/3ojl7QJ  -facebook
+https://bit.ly/3B2suzE -instagram
+https://bit.ly/39QGOPL -youtube
+https://bit.ly/39Qt87k -telegram */}
+
                   <p>
                     <a
-                      href={"https://t.me/Xorazm_5_maktab"}
+                      href={"https://bit.ly/39Qt87k"}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -108,7 +112,7 @@ export default class Footer extends Component {
                   </p>
                   <p>
                     <a
-                      href={"https://www.instagram.com/5ummumtalimmaktabi/"}
+                      href={"https://bit.ly/3B2suzE"}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -117,9 +121,7 @@ export default class Footer extends Component {
                   </p>
                   <p>
                     <a
-                      href={
-                        "https://www.facebook.com/5-sonli-maktab-283432626789189/?ref=pages_you_manage"
-                      }
+                      href={"https://bit.ly/3ojl7QJ"}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -128,9 +130,7 @@ export default class Footer extends Component {
                   </p>
                   <p>
                     <a
-                      href={
-                        "https://www.youtube.com/channel/UCTU9AVjpeZQLSSh3rlwTpDw"
-                      }
+                      href={"https://bit.ly/39QGOPL"}
                       target="_blank"
                       rel="noreferrer"
                     >
