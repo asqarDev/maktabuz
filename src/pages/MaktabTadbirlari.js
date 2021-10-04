@@ -263,7 +263,7 @@ export default class MaktabTadbirlari extends Component {
                     width="100%"
                     height="400px"
                     state={{
-                      center: [39.651698, 66.97187],
+                      center: [43.289631, -81.636002],
                       zoom: 13,
                     }}
                   >
@@ -274,7 +274,7 @@ export default class MaktabTadbirlari extends Component {
                     >
                       <Placemark
                         key={-1}
-                        geometry={[39.651698, 66.97187]}
+                        geometry={[43.289631, -81.636002]}
                         options={{
                           iconLayout: "default#image",
                         }}
