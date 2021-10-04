@@ -52,9 +52,7 @@ export default class Gallery extends Component {
                   size={120}
                 />
               </div>
-              <h5 style={{ color: "blue" }}>
-                Web sayit test rejimida ishlamoqda
-              </h5>
+              <h5 style={{ color: "blue" }}>Sayt test rejimida ishlamoqda</h5>
             </div>
           </div>
         ) : (
