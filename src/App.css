@@ -175,6 +175,9 @@ html {
 .loader_center {
   min-height: 20px;
 }
+.loader_center h5 {
+  text-align: center;
+}
 .loader_item {
   display: flex;
   justify-content: center;
