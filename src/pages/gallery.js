@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import style from "../css/gallery.module.css";
-import img1 from "../img/b1.JPG";
+// import img1 from "../img/b1.JPG";
 import img2 from "../img/b2.jpg";
 import img3 from "../img/b3.jpg";
 import img4 from "../img/b4.jpg";
@@ -44,21 +44,26 @@ export default class Gallery extends Component {
       <div>
         {this.state.loader ? (
           <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+            <div className="loader_center">
+              <div className="loader_item">
+                <FadeLoader
+                  color="blue"
+                  loading={this.state.loader}
+                  size={120}
+                />
+              </div>
+              <h5 style={{ color: "blue" }}>
+                Web sayit test rejimida ishlamoqda
+              </h5>
+            </div>
           </div>
         ) : (
           <div className={style.mat}>
             <div
               className={style.header}
-              style={{
-                backgroundImage: `url(${
-                  this.state.school !== null
-                    ? this.state.school.foto !== null
-                      ? this.state.school.foto
-                      : img1
-                    : img1
-                })`,
-              }}
+              // style={{
+              //   backgroundImage: `url("./../img/buxoro_rasm.jpg")`,
+              // }}
             >
               <div className={style.sarlavha}>
                 <h2>Maktabimiz hayotidan fotolavhalar</h2>

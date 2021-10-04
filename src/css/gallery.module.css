@@ -10,6 +10,7 @@
   position: relative;
   top: 0px;
   height: 100vh;
+  background-image: url("./../img/buxoro_rasm.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -47,19 +48,19 @@
   left: 0;
   transform-origin: left;
 }
-.image1 {
-  clip-path: polygon(0 0, 0 32%, 28% 0);
-  transform: translate(1px, -60px);
+.image1,
+.image2,
+.image3,
+.image4 {
   transition: transform 600ms ease;
-  transform-origin: top;
 }
 .imagewrapper:hover .image1,
 .imagewrapper:hover .image2,
 .imagewrapper:hover .image3,
 .imagewrapper:hover .image4 {
-  transform: translate(0, 0);
+  transform: scale(1.1);
 }
-.image2 {
+/* .image2 {
   clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
   transform: translate(-20px, -30px);
   transition: transform 600ms ease;
@@ -74,4 +75,4 @@
   transform: translate(-30px, 30px);
   transition: transform 600ms ease;
   transform-origin: top;
-}
+} */

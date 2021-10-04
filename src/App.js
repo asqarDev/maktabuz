@@ -50,7 +50,18 @@ export default class App extends Component {
       <div style={{ width: "100%", overflowX: "hidden" }}>
         {this.state.loader ? (
           <div className="loaderT">
-            <FadeLoader color="blue" loading={this.state.loader} size={120} />
+            <div className="loader_center">
+              <div className="loader_item">
+                <FadeLoader
+                  color="blue"
+                  loading={this.state.loader}
+                  size={120}
+                />
+              </div>
+              <h5 style={{ color: "blue" }}>
+                Web sayit test rejimida ishlamoqda
+              </h5>
+            </div>
           </div>
         ) : (
           <BrowserRouter>

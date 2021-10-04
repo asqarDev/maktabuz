@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   /* z-index: 3445; */
 }
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 .load {
   width: 100%;
@@ -43,8 +44,6 @@ body {
 .site-layout .site-layout-background {
   background: rgba(255, 255, 255, 0.549);
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 .wrapper {
   display: inline-flex;
@@ -172,6 +171,15 @@ html {
   justify-content: center;
   align-items: center;
   padding: 0px;
+}
+.loader_center {
+  min-height: 20px;
+}
+.loader_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 ::-webkit-scrollbar-track {
   border: 5px solid white;
