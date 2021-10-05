@@ -100,7 +100,7 @@ export default class MaktabTadbirlari extends Component {
                   <div className={style.flipBox}>
                     <div className={style.flipBoxInner}>
                       <div className={style.flipBoxFront}>
-                        <img src={item.image} alt="Paris" />
+                        <Image src={item.image} alt="Paris" />
                       </div>
                       <div className={style.flipBoxBack}>
                         <p>{item.title}</p>
@@ -162,8 +162,12 @@ export default class MaktabTadbirlari extends Component {
                 }}
               >
                 <div className="toolpat" style={{ backgroundColor: "white" }}>
-                  <a href="https://president.uz/oz" target="_blank">
-                    <img src={school} />
+                  <a
+                    href="https://president.uz/oz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={school} />
                   </a>
                 </div>
                 <p>O'zbekiston Respublikasi Prezidentining rasmiy veb-sayti</p>
@@ -177,8 +181,12 @@ export default class MaktabTadbirlari extends Component {
                 }}
               >
                 <div className="toolpat" style={{ backgroundColor: "white" }}>
-                  <a href="https://www.gov.uz/uz" target="_blank">
-                    <img src={her2} />
+                  <a
+                    href="https://www.gov.uz/uz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={her2} />
                   </a>
                 </div>
                 <p>O'zbekiston Respublikasining Hukumat portali</p>
@@ -192,8 +200,12 @@ export default class MaktabTadbirlari extends Component {
                 }}
               >
                 <div className="toolpat" style={{ backgroundColor: "white" }}>
-                  <a href="https://lex.uz/" target="_blank">
-                    <img src={her3} />
+                  <a
+                    href="https://lex.uz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={her3} />
                   </a>
                 </div>
                 <p>O'zbekiston Respublikasi qonun hujjatlari milliy bazasi</p>
@@ -207,8 +219,12 @@ export default class MaktabTadbirlari extends Component {
                 }}
               >
                 <div className="toolpat" style={{ backgroundColor: "white" }}>
-                  <a href="https://my.gov.uz/oz" target="_blank">
-                    <img src={her4} />
+                  <a
+                    href="https://my.gov.uz/oz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={her4} />
                   </a>
                 </div>
                 <p>Interaktiv davlat xizmatlarining Yagona portali</p>
@@ -222,8 +238,12 @@ export default class MaktabTadbirlari extends Component {
                 }}
               >
                 <div className="toolpat" style={{ backgroundColor: "white" }}>
-                  <a href="https://www.uzedu.uz/" target="_blank">
-                    <img src={her5} />
+                  <a
+                    href="https://www.uzedu.uz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={her5} />
                   </a>
                 </div>
                 <p>O'zbekiston Respublikasi xalq ta'limi vazirligi</p>
@@ -237,8 +257,12 @@ export default class MaktabTadbirlari extends Component {
                 }}
               >
                 <div className="toolpat" style={{ backgroundColor: "white" }}>
-                  <a href="https://ittower.uz/" target="_blank">
-                    <img src={her6} />
+                  <a
+                    href="https://ittower.uz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={her6} />
                   </a>
                 </div>
                 <p>IT Tower firmasi </p>

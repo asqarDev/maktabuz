@@ -70,341 +70,110 @@ export default class Gallery extends Component {
 
             <Container>
               <Row style={{ justifyContent: "center", marginTop: "10vh" }}>
-                <Col lg={4} md={6} cm={12}>
+                <Col lg={4} md={6} cm={12} className={style.row_col_item}>
                   <div class={style.imagewrapper}>
-                    <img
-                      alt=" "
-                      class={style.image1}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto1 !== null
-                            ? this.state.school.foto1
+                    <div
+                      style={{
+                        backgroundImage: `url('${
+                          this.state.school !== null
+                            ? this.state.school.foto1 !== null
+                              ? this.state.school.foto1
+                              : img2
                             : img2
-                          : img2
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image2}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto1 !== null
-                            ? this.state.school.foto1
-                            : img2
-                          : img2
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image3}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto1 !== null
-                            ? this.state.school.foto1
-                            : img2
-                          : img2
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image4}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto1 !== null
-                            ? this.state.school.foto1
-                            : img2
-                          : img2
-                      }
+                        }')`,
+                      }}
                     />
                   </div>{" "}
                 </Col>
-                <Col lg={4} md={6} cm={12}>
+                <Col lg={4} md={6} cm={12} className={style.row_col_item}>
                   <div class={style.imagewrapper}>
-                    <img
-                      alt=" "
-                      class={style.image1}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto2 !== null
-                            ? this.state.school.foto2
+                    <div
+                      style={{
+                        backgroundImage: `url('${
+                          this.state.school !== null
+                            ? this.state.school.foto2 !== null
+                              ? this.state.school.foto2
+                              : img3
                             : img3
-                          : img3
-                      }
+                        }')`,
+                      }}
                     />
-                    <img
-                      alt=" "
-                      class={style.image2}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto2 !== null
-                            ? this.state.school.foto2
-                            : img3
-                          : img3
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image3}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto2 !== null
-                            ? this.state.school.foto2
-                            : img3
-                          : img3
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image4}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto2 !== null
-                            ? this.state.school.foto2
-                            : img3
-                          : img3
-                      }
-                    />
-                  </div>
+                  </div>{" "}
                 </Col>
-                <Col lg={4} md={6} cm={12}>
+                <Col lg={4} md={6} cm={12} className={style.row_col_item}>
                   <div class={style.imagewrapper}>
-                    <img
-                      alt=" "
-                      class={style.image1}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto3 !== null
-                            ? this.state.school.foto3
+                    <div
+                      style={{
+                        backgroundImage: `url('${
+                          this.state.school !== null
+                            ? this.state.school.foto3 !== null
+                              ? this.state.school.foto3
+                              : img4
                             : img4
-                          : img4
-                      }
+                        }')`,
+                      }}
                     />
-                    <img
-                      alt=" "
-                      class={style.image2}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto3 !== null
-                            ? this.state.school.foto3
-                            : img4
-                          : img4
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image3}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto3 !== null
-                            ? this.state.school.foto3
-                            : img4
-                          : img4
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image4}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto3 !== null
-                            ? this.state.school.foto3
-                            : img4
-                          : img4
-                      }
-                    />
-                  </div>
+                  </div>{" "}
                 </Col>
-                <Col lg={4} md={6} cm={12}>
+                <Col lg={4} md={6} cm={12} className={style.row_col_item}>
                   <div class={style.imagewrapper}>
-                    <img
-                      alt=" "
-                      class={style.image1}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto4 !== null
-                            ? this.state.school.foto4
+                    <div
+                      style={{
+                        backgroundImage: `url('${
+                          this.state.school !== null
+                            ? this.state.school.foto4 !== null
+                              ? this.state.school.foto4
+                              : img5
                             : img5
-                          : img5
-                      }
+                        }')`,
+                      }}
                     />
-                    <img
-                      alt=" "
-                      class={style.image2}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto4 !== null
-                            ? this.state.school.foto4
-                            : img5
-                          : img5
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image3}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto4 !== null
-                            ? this.state.school.foto4
-                            : img5
-                          : img5
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image4}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto4 !== null
-                            ? this.state.school.foto4
-                            : img5
-                          : img5
-                      }
-                    />
-                  </div>
+                  </div>{" "}
                 </Col>
-                <Col lg={4} md={6} cm={12}>
+                <Col lg={4} md={6} cm={12} className={style.row_col_item}>
                   <div class={style.imagewrapper}>
-                    <img
-                      alt=" "
-                      class={style.image1}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto6 !== null
-                            ? this.state.school.foto6
+                    <div
+                      style={{
+                        backgroundImage: `url('${
+                          this.state.school !== null
+                            ? this.state.school.foto5 !== null
+                              ? this.state.school.foto5
+                              : img6
                             : img6
-                          : img6
-                      }
+                        }')`,
+                      }}
                     />
-                    <img
-                      alt=" "
-                      class={style.image2}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto6 !== null
-                            ? this.state.school.foto6
-                            : img6
-                          : img6
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image3}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto6 !== null
-                            ? this.state.school.foto6
-                            : img6
-                          : img6
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image4}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto6 !== null
-                            ? this.state.school.foto6
-                            : img6
-                          : img6
-                      }
-                    />
-                  </div>
+                  </div>{" "}
                 </Col>
-                <Col lg={4} md={12} cm={12}>
+                <Col lg={4} md={6} cm={12} className={style.row_col_item}>
                   <div class={style.imagewrapper}>
-                    <img
-                      alt=" "
-                      class={style.image1}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto5 !== null
-                            ? this.state.school.foto5
-                            : img6
-                          : img6
-                      }
+                    <div
+                      style={{
+                        backgroundImage: `url('${
+                          this.state.school !== null
+                            ? this.state.school.foto6 !== null
+                              ? this.state.school.foto6
+                              : img2
+                            : img2
+                        }')`,
+                      }}
                     />
-                    <img
-                      alt=" "
-                      class={style.image2}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto5 !== null
-                            ? this.state.school.foto5
-                            : img6
-                          : img6
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image3}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto5 !== null
-                            ? this.state.school.foto5
-                            : img6
-                          : img6
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image4}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto5 !== null
-                            ? this.state.school.foto5
-                            : img6
-                          : img6
-                      }
-                    />
-                  </div>
+                  </div>{" "}
                 </Col>
-                <Col lg={4} md={12} cm={12}>
+                <Col lg={4} md={6} cm={12} className={style.row_col_item}>
                   <div class={style.imagewrapper}>
-                    <img
-                      alt=" "
-                      class={style.image1}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto7 !== null
-                            ? this.state.school.foto7
-                            : img6
-                          : img6
-                      }
+                    <div
+                      style={{
+                        backgroundImage: `url('${
+                          this.state.school !== null
+                            ? this.state.school.foto7 !== null
+                              ? this.state.school.foto7
+                              : img2
+                            : img2
+                        }')`,
+                      }}
                     />
-                    <img
-                      alt=" "
-                      class={style.image2}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto7 !== null
-                            ? this.state.school.foto7
-                            : img6
-                          : img6
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image3}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto7 !== null
-                            ? this.state.school.foto7
-                            : img6
-                          : img6
-                      }
-                    />
-                    <img
-                      alt=" "
-                      class={style.image4}
-                      src={
-                        this.state.school !== null
-                          ? this.state.school.foto7 !== null
-                            ? this.state.school.foto7
-                            : img6
-                          : img6
-                      }
-                    />
-                  </div>
+                  </div>{" "}
                 </Col>
               </Row>
             </Container>
