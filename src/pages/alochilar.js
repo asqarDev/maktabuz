@@ -10,6 +10,7 @@ import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import Aos from "aos";
 import { getPupil } from "../host/Config";
+
 import { url, user, idMaktab } from "../host/Host";
 import { FadeLoader } from "react-spinners";
 

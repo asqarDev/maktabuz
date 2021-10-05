@@ -8,7 +8,7 @@ import school2 from "../img/school2.jpg";
 import axios from "axios";
 import Aos from "aos";
 import { getPupil } from "../host/Config";
-import { idMaktab, url, user } from "../host/Host";
+import { url, user } from "../host/Host";
 
 export default class BoshSahifaDavomi extends Component {
   state = {
