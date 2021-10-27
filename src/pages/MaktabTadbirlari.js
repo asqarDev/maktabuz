@@ -29,6 +29,11 @@ import {
   faCalendarAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { getEvents } from "../host/Config";
+
+import axios from 'axios'
+import {url} from '../host/Host'
+import {message} from 'antd'
+
 export default class MaktabTadbirlari extends Component {
   state = {
     events: [],
@@ -59,6 +64,20 @@ export default class MaktabTadbirlari extends Component {
   };
   componentDidMount() {
     this.getEvents();
+  }
+  sendMurojat=()=>{
+    // console.log('wfknfdnhf')
+    var name=document.getElementById('name').value
+    var phone=document.getElementById('phone').value
+    var text=document.getElementById('text').value
+    var config={
+      name,
+      phone,
+      text,
+      school:Global.schoolId
+    }
+    console.log(config)
+    axios.post(`${url}/murojaat/`, config).then(res=>{message.success('Murojaatingiz yuborildi')}).catch(err=>{message.success('Murojaatingiz yuborilmadi')})
   }
   render() {
     const responsive = {
@@ -327,14 +346,14 @@ export default class MaktabTadbirlari extends Component {
                 <div className="container">
                   <div className="brand-logo"></div>
                   <div className="inputs">
-                    <form>
+                  <form>
                       <label>F.I.O.</label>
-                      <input type="text" placeholder="Ism Familiya Sharifi" />
+                      <input type="text" id="name" placeholder="Ism Familiya Sharifi" />
                       <label>Telefon raqam</label>
-                      <input type="text" placeholder="+998 99 999 99 99" />
-                      <label>Murojat</label>
-                      <textarea placeholder="Murojat matni..."></textarea>
-                      <button type="submit">Yuborish</button>
+                      <input type="text" id="phone" placeholder="+998 99 999 99 99" />
+                      <label>Murojaat</label>
+                      <textarea id="text" placeholder="Murojaat matni..."></textarea>
+                      <button type="button" onClick={this.sendMurojat}>Yuborish</button>
                     </form>
                   </div>
                 </div>
