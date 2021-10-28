@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import { Col, Container, Image, Row, Card } from "react-bootstrap";
 import style from "./BoshSahifaDavomi.module.css";
 import { ButtonWrapper } from "./StyleBoshSahifa";
-import ustoz1 from "../img/ustoz1.jpg";
-import ustoz2 from "../img/ustoz2.jpg";
 import school2 from "../img/school2.jpg";
 import axios from "axios";
 import Aos from "aos";
 import { getPupil } from "../host/Config";
-import { url, user } from "../host/Host";
+import { idMaktab, url, user } from "../host/Host";
 
 export default class BoshSahifaDavomi extends Component {
   state = {
@@ -20,12 +18,13 @@ export default class BoshSahifaDavomi extends Component {
     id: 0,
     school: null,
     class: [],
+    orin3: [],
   };
 
   getExcellents = () => {
     var v = user;
     axios
-      .get(`${url}/excellent/`)
+      .get(`${url}/excellent/${idMaktab}`)
       .then((res) => {
         this.setState({
           excellent: res.data,
@@ -82,6 +81,31 @@ export default class BoshSahifaDavomi extends Component {
     }
     return classes;
   };
+  getStaff = () => {
+    axios
+      .get(`${url}/staff-by-school/${idMaktab}/`)
+      .then((res) => {
+        var orin3 = [];
+        res.data.map((item) =>
+          item.speciality.length !== 0
+            ? item.speciality.map((item1) =>
+                item1 === 7 ? orin3.push(item) : ""
+              )
+            : ""
+        );
+        this.setState({
+          orin3: orin3,
+        });
+        this.setState({
+          loader: false,
+        });
+      })
+      .catch((err) => {
+        this.setState({
+          loader: false,
+        });
+      });
+  };
 
   componentDidMount() {
     Aos.init({
@@ -89,8 +113,8 @@ export default class BoshSahifaDavomi extends Component {
     });
     this.getExcellents();
     this.getPupil();
+    this.getStaff();
     this.setState({ loader: false });
-    console.log(123);
   }
 
   render() {
@@ -184,36 +208,29 @@ export default class BoshSahifaDavomi extends Component {
                 <h3 className={style.main_header}>O'qituvchilar doskasi</h3>
                 <Container>
                   <Row>
-                    <Col lg={6} md={12} sm={12} data-aos="zoom-in">
-                      <did className={style.flipBox}>
-                        <div className={style.flipBoxInner}>
-                          <div className={style.flipBoxFront}>
-                            <img src={ustoz1} alt="" />
-                          </div>
-                          <div className={style.flipBoxBack}>
-                            <div>
-                              <h3>Muxlisova Munisa Mahmudovna</h3>
-                              <p>Ingliz tili o'qituvchisi</p>
+                    {this.state.orin3.map((item) => (
+                      <Col
+                        key={item.id}
+                        lg={6}
+                        md={12}
+                        sm={12}
+                        data-aos="zoom-in"
+                      >
+                        <did className={style.flipBox}>
+                          <div className={style.flipBoxInner}>
+                            <div className={style.flipBoxFront}>
+                              <img src={item.image} alt="" />
+                            </div>
+                            <div className={style.flipBoxBack}>
+                              <div>
+                                <h3>{item.full_name}</h3>
+                                <p>{item.position}</p>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </did>
-                    </Col>
-                    <Col lg={6} md={12} sm={12} data-aos="zoom-in">
-                      <div className={style.flipBox}>
-                        <div className={style.flipBoxInner}>
-                          <div className={style.flipBoxFront}>
-                            <img src={ustoz2} alt="" />
-                          </div>
-                          <div className={style.flipBoxBack}>
-                            <div>
-                              <h3>Hamidova Shahnoza Elmurodovna</h3>
-                              <p>Ona tili o'qituvchisi</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </Col>
+                        </did>
+                      </Col>
+                    ))}
                   </Row>
                 </Container>
               </div>
