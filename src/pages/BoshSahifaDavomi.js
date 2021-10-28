@@ -7,6 +7,8 @@ import axios from "axios";
 import Aos from "aos";
 import { getPupil } from "../host/Config";
 import { idMaktab, url, user } from "../host/Host";
+import ustoz1 from "./../img/ustoz1.jpg";
+import ustoz2 from "./../img/ustoz2.jpg";
 
 export default class BoshSahifaDavomi extends Component {
   state = {
@@ -139,6 +141,7 @@ export default class BoshSahifaDavomi extends Component {
                       style={{ textDecoration: "none", color: "white" }}
                       href="https://my.maktab.uz/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Hoziroq ariza topshiring
                     </a>
@@ -208,29 +211,37 @@ export default class BoshSahifaDavomi extends Component {
                 <h3 className={style.main_header}>O'qituvchilar doskasi</h3>
                 <Container>
                   <Row>
-                    {this.state.orin3.map((item) => (
-                      <Col
-                        key={item.id}
-                        lg={6}
-                        md={12}
-                        sm={12}
-                        data-aos="zoom-in"
-                      >
-                        <did className={style.flipBox}>
-                          <div className={style.flipBoxInner}>
-                            <div className={style.flipBoxFront}>
-                              <img src={item.image} alt="" />
-                            </div>
-                            <div className={style.flipBoxBack}>
-                              <div>
-                                <h3>{item.full_name}</h3>
-                                <p>{item.position}</p>
-                              </div>
+                    <Col lg={6} md={12} sm={12} data-aos="zoom-in">
+                      <did className={style.flipBox}>
+                        <div className={style.flipBoxInner}>
+                          <div className={style.flipBoxFront}>
+                            <img src={ustoz1} alt="" />
+                          </div>
+                          <div className={style.flipBoxBack}>
+                            <div>
+                              <h3>Tosheva Gavhar Umarovna</h3>
+                              <p>Matematika fani o'qituvchisi</p>
                             </div>
                           </div>
-                        </did>
-                      </Col>
-                    ))}
+                        </div>
+                      </did>
+                    </Col>
+
+                    <Col lg={6} md={12} sm={12} data-aos="zoom-in">
+                      <did className={style.flipBox}>
+                        <div className={style.flipBoxInner}>
+                          <div className={style.flipBoxFront}>
+                            <img src={ustoz2} alt="" />
+                          </div>
+                          <div className={style.flipBoxBack}>
+                            <div>
+                              <h3>Ravshanova Mamlakat Sulaymonovna</h3>
+                              <p>Rus tili filologiya o'qituvchi</p>
+                            </div>
+                          </div>
+                        </div>
+                      </did>
+                    </Col>
                   </Row>
                 </Container>
               </div>
