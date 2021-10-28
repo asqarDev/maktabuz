@@ -29,7 +29,7 @@ export default class Alochilar extends Component {
   getExcellents = () => {
     var v = user;
     axios
-      .get(`${url}/excellent/`)
+      .get(`${url}/excellent/${idMaktab}`)
       .then((res) => {
         this.setState({
           excellent: res.data,
