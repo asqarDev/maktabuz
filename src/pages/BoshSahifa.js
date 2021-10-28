@@ -440,7 +440,7 @@ export default class BoshSahifa extends Component {
               </div>
             </div>
             <BoshSahifaDavomi />
-            <MaktabTadbirlari />
+
             <div className={style.elem}>
               <Row style={{ alignItems: "center" }}>
                 <Col className={style.htr} lg={12} md={12} sm={12}>
@@ -495,7 +495,7 @@ export default class BoshSahifa extends Component {
                 </Col>
               </Row>
             </div>
-
+            <MaktabTadbirlari />
             <Footer />
           </div>
         )}
