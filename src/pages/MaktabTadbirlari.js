@@ -30,6 +30,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { getEvents } from "../host/Config";
 
+import Global from "../host/Global";
 import axios from 'axios'
 import {url} from '../host/Host'
 import {message} from 'antd'
@@ -66,7 +67,7 @@ export default class MaktabTadbirlari extends Component {
     this.getEvents();
   }
   sendMurojat=()=>{
-    // console.log('wfknfdnhf')
+   
     var name=document.getElementById('name').value
     var phone=document.getElementById('phone').value
     var text=document.getElementById('text').value
@@ -76,8 +77,11 @@ export default class MaktabTadbirlari extends Component {
       text,
       school:Global.schoolId
     }
-    console.log(config)
-    axios.post(`${url}/murojaat/`, config).then(res=>{message.success('Murojaatingiz yuborildi')}).catch(err=>{message.success('Murojaatingiz yuborilmadi')})
+    
+    axios.post(`${url}/murojaat/`, config).then(res=>{message.success('Murojaatingiz yuborildi');
+   name=document.getElementById('name').value=""
+   phone=document.getElementById('phone').value=""
+   text=document.getElementById('text').value=""}).catch(err=>{message.success('Murojaatingiz yuborilmadi')})
   }
   render() {
     const responsive = {
