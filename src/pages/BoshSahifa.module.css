@@ -195,6 +195,7 @@
 .elem {
   padding: 10px;
   border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
 }
 .elem h2 {
   text-align: center;
