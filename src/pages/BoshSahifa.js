@@ -441,6 +441,61 @@ export default class BoshSahifa extends Component {
             </div>
             <BoshSahifaDavomi />
             <MaktabTadbirlari />
+            <div className={style.elem}>
+              <Row style={{ alignItems: "center" }}>
+                <Col className={style.htr} lg={12} md={12} sm={12}>
+                  <h2 className={style.colT}>
+                    Bizning ijtimoiy sahifalarimiz:
+                  </h2>
+                </Col>
+
+                <Col className={style.htr} lg={3} md={6} sm={12}>
+                  <a
+                    href={this.state.school ? this.state.school.telegram : ""}
+                    className={style.colT}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Telegram_Messenger.png" />
+                    <p>Telegram sahifasi</p>
+                  </a>
+                </Col>
+                <Col className={style.htr} lg={3} md={6} sm={12}>
+                  <a
+                    href={this.state.school ? this.state.school.instagram : ""}
+                    className={style.colT}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" />
+                    <p>Instagram sahifasi</p>
+                  </a>
+                </Col>
+                <Col className={style.htr} lg={3} md={6} sm={12}>
+                  <a
+                    href={this.state.school ? this.state.school.facebook : ""}
+                    className={style.colT}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" />
+                    <p>Facebook sahifasi</p>
+                  </a>
+                </Col>
+                <Col className={style.htr} lg={3} md={6} sm={12}>
+                  <a
+                    href={this.state.school ? this.state.school.youtube : ""}
+                    className={style.colT}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" />
+                    <p>You tube sahifasi</p>
+                  </a>
+                </Col>
+              </Row>
+            </div>
+
             <Footer />
           </div>
         )}

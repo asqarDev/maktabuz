@@ -130,7 +130,8 @@
   margin: 5px 0;
   height: 23rem;
   border-right: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .card_item:hover,
 .card_item1:hover {
@@ -190,6 +191,32 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.elem {
+  padding: 10px;
+  border-top: 1px solid #555;
+}
+.elem h2 {
+  text-align: center;
+}
+.htr a {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.htr p {
+  margin: 0;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+.htr img {
+  height: 30px;
+  width: 30px;
+}
+
 @media screen and (max-width: 1200px) {
   .navbar_button {
     display: block;
