@@ -25,76 +25,38 @@ export default class Alochilar extends Component {
     school: null,
     class: [],
   };
-
-  getExcellents = () => {
-    var v = user;
-    axios
-      .get(`${url}/excellent/${idMaktab}`)
-      .then((res) => {
-        this.setState({
-          excellent: res.data,
-          loader: false,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({
-          loader: false,
-        });
-      });
-    axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
+  getSchool=()=>{
+    axios.get(`${url}/school-by-admin/${user}/`).then((res) => {
       this.setState({ data: res.data });
-    });
-    axios
-      .get(`${url}/class/`)
-      .then((res) => {
-        this.setState({
-          class: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+      axios.get(`${url}/excellent/`).then((res1) => {
+       var v=[]
+       res1.data.map(item=>{
+         if(item.school===res.data.id){
+           v.push(item)
+         }
+       })
+       
+        this.setState({ excellent: v });
+        setInterval(() => {
+          this.setState({
+            loader: false,
+          });
+        }, 2000);
+     
       });
-  };
-
-  getPupil = () => {
-    getPupil()
-      .then((res) => {
-        this.setState({
-          pupils: res.data,
-        });
-      })
-      .catch((err) => console.log(err));
-  };
-
-  setPupils = (id) => {
-    var pupil = {};
-    if (this.state.pupils !== []) {
-      this.state.pupils.map((item1) =>
-        item1.id === id ? (pupil = item1) : ""
-      );
-    }
-    return pupil;
-  };
-
-  echoClasses = (id) => {
-    var classes = {};
-    if (this.state.class !== []) {
-      this.state.class.map((item1) =>
-        item1.id === id ? (classes = item1) : ""
-      );
-    }
-    return classes;
-  };
-
-  componentDidMount() {
-    Aos.init({
-      duration: 2000,
     });
-    this.getExcellents();
-    this.getPupil();
+  
+   
+  
   }
-
+    componentDidMount() {
+      Aos.init({
+        duration: 2000,
+      });
+      // this.getExcellents();
+      this.getSchool();
+    }
+  
   render() {
     const { data } = this.state;
     return (

@@ -22,103 +22,39 @@ export default class BoshSahifaDavomi extends Component {
     class: [],
     orin3: [],
   };
-
-  getExcellents = () => {
-    var v = user;
-    axios
-      .get(`${url}/excellent/${idMaktab}`)
-      .then((res) => {
-        this.setState({
-          excellent: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
+  getSchool=()=>{
+    axios.get(`${url}/school-by-admin/${user}/`).then((res) => {
       this.setState({ data: res.data });
-
-      console.log(res.data);
-    });
-    axios
-      .get(`${url}/class/`)
-      .then((res) => {
-        this.setState({
-          class: res.data,
-          loader: false,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({ loader: false });
+      axios.get(`${url}/excellent/`).then((res1) => {
+       var v=[]
+       res1.data.map(item=>{
+         if(item.school===res.data.id){
+           v.push(item)
+         }
+       })
+       
+        this.setState({ excellent: v.slice(0, 2) });
+        setInterval(() => {
+          this.setState({
+            loader: false,
+          });
+        }, 2000);
+     
       });
-  };
-
-  getPupil = () => {
-    getPupil()
-      .then((res) => {
-        this.setState({
-          pupils: res.data,
-        });
-      })
-      .catch((err) => console.log(err));
-  };
-
-  setPupils = (id) => {
-    var pupil = {};
-    if (this.state.pupils !== []) {
-      this.state.pupils.map((item1) =>
-        item1.id === id ? (pupil = item1) : ""
-      );
-    }
-    return pupil;
-  };
-
-  echoClasses = (id) => {
-    var classes = {};
-    if (this.state.class !== []) {
-      this.state.class.map((item1) =>
-        item1.id === id ? (classes = item1) : ""
-      );
-    }
-    return classes;
-  };
-  getStaff = () => {
-    axios
-      .get(`${url}/staff-by-school/${idMaktab}/`)
-      .then((res) => {
-        var orin3 = [];
-        res.data.map((item) =>
-          item.speciality.length !== 0
-            ? item.speciality.map((item1) =>
-                item1 === 7 ? orin3.push(item) : ""
-              )
-            : ""
-        );
-        this.setState({
-          orin3: orin3,
-        });
-        this.setState({
-          loader: false,
-        });
-      })
-      .catch((err) => {
-        this.setState({
-          loader: false,
-        });
-      });
-  };
-
-  componentDidMount() {
-    Aos.init({
-      duration: 2000,
     });
-    this.getExcellents();
-    this.getPupil();
-    this.getStaff();
-    this.setState({ loader: false });
+  
+   
+  
   }
-
+    componentDidMount() {
+      Aos.init({
+        duration: 2000,
+      });
+      // this.getExcellents();
+      this.getSchool();
+    }
+  
+  
   render() {
     return (
       <div>
@@ -168,10 +104,9 @@ export default class BoshSahifaDavomi extends Component {
                   <Row>
                     {this.state.excellent !== [] && this.state.class !== []
                       ? this.state.excellent.map((item) => {
-                          var pupil = this.setPupils(item.pupil);
                           return (
                             <Col
-                              lg={this.state.excellent.length > 3 ? 3 : 6}
+                              lg={6}
                               md={6}
                               sm={12}
                               data-aos="zoom-in-up"
@@ -184,17 +119,15 @@ export default class BoshSahifaDavomi extends Component {
                                 <Card.Img
                                   variant="top"
                                   src={
-                                    pupil.image !== null ? pupil.image : school2
+                                    item.image !== null ? item.image : school2
                                   }
                                 />
                                 <Card.Body className={style.card_for_body}>
                                   <Card.Title className={style.card_title}>
-                                    <h4>{pupil.full_name}</h4>
+                                    <h4>{item.full_name}</h4>
                                   </Card.Title>
                                   <Card.Text>
-                                    {this.echoClasses(pupil.clas).class_number}{" "}
-                                    - "{this.echoClasses(pupil.clas).class_char}
-                                    " sinf
+                                  {item.clas}
                                   </Card.Text>
                                 </Card.Body>
                               </Card>
@@ -243,6 +176,9 @@ export default class BoshSahifaDavomi extends Component {
                       </did>
                     </Col>
                   </Row>
+                  <br/>
+                  <br/>
+                  <br/>
                 </Container>
               </div>
             </Col>
