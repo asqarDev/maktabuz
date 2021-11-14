@@ -1,5 +1,5 @@
 import Global from "./Global";
-import { httpRequest,  url } from "./Host";
+import { httpRequest, url } from "./Host";
 
 export const getSchool = () => {
   var config = {
@@ -91,9 +91,9 @@ export const getPupils = (id) => {
   return httpRequest(config);
 };
 
-export const getExcellent = (id) => {
+export const getExcellent = () => {
   var config = {
-    url: `${url}/excellent/${Global.schoolId}/`,
+    url: `${url}/excellent`,
     method: "get",
   };
   return httpRequest(config);

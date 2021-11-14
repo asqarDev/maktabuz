@@ -9,9 +9,9 @@ import school3 from "../img/school3.jpg";
 import school4 from "../img/school4.jpg";
 import school5 from "../img/school5.jpg";
 import Aos from "aos";
-import { getPupil } from "../host/Config";
+// import { getPupil } from "../host/Config";
 
-import { url, user, idMaktab } from "../host/Host";
+import { idMaktab, url, user } from "../host/Host";
 import { FadeLoader } from "react-spinners";
 
 export default class Alochilar extends Component {
@@ -23,68 +23,28 @@ export default class Alochilar extends Component {
     data: null,
     id: 0,
     school: null,
-    class: [],
+    // class: [],
   };
 
   getExcellents = () => {
+    let informations = [];
+    axios.get(`${url}/excellent`).then((res) => {
+      res.data.map((item) => {
+        return item.school === parseInt(idMaktab)
+          ? informations.push(item)
+          : "";
+      });
+      this.setState({ excellent: informations, loader: false });
+    });
     var v = user;
     axios
-      .get(`${url}/excellent/${idMaktab}`)
+      .get(`${url}/school-by-admin/${v}/`)
       .then((res) => {
-        this.setState({
-          excellent: res.data,
-          loader: false,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({
-          loader: false,
-        });
-      });
-    axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
-      this.setState({ data: res.data });
-    });
-    axios
-      .get(`${url}/class/`)
-      .then((res) => {
-        this.setState({
-          class: res.data,
-        });
+        this.setState({ data: res.data });
       })
       .catch((err) => {
         console.log(err);
       });
-  };
-
-  getPupil = () => {
-    getPupil()
-      .then((res) => {
-        this.setState({
-          pupils: res.data,
-        });
-      })
-      .catch((err) => console.log(err));
-  };
-
-  setPupils = (id) => {
-    var pupil = {};
-    if (this.state.pupils !== []) {
-      this.state.pupils.map((item1) =>
-        item1.id === id ? (pupil = item1) : ""
-      );
-    }
-    return pupil;
-  };
-
-  echoClasses = (id) => {
-    var classes = {};
-    if (this.state.class !== []) {
-      this.state.class.map((item1) =>
-        item1.id === id ? (classes = item1) : ""
-      );
-    }
-    return classes;
   };
 
   componentDidMount() {
@@ -92,7 +52,6 @@ export default class Alochilar extends Component {
       duration: 2000,
     });
     this.getExcellents();
-    this.getPupil();
   }
 
   render() {
@@ -177,13 +136,12 @@ export default class Alochilar extends Component {
               <Row className={style.tana}>
                 {this.state.excellent !== []
                   ? this.state.excellent.map((item) => {
-                      var pupil = this.setPupils(item.pupil);
                       return (
                         <Col
                           key={item.id}
                           sm={12}
                           md={6}
-                          lg={this.state.excellent.length > 3 ? 3 : 6}
+                          lg={this.state.excellent.length >= 3 ? 4 : 6}
                           className={style.row_col}
                         >
                           <div className={style.card1}>
@@ -196,33 +154,22 @@ export default class Alochilar extends Component {
                                   <Card.Img
                                     variant="top"
                                     src={
-                                      pupil.image !== null
-                                        ? pupil.image
-                                        : school2
+                                      item.image !== null ? item.image : school2
                                     }
                                   />
                                   <Card.Body>
                                     <Card.Title>Bizning faxrimiz</Card.Title>
                                     <Card.Text>
                                       <p>
-                                        <b>O'quvchi: </b> {pupil.full_name}
+                                        <b>O'quvchi: </b> {item.full_name}
                                       </p>
                                       <p>
                                         <b>Tug'ulgan sanasi: </b>{" "}
-                                        {pupil.birth_day}
+                                        {item.birth_day}
                                       </p>
                                       <p>
                                         <b>Sinfi: </b>
-                                        {
-                                          this.echoClasses(pupil.clas)
-                                            .class_number
-                                        }{" "}
-                                        - "
-                                        {
-                                          this.echoClasses(pupil.clas)
-                                            .class_char
-                                        }
-                                        " sinf
+                                        {item.clas}
                                       </p>
                                     </Card.Text>
                                   </Card.Body>

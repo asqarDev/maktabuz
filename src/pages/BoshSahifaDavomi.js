@@ -25,16 +25,15 @@ export default class BoshSahifaDavomi extends Component {
 
   getExcellents = () => {
     var v = user;
-    axios
-      .get(`${url}/excellent/${idMaktab}`)
-      .then((res) => {
-        this.setState({
-          excellent: res.data,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
+    let informations = [];
+    axios.get(`${url}/excellent`).then((res) => {
+      res.data.map((item) => {
+        return item.school === parseInt(idMaktab)
+          ? informations.push(item)
+          : "";
       });
+      this.setState({ excellent: informations, loader: false });
+    });
     axios.get(`${url}/school-by-admin/${v}/`).then((res) => {
       this.setState({ data: res.data });
 
@@ -168,10 +167,11 @@ export default class BoshSahifaDavomi extends Component {
                   <Row>
                     {this.state.excellent !== [] && this.state.class !== []
                       ? this.state.excellent.map((item) => {
-                          var pupil = this.setPupils(item.pupil);
+                          // var pupil = this.setPupils(item.pupil);
+
                           return (
                             <Col
-                              lg={this.state.excellent.length > 3 ? 3 : 6}
+                              lg={this.state.excellent.length >= 3 ? 4 : 6}
                               md={6}
                               sm={12}
                               data-aos="zoom-in-up"
@@ -184,17 +184,18 @@ export default class BoshSahifaDavomi extends Component {
                                 <Card.Img
                                   variant="top"
                                   src={
-                                    pupil.image !== null ? pupil.image : school2
+                                    item.image !== null ? item.image : school2
                                   }
                                 />
                                 <Card.Body className={style.card_for_body}>
                                   <Card.Title className={style.card_title}>
-                                    <h4>{pupil.full_name}</h4>
+                                    <h4>{item.full_name}</h4>
                                   </Card.Title>
                                   <Card.Text>
-                                    {this.echoClasses(pupil.clas).class_number}{" "}
+                                    {item.clas}
+                                    {/* {this.echoClasses(pupil.clas).class_number}{" "}
                                     - "{this.echoClasses(pupil.clas).class_char}
-                                    " sinf
+                                    " sinf */}
                                   </Card.Text>
                                 </Card.Body>
                               </Card>
