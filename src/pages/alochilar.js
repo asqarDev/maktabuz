@@ -139,13 +139,13 @@ export default class Alochilar extends Component {
               <Row className={style.tana}>
                 {this.state.excellent !== []
                   ? this.state.excellent.map((item) => {
-                      var pupil = this.setPupils(item.pupil);
+                   
                       return (
                         <Col
                           key={item.id}
                           sm={12}
                           md={6}
-                          lg={this.state.excellent.length > 3 ? 3 : 6}
+                          lg={4}
                           className={style.row_col}
                         >
                           <div className={style.card1}>
@@ -158,8 +158,8 @@ export default class Alochilar extends Component {
                                   <Card.Img
                                     variant="top"
                                     src={
-                                      pupil.image !== null
-                                        ? pupil.image
+                                      item.image !== null
+                                        ? item.image
                                         : school2
                                     }
                                   />
@@ -167,25 +167,17 @@ export default class Alochilar extends Component {
                                     <Card.Title>Bizning faxrimiz</Card.Title>
                                     <Card.Text>
                                       <p>
-                                        <b>O'quvchi: </b> {pupil.full_name}
-                                      </p>
-                                      <p>
-                                        <b>Tug'ulgan sanasi: </b>{" "}
-                                        {pupil.birth_day}
+                                        <b>O'quvchi: </b> {item.full_name}
                                       </p>
                                       <p>
                                         <b>Sinfi: </b>
-                                        {
-                                          this.echoClasses(pupil.clas)
-                                            .class_number
-                                        }{" "}
-                                        - "
-                                        {
-                                          this.echoClasses(pupil.clas)
-                                            .class_char
-                                        }
-                                        " sinf
+                                        {item.clas}
                                       </p>
+                                      <p>
+                                        <b>Tug'ulgan sanasi: </b>{" "}
+                                        {item.birth_day}
+                                      </p>
+                                      
                                     </Card.Text>
                                   </Card.Body>
                                 </Card>
