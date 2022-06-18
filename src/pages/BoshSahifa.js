@@ -136,7 +136,7 @@ export default class BoshSahifa extends Component {
                   - maktab
                 </p>
               </div>
-              <div className={style.bosh_clock}>{this.state.clock}</div>
+            
             </div>
 
             <Navbar

@@ -3,8 +3,12 @@ import { Col, Row } from "react-bootstrap";
 import style from "./Footer.module.css";
 import axios from "axios";
 import { url, user } from "../host/Host";
+import styles from '../css/footer.module.css';
+
+import {RiTelegramFill}  from "react-icons/ri"
+import {CgFacebook}  from "react-icons/cg"
 import { NavLink } from "react-router-dom";
-import { FaTelegram, FaFacebook } from "react-icons/fa";
+import { FaTelegram, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { AiFillYoutube } from "react-icons/ai";
 export default class Footer extends Component {
@@ -23,31 +27,12 @@ export default class Footer extends Component {
         <div className={style.container}>
           <Row>
             <Col xs={12} sm={12} md={6} lg={4} className={style.logoUchun}>
-              <h2>Maktab ma'lumoti</h2>
-              <p>{this.state.data !== null ? this.state.data.address : ""}</p>
-              <p style={{ marginBottom: "0" }}>
-                <a
-                  className={style.navLink}
-                  href={`mailto: ${
-                    this.state.data !== null ? this.state.data.email : "#"
-                  }`}
-                >
-                  {this.state.data !== null ? this.state.data.email : "#"}
-                </a>
-              </p>
-              <br />
-              <p>
-                <a
-                  className={style.navLink}
-                  href={`tel: +998977902801`}
-                  // href={`tel: ${
-                  //   this.state.data !== null ? this.state.data.phone : "#"
-                  // }`}
-                >
-                  +99897 790 28 01
-                  {/* {this.state.data !== null ? this.state.data.phone : ""} */}
-                </a>
-              </p>
+            <div className={styles.one}>
+                                    <h2>{this.state.data !== null ? this.state.data.school_number : ""}-maktab </h2>
+                                    <p style={{textTransform:'uppercase', fontSize:'13px', fontWeight:'600', color:'white'}}>{this.state.data !== null ? this.state.data.type : ""}</p>
+                                    <p style={{color:'white', fontSize:'16px', marginTop:'40px'}}>Sifatli bilim va yuqori natijalarga bizning maktab bilan erishishingiz mumkin!</p>
+                                  
+                                 </div>
             </Col>
             <Col xs={12} sm={12} md={6} lg={4} className={style.ulLi}>
               <h2>Bizning maktab</h2>
