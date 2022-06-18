@@ -79,11 +79,9 @@ export default class Maktabmamuriyati extends Component {
           yetakchi: yetakchi,
           chqbt: chqbt,
         });
-        setTimeout(() => {
-          this.setState({
-            loader: false,
-          });
-        }, 5000);
+        this.setState({
+          loader: false,
+        });
       })
       .catch((err) => {
         this.setState({
@@ -120,12 +118,7 @@ export default class Maktabmamuriyati extends Component {
             <div
               className={styles.mamuryat_header}
               style={{
-                backgroundImage: `url(${
-                  this.state.direktor.image !== null &&
-                  this.state.direktor !== null
-                    ? this.state.direktor[0].image
-                    : `"https://cdn.wallpapersafari.com/46/99/Vh6QFJ.jpg"
-                    `
+                backgroundImage: `url(${this.state.direktor !== null && this.state.direktor.length!==0?this.state.direktor[0].image: "https://cdn.wallpapersafari.com/46/99/Vh6QFJ.jpg"
                 })`,
               }}
             >

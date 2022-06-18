@@ -124,8 +124,10 @@ export default class BoshSahifa extends Component {
                   />
                 </div>
                 <p className={style.bosh_p1}>
-                  Xorazm viloyati Gurlan tumani 1-ayrim fanlar chuqur
-                  o'rganiladigan Davlat ixtisoslashtirilgan maktabi
+                {this.state.school !== null
+                      ? this.state.school.address
+                      : ""}
+                      {this.state.school !== null ? " "+this.state.school.school_number+" - "+this.state.school.type[0].toLowerCase()+ this.state.school.type.slice(1, this.state.school.type.length): ""}
                 </p>
                 <p className={style.bosh_p2}>
                   {this.state.school !== null
@@ -316,8 +318,10 @@ export default class BoshSahifa extends Component {
                     <h3>Yutuqlarimiz</h3>
                   </Card.Title>
                   <Card.Text>
+                  <Link to={`/yutuqlar/`}>    
                     Sizda bizning maktabimiz yutuqlari bilan tanishib chiqish
                     uchun qulay imkoniyat bor
+                    </Link>
                   </Card.Text>
                 </Card.Body>
               </Card>{" "}
